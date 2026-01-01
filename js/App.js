@@ -1,4 +1,4 @@
-import { html, useState, useEffect } from "./preact-htm.js";
+import { html, useState, useEffect, useRef } from "./preact-htm.js";
 import { parseCSV } from "./helper.js";
 
 export const App = ({ dataURL }) => {
@@ -12,6 +12,7 @@ export const App = ({ dataURL }) => {
     { label: "NB 1", building: "Neubau", level: "1. Obergeschoss" },
   ];
   const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
+  const sectionRefs = useRef({});
 
   const [data, setData] = useState(null);
 
@@ -85,6 +86,47 @@ export const App = ({ dataURL }) => {
   }
   console.log("Data by level label:", sortedDataByLevelLabel);
 
+  // Intersection Observer to update selectedLevel based on scroll position
+  useEffect(() => {
+    if (!data || Object.keys(sortedDataByLevelLabel).length === 0) return;
+
+    const eventListElement = document.querySelector(".event-list");
+    if (!eventListElement) return;
+
+    const observerOptions = {
+      root: eventListElement,
+      rootMargin: "-10% 0px -80% 0px",
+      threshold: 0,
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const levelLabel = entry.target.dataset.levelLabel;
+          if (levelLabel) {
+            setSelectedLevel(levelLabel);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    // Observe all sections
+    Object.keys(sectionRefs.current).forEach((key) => {
+      if (sectionRefs.current[key]) {
+        observer.observe(sectionRefs.current[key]);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [data, sortedDataByLevelLabel]);
+
   return html`
     <div
       style="border: 1px solid red; display: grid; grid-template-columns: 60% 40%; gap: 10px;"
@@ -99,7 +141,10 @@ export const App = ({ dataURL }) => {
             >`
           )}
         </div>
-        <div>
+        <div
+          class="event-list"
+          style="overflow-y: auto; height: calc(100vh - 150px); margin-top: 20px;"
+        >
           ${Object.entries(sortedDataByLevelLabel).map(
             ([levelLabel, events]) => {
               const levelObject = levels.find(
@@ -110,8 +155,14 @@ export const App = ({ dataURL }) => {
               }
 
               return html`
-                <div style="margin-top: 10px;">
-                  <h3>
+                <div
+                  style="margin-top: 10px; margin-bottom: 30px;"
+                  data-level-label=${levelLabel}
+                  ref=${(el) => (sectionRefs.current[levelLabel] = el)}
+                >
+                  <h3
+                    style="position: sticky; top: 0; background-color: white; z-index: 10; padding: 10px 0; margin: 0;"
+                  >
                     <b>${levelObject.building}</b>${" "}<span
                       style="font-weight: normal;"
                       >${levelObject.level}</span
