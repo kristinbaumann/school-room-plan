@@ -67,12 +67,30 @@ export const App = ({ dataURL }) => {
   }, [dataURL]);
   console.log("Data updated:", data);
 
+  const sortedDataByLevelLabel = {};
+  if (data) {
+    const dataByLevelLabel = {};
+    data.forEach((el) => {
+      if (!dataByLevelLabel[el.levelLabel]) {
+        dataByLevelLabel[el.levelLabel] = [];
+      }
+      dataByLevelLabel[el.levelLabel].push(el);
+    });
+    // sort dataByLevelLabel in order of levels array
+    levels.forEach((lvl) => {
+      if (dataByLevelLabel[lvl.label]) {
+        sortedDataByLevelLabel[lvl.label] = dataByLevelLabel[lvl.label];
+      }
+    });
+  }
+  console.log("Data by level label:", sortedDataByLevelLabel);
+
   return html`
     <div
       style="border: 1px solid red; padding: 6px; display: grid; grid-template-columns: 60% 40%; gap: 10px;"
     >
       <div style="background-color: #ffc0cb82;">
-        <div style="display: flex; gap: 20px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
           ${levels.map(
             (level) => html` <${Button}
               isSelected=${selectedLevel === level.label}
@@ -82,8 +100,27 @@ export const App = ({ dataURL }) => {
           )}
         </div>
         <div>
-          Raumliste für alle Ebenen, gruppiert nach Ebene, aktuell ausgewählte
-          Ebene: ${selectedLevel}
+          ${Object.entries(sortedDataByLevelLabel).map(
+            ([levelLabel, events]) => {
+              const levelObject = levels.find(
+                (lvl) => lvl.label === levelLabel
+              );
+              if (!levelObject) {
+                return null;
+              }
+
+              return html`
+                <div style="margin-top: 10px;">
+                  <h3><b>${levelObject.building}</b>${levelObject.level}</h3>
+                  <div
+                    style="display: flex; flex-direction: column; gap: 10px;"
+                  >
+                    ${events.map((event) => html`<${Event} event=${event} />`)}
+                  </div>
+                </div>
+              `;
+            }
+          )}
         </div>
       </div>
 
@@ -92,6 +129,17 @@ export const App = ({ dataURL }) => {
       </div>
     </div>
   `;
+};
+
+const Event = ({ event }) => {
+  if (!event.sichtbar && !event.klickbar) {
+    return null;
+  }
+  return html`<div style="border: 1px solid black; padding: 4px;">
+    ${event.number ? html`<p>Raum: ${event.number}</p>` : ""}
+    ${event.name1 ? html`<p style="font-weight: bold;">${event.name1}</p>` : ""}
+    ${event.name2 ? html`<p>${event.name2}</p>` : ""}
+  </div>`;
 };
 
 const Button = ({ onClick, children, isSelected }) => {
