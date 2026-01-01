@@ -129,9 +129,11 @@ export const App = ({ dataURL }) => {
 
   const scrollToLevel = (levelLabel) => {
     setSelectedLevel(levelLabel);
+    const eventListElement = document.querySelector(".event-list");
     const sectionElement = sectionRefs.current[levelLabel];
-    if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (sectionElement && eventListElement) {
+      const offsetTop = sectionElement.offsetTop - eventListElement.offsetTop;
+      eventListElement.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
   };
 
@@ -177,7 +179,7 @@ export const App = ({ dataURL }) => {
                     >
                   </h3>
                   <div
-                    style="display: flex; flex-direction: column; gap: 10px;"
+                    style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;"
                   >
                     ${events.map((event) => html`<${Event} event=${event} />`)}
                   </div>
