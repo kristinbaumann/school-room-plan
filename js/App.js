@@ -87,9 +87,9 @@ export const App = ({ dataURL }) => {
 
   return html`
     <div
-      style="border: 1px solid red; padding: 6px; display: grid; grid-template-columns: 60% 40%; gap: 10px;"
+      style="border: 1px solid red; display: grid; grid-template-columns: 60% 40%; gap: 10px;"
     >
-      <div style="background-color: #ffc0cb82;">
+      <div>
         <div style="display: flex; flex-wrap: wrap; gap: 20px;">
           ${levels.map(
             (level) => html` <${Button}
@@ -111,7 +111,12 @@ export const App = ({ dataURL }) => {
 
               return html`
                 <div style="margin-top: 10px;">
-                  <h3><b>${levelObject.building}</b>${levelObject.level}</h3>
+                  <h3>
+                    <b>${levelObject.building}</b>${" "}<span
+                      style="font-weight: normal;"
+                      >${levelObject.level}</span
+                    >
+                  </h3>
                   <div
                     style="display: flex; flex-direction: column; gap: 10px;"
                   >
