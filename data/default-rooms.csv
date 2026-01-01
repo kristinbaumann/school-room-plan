@@ -1,0 +1,125 @@
+ID;Karte;Gebaeude;Etage;Nummer;Name_1;Name_2;sichtbar;klickbar
+001;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;001;Hausmeister;;Y;Y
+002;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;002;Schulbüro;Nadja Nagorsnik, Katrin Wiese;Y;Y
+003;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;002a;Schulleiterin;Dr. Maike Languth;Y;Y
+004;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;003;Stellv. Schulleiter;Tino Fischer;Y;Y
+005;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;004;Klasse 7c (Wks);;Y;Y
+006;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;005;Klasse 7b (Mar);;Y;Y
+007;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;006;Klasse 7a (Es);;Y;Y
+008;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;007;Klasse 5d (Fo);;Y;Y
+009;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;008;Klasse 5c (Be);;Y;Y
+010;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;011;Klasse 5a (Wg);;Y;Y
+011;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;012;Klasse 5b (To);;Y;Y
+012;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;013;Klasse 6a (Sf/Sz);;Y;Y
+013;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;014;Klasse 6b (Lo);;Y;Y
+014;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;015;Klasse 6c (Gm);;Y;Y
+015;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;016;Klasse 6d (Sü);;Y;Y
+016;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;017;;WC Herren (WC Damen 1/2 Etage tiefer);Y;Y
+017;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;021;Konferenzraum;;Y;Y
+018;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;022;Schulbüro & Krankenzimmer;Linn Gellermann;Y;Y
+019;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;UG1;Ruheruam L;;Y;Y
+020;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;UG14;Sozialpädagogin;Helle Westermann;Y;Y
+021;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;UG2;Beratung & Lerncoaching;;Y;Y
+022;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;UG3;Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung;Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand;Y;Y
+023;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;UG7;Ganztag (PerLe);;Y;Y
+024;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;UG7a;Ganztag (Ruhe);Büro: Oliver Nielsen;Y;Y
+025;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;UG8;;Personalraum Reinigung;Y;Y
+026;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;Kleine Halle;;Y;Y
+027;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;Mensa HEGElicious;;Y;Y
+028;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;Multifunktionshalle;;Y;Y
+029;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Hausmeister, Technik, Heizung;Y;Y
+030;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Hausmeister, Technik, Heizung;Y;Y
+031;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Hausmeister, Technik, Heizung;Y;Y
+032;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Hausmeister, Technik, Heizung;Y;Y
+033;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Küche;Y;Y
+034;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Reinigung;Y;Y
+035;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Reinigung;Y;Y
+036;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Umkleiden & Duschen;Y;Y
+037;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Umkleiden & Duschen;Y;Y
+038;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Umkleiden & Duschen;Y;Y
+039;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;Waschküche;Y;Y
+040;Hauptgebaeude_Untergeschoss.svg;Hauptgebäude;Untergeschoss;;;WC Damen;Y;Y
+041;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;101;Abteilungsleitung 11–12;Dr. Björn Reetz;Y;Y
+042;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;102;Abteilungsleitung 5–7 & 8–10;Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius;Y;Y
+043;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;103;Klasse 8d (Sch);;Y;Y
+044;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;104;Klasse 8c (Fn);;Y;Y
+045;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;105;Klasse 8b (Pr);;Y;Y
+046;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;106;Klasse 8a (Krp);;Y;Y
+047;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;107;Klasse 9d (Ho);;Y;Y
+048;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;108;Klasse 9c (Er);;Y;Y
+049;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;111;Klasse 9a (Ka);;Y;Y
+050;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;112;Klasse 9b (Ku);;Y;Y
+051;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;113;Klasse 7d (Bz/Vo);;Y;Y
+052;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;114;Medienraum;;Y;Y
+053;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;115;Lehrerzimmer;;Y;Y
+054;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;117;;WC Damen;Y;Y
+055;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;118;;IT-Admin: Michael König, David Hähningen;Y;Y
+056;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;119;Physik 2;;Y;Y
+057;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;121;Mathe/Physik;(Es)/(Jo);Y;Y
+058;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;122;Physik 1;;Y;Y
+059;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;123;Physik-Sammlung;;Y;Y
+060;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;124;Lehrerarbeitsraum;;Y;Y
+061;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;;Freiarbeitsbereich;;Y;Y
+062;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;;Lehrerzimmer;;Y;Y
+063;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;201;Chemie 2;;Y;Y
+064;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;202;Chemie-Sammlung ;;Y;Y
+065;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;203;Chemie 1;;Y;Y
+066;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;204;Chemie-Verwaltung;Dr. Frank Jürgensen;Y;Y
+067;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;205;Comupterraum 2;;Y;Y
+068;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;206;Musik 2;;Y;Y
+069;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;207;Biologie 1;;Y;Y
+070;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;208;;;N;N
+071;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;211;Biologie 2;;Y;Y
+072;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;212;Biologie-Sammlung;;Y;Y
+073;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;213;Geographie-Sammlung;Dr. Jean-Marie Schwarzkopf;Y;Y
+074;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;214;Geographie;;Y;Y
+075;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;215;Computerraum 1;;Y;Y
+076;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;216;Musik 1;;Y;Y
+077;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;216p;;;N;N
+078;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;218;;WC Herren;Y;Y
+079;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;220;Aula;;Y;Y
+080;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;222;Musik-Sammlung;;Y;Y
+081;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;223;Chemie-Sammlung;;Y;Y
+082;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;;Biologie-Arbeitsraum;;Y;Y
+083;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;;;Aufgang zur Schülerbibliothek;Y;Y
+084;Hauptgebaeude_2_Obergeschoss.svg;Hauptgebäude;2. Obergeschoss;;;WC Lehrkräfte;Y;Y
+085;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;301;Terrasse;;Y;Y
+086;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;302;;;N;N
+087;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;302a;;;N;N
+088;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;304;Kunst-Sammlung und -Vorbereitung;;Y;Y
+089;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;304a;;;N;N
+090;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;304b;;;N;N
+091;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;306;Kunst-Brennraum;;Y;Y
+092;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;308;Kunst 2;;Y;Y
+093;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;309;Kunst 1;;Y;Y
+094;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;;Kunst-Vorbereitung;;Y;Y
+095;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;;Schülerbibliothek;;Y;Y
+096;Hauptgebaeude_3_Obergeschoss.svg;Hauptgebäude;3. Obergeschoss;;;Lager;Y;Y
+097;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;L1;;;N;N
+098;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;L2;;;N;N
+099;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;N1;Klasse 10a (Jo);;Y;Y
+100;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;N2;Klasse 10b (Gw);;Y;Y
+101;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;N3;;;N;N
+102;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;N4;;;N;N
+103;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;N5;;;N;N
+104;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;N6;Oberstufenraum;;Y;Y
+105;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;;;Technik;Y;Y
+106;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;;;Technik;Y;Y
+107;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;;;Technik;Y;Y
+108;Neubau_Erdgeschoss.svg;Neubau;Erdgeschoss;;;WC Damen, barrierefrei;Y;Y
+109;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;N1.1;Klasse 10c (Ln);;Y;Y
+110;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;N1.2;Klasse 10d (Dw);;Y;Y
+111;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;N1.3;Arbeitsraum;;Y;Y
+112;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;N1.4;;;N;N
+113;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;N1.5;;;N;N
+114;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;N1.6;;;N;N
+115;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;;;Technik;Y;Y
+116;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;;;Technik;Y;Y
+117;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;;;WC Damen;Y;Y
+118;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;;;WC Herren;Y;Y
+119;Neubau_Obergeschoss.svg;Neubau;1. Obergeschoss;;;WC Herren, barrierefrei;Y;Y
+120;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;;Foyer;;N;N
+121;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;;Gang vor Raum 003;;N;N
+122;Hauptgebaeude_Erdgeschoss.svg;Hauptgebäude;Erdgeschoss;;Gang vor Raum 005;;N;N
+123;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;;Gang vor Raum 106;;N;N
+124;Hauptgebaeude_1_Obergeschoss.svg;Hauptgebäude;1. Obergeschoss;;Gang vor Raum 104;;N;N

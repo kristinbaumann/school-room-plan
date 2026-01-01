@@ -1,16 +1,71 @@
-import { html, useState } from "./preact-htm.js";
+import { html, useState, useEffect } from "./preact-htm.js";
+import { parseCSV } from "./helper.js";
 
-export const App = () => {
+export const App = ({ dataURL }) => {
   const levels = [
-    { label: "HG -1", name: "Hauptgebäude Untergeschoss" },
-    { label: "HG 0", name: "Hauptgebäude Erdgeschoss" },
-    { label: "HG 1", name: "Hauptgebäude 1. Obergeschoss" },
-    { label: "HG 2", name: "Hauptgebäude 2. Obergeschoss" },
-    { label: "HG 3", name: "Hauptgebäude 3. Obergeschoss" },
-    { label: "NB 0", name: "Neubau Erdgeschoss" },
-    { label: "NB 1", name: "Neubau 1. Obergeschoss" },
+    { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
+    { label: "HG 0", building: "Hauptgebäude", level: "Erdgeschoss" },
+    { label: "HG 1", building: "Hauptgebäude", level: "1. Obergeschoss" },
+    { label: "HG 2", building: "Hauptgebäude", level: "2. Obergeschoss" },
+    { label: "HG 3", building: "Hauptgebäude", level: "3. Obergeschoss" },
+    { label: "NB 0", building: "Neubau", level: "Erdgeschoss" },
+    { label: "NB 1", building: "Neubau", level: "1. Obergeschoss" },
   ];
   const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // read data from dataURL (CSV file)
+    if (dataURL) {
+      fetch(dataURL)
+        .then((response) => response.text())
+        .then((dataText) => {
+          const parsed = parseCSV(dataText);
+          if (!parsed || parsed.length === 0) {
+            setData([]);
+            return;
+          }
+          const headers = parsed[0];
+          const rows = parsed.slice(1).map((values) => {
+            const obj = {};
+            for (let i = 0; i < headers.length; i++) {
+              obj[headers[i]] = values[i] !== undefined ? values[i] : "";
+            }
+            return obj;
+          });
+          const mappedRows = rows.map((row) => {
+            let el = {
+              id: row["ID"] ? row["ID"].trim() : null,
+              number: row["Nummer"] ? row["Nummer"].trim() : null,
+              level: row["Etage"] ? row["Etage"].trim() : null,
+              building: row["Gebaeude"] ? row["Gebaeude"].trim() : null,
+              name1: row["Name_1"] ? row["Name_1"].trim() : null,
+              name2: row["Name_2"] ? row["Name_2"].trim() : null,
+              klickbar: row["klickbar"]
+                ? row["klickbar"].trim().toLowerCase() === "y"
+                : false,
+              sichtbar: row["sichtbar"]
+                ? row["sichtbar"].trim().toLowerCase() === "y"
+                : false,
+            };
+            // match level labels
+            const levelObj = levels.find(
+              (lvl) => lvl.building === el.building && lvl.level === el.level
+            );
+            el.levelLabel = levelObj ? levelObj.label : null;
+            return el;
+          });
+
+          const filteredRows = mappedRows.filter((row) => row.id);
+          setData(filteredRows);
+        })
+        .catch((error) => {
+          console.error("Error loading CSV data:", error);
+        });
+    }
+  }, [dataURL]);
+  console.log("Data updated:", data);
 
   return html`
     <div
