@@ -3,6 +3,7 @@ import { html, useState } from "./preact-htm.js";
 export const App = ({ containerId }) => {
   const [count, setCount] = useState(0);
   const [selectedLevel, setSelectedLevel] = useState(null);
+  const levels = ["HG -1", "HG 0", "HG 1", "HG 2", "HG 3", "NB 0", "NB 1"];
 
   const handleLevelClick = (level) => {
     setSelectedLevel(level);
@@ -15,35 +16,32 @@ export const App = ({ containerId }) => {
         Clicks: ${count}
       </button>
       <div style="display: flex; gap: 20px;">
-        <${Button}
-          style="background-color: var(--e-global-color-accent)"
-          onClick=${() => handleLevelClick("HG -1")}
-          >HG -1<//
-        >
-        <${Button} onClick=${() => handleLevelClick("HG 0")}>HG 0<//>
-        <${Button} onClick=${() => handleLevelClick("HG 1")}>HG 1<//>
-        <${Button} onClick=${() => handleLevelClick("HG 2")}>HG 2<//>
-        <${Button} onClick=${() => handleLevelClick("HG 3")}>HG 3<//>
-        <${Button} onClick=${() => handleLevelClick("NB 0")}>NB 0<//>
-        <${Button} onClick=${() => handleLevelClick("NB 1")}>NB 1<//>
+        ${levels.map(
+          (level) => html` <${Button}
+            isSelected=${selectedLevel === level}
+            onClick=${() => handleLevelClick(level)}
+            >${level}<//
+          >`
+        )}
       </div>
     </div>
   `;
 };
 
-const Button = ({ onClick, children }) => {
+const Button = ({ onClick, children, isSelected }) => {
   return html`
     <div
-      class="elementor-element elementor-element-e6cddec elementor-align-center elementor-widget elementor-widget-button"
-      data-id="e6cddec"
-      data-element_type="widget"
-      data-widget_type="button.default"
+      class="elementor-element elementor-align-center elementor-widget elementor-widget-button"
     >
       <button
         class="elementor-button elementor-button-link elementor-size-sm"
         onClick=${onClick}
+        style=${`border-color: black; background: ${
+          isSelected ? "var(--e-global-color-accent)" : "transparent"
+        };`}
       >
         <span class="elementor-button-content-wrapper">
+          <span class="elementor-button-text">${children}</span>
           <span class="elementor-button-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +56,6 @@ const Button = ({ onClick, children }) => {
               ></path>
             </svg>
           </span>
-          <span class="elementor-button-text">${children}</span>
         </span>
       </button>
     </div>
