@@ -127,16 +127,24 @@ export const App = ({ dataURL }) => {
     };
   }, [data, sortedDataByLevelLabel]);
 
+  const scrollToLevel = (levelLabel) => {
+    setSelectedLevel(levelLabel);
+    const sectionElement = sectionRefs.current[levelLabel];
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return html`
-    <div
-      style="border: 1px solid red; display: grid; grid-template-columns: 60% 40%; gap: 10px;"
-    >
+    <div style="display: grid; grid-template-columns: 60% 40%; gap: 10px;">
       <div>
-        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div
+          style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
+        >
           ${levels.map(
             (level) => html` <${Button}
               isSelected=${selectedLevel === level.label}
-              onClick=${() => setSelectedLevel(level.label)}
+              onClick=${() => scrollToLevel(level.label)}
               >${level.label}<//
             >`
           )}
@@ -192,9 +200,11 @@ const Event = ({ event }) => {
     return null;
   }
   return html`<div style="border: 1px solid black; padding: 4px;">
-    ${event.number ? html`<p>Raum: ${event.number}</p>` : ""}
-    ${event.name1 ? html`<p style="font-weight: bold;">${event.name1}</p>` : ""}
-    ${event.name2 ? html`<p>${event.name2}</p>` : ""}
+    ${event.number ? html`<p style="margin: 0;">Raum: ${event.number}</p>` : ""}
+    ${event.name1
+      ? html`<p style="font-weight: bold; margin: 0;">${event.name1}</p>`
+      : ""}
+    ${event.name2 ? html`<p style="margin: 0;">${event.name2}</p>` : ""}
   </div>`;
 };
 
