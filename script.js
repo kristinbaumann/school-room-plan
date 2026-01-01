@@ -7,5 +7,5 @@ export function roomPlaner(containerId) {
     console.error(`roomPlaner: container with id "${containerId}" not found`);
     return;
   }
-  renderComponent(html`<${App} containerId=${containerId} />`, container);
+  renderComponent(html`<${App} />`, container);
 }

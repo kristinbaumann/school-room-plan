@@ -1,28 +1,39 @@
 import { html, useState } from "./preact-htm.js";
 
-export const App = ({ containerId }) => {
-  const [count, setCount] = useState(0);
-  const [selectedLevel, setSelectedLevel] = useState(null);
-  const levels = ["HG -1", "HG 0", "HG 1", "HG 2", "HG 3", "NB 0", "NB 1"];
+export const App = () => {
+  const levels = [
+    { label: "HG -1", name: "Hauptgebäude Untergeschoss" },
+    { label: "HG 0", name: "Hauptgebäude Erdgeschoss" },
+    { label: "HG 1", name: "Hauptgebäude 1. Obergeschoss" },
+    { label: "HG 2", name: "Hauptgebäude 2. Obergeschoss" },
+    { label: "HG 3", name: "Hauptgebäude 3. Obergeschoss" },
+    { label: "NB 0", name: "Neubau Erdgeschoss" },
+    { label: "NB 1", name: "Neubau 1. Obergeschoss" },
+  ];
+  const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
 
-  const handleLevelClick = (level) => {
-    setSelectedLevel(level);
-  };
   return html`
-    <div>
-      <h2>Room Planer</h2>
-      <p>Rendered into #${containerId}</p>
-      <button class="" onClick=${() => setCount((c) => c + 1)}>
-        Clicks: ${count}
-      </button>
-      <div style="display: flex; gap: 20px;">
-        ${levels.map(
-          (level) => html` <${Button}
-            isSelected=${selectedLevel === level}
-            onClick=${() => handleLevelClick(level)}
-            >${level}<//
-          >`
-        )}
+    <div
+      style="border: 1px solid red; padding: 6px; display: grid; grid-template-columns: 60% 40%; gap: 10px;"
+    >
+      <div style="background-color: #ffc0cb82;">
+        <div style="display: flex; gap: 20px;">
+          ${levels.map(
+            (level) => html` <${Button}
+              isSelected=${selectedLevel === level.label}
+              onClick=${() => setSelectedLevel(level.label)}
+              >${level.label}<//
+            >`
+          )}
+        </div>
+        <div>
+          Raumliste für alle Ebenen, gruppiert nach Ebene, aktuell ausgewählte
+          Ebene: ${selectedLevel}
+        </div>
+      </div>
+
+      <div style="background-color: #d9e1ff82;">
+        Grundriss für aktuell ausgewählte Ebene: ${selectedLevel}
       </div>
     </div>
   `;
