@@ -1,15 +1,5 @@
-import { html, renderComponent, useState } from "./js/preact-htm.js";
-
-const App = ({ containerId }) => {
-  const [count, setCount] = useState(0);
-  return html`
-    <div>
-      <h2>Room Planer</h2>
-      <p>Rendered into #${containerId}</p>
-      <button onClick=${() => setCount((c) => c + 1)}>Clicks: ${count}</button>
-    </div>
-  `;
-};
+import { html, renderComponent } from "./js/preact-htm.js";
+import { App } from "./js/App.js";
 
 export function roomPlaner(containerId) {
   const container = document.getElementById(containerId);
@@ -19,6 +9,3 @@ export function roomPlaner(containerId) {
   }
   renderComponent(html`<${App} containerId=${containerId} />`, container);
 }
-
-// Also attach to window for non-module callers
-window.roomPlaner = roomPlaner;
