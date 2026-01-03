@@ -1,8 +1,8 @@
 import { html, useState, useEffect, useRef } from "./preact-htm.js";
 import { parseCSV } from "./helper.js";
 
-const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
-// const mapsBasePath = "../maps/";
+// const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
+const mapsBasePath = "../maps/";
 
 const levels = [
   { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
@@ -88,8 +88,8 @@ export const App = ({ dataURL }) => {
         const svgMap = {
           "HG 0": "Hauptgebaeude_Erdgeschoss_edited.svg",
           "HG -1": "Hauptgebaeude_Untergeschoss_edited.svg",
-          "HG 1": "Hauptgebaeude_1_Obergeschoss.svg",
-          "HG 2": "Hauptgebaeude_2_Obergeschoss.svg",
+          "HG 1": "Hauptgebaeude_1_Obergeschoss_edited.svg",
+          "HG 2": "Hauptgebaeude_2_Obergeschoss_edited.svg",
           "HG 3": "Hauptgebaeude_3_Obergeschoss.svg",
           "NB 0": "Neubau_Erdgeschoss.svg",
           "NB 1": "Neubau_Obergeschoss.svg",

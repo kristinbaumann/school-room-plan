@@ -22,17 +22,17 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
 18,Hauptgebäude,Erdgeschoss,022,022,Schulbüro & Krankenzimmer,Linn Gellermann,N,N
 41,Hauptgebäude,1. Obergeschoss,101,101,Abteilungsleitung 11–12,Dr. Björn Reetz,N,N
 42,Hauptgebäude,1. Obergeschoss,102,102,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",N,N
-43,Hauptgebäude,1. Obergeschoss,103,103,Hege For Future-AG,,Y,Y
-44,Hauptgebäude,1. Obergeschoss,104,104,Mathematik zum Mitmachen,Gesa Einsporn,Y,Y
-45,Hauptgebäude,1. Obergeschoss,105,105,Deutsch – Schwerpunkte und Projekte,Kristina Duncan,Y,Y
+43,Hauptgebäude,1. Obergeschoss,103,103,Hege For Future-AG,,N,Y
+44,Hauptgebäude,1. Obergeschoss,104,104,Mathematik zum Mitmachen,Gesa Einsporn,N,Y
+45,Hauptgebäude,1. Obergeschoss,105,105,Deutsch – Schwerpunkte und Projekte,Kristina Duncan,N,Y
 46,Hauptgebäude,1. Obergeschoss,106,106,"Vive la France – Vive l’échange
- Französisch und unser Frankreichaustausch","Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas",Y,Y
+ Französisch und unser Frankreichaustausch","Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas",N,Y
 47,Hauptgebäude,1. Obergeschoss,107,107,Klasse 9d (Ho),,N,N
 48,Hauptgebäude,1. Obergeschoss,108,108,Klasse 9c (Er),,N,N
 49,Hauptgebäude,1. Obergeschoss,111,111,Klasse 9a (Ka),,N,N
 50,Hauptgebäude,1. Obergeschoss,112,112,"Geografie – Auf dem Weg zur Nachhaltigkeit
  Crafting - Gutes Gewissen mit Seegrasskissen","Hege Studies-AG
- Dr. Jean-Marie Schwarzkopf, Florian Hogg",Y,Y
+ Dr. Jean-Marie Schwarzkopf, Florian Hogg",N,Y
 51,Hauptgebäude,1. Obergeschoss,113,113,12:00 Uhr: »Franz en France«: 15-minütiges deutsch-französisches Theaterstück,"Von Schülerinnen und Schülern aus Jg. 7
  Dr. Heide Pilarczyk",N,N
 52,Hauptgebäude,1. Obergeschoss,114,114,Medienraum,,N,N
@@ -94,8 +94,8 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
  Meeting-Point der Scouts",Y,Y
 121,Hauptgebäude,Erdgeschoss,Gang vor Raum 003,003gang,Info-Point »Unsere Beobachtungs- und Mittelstufe«,Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7) und Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10) beraten Sie gern,Y,Y
 122,Hauptgebäude,Erdgeschoss,Gang vor Raum 005,005gang,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
-124,Hauptgebäude,1. Obergeschoss,Gang vor Raum 104,Gang_104,Hege-Café,,Y,Y
-123,Hauptgebäude,1. Obergeschoss,Gang vor Raum 106,Gang_106,Wir lernen gemeinsam Frankreich kennen,Dr. Heide Pilarczyk,Y,Y
+124,Hauptgebäude,1. Obergeschoss,Gang vor Raum 104,104gang,Hege-Café,,Y,Y
+123,Hauptgebäude,1. Obergeschoss,Gang vor Raum 106,106gang,Wir lernen gemeinsam Frankreich kennen,Dr. Heide Pilarczyk,Y,Y
 97,Neubau,Erdgeschoss,L1,L1,,,N,N
 98,Neubau,Erdgeschoss,L2,L2,,,N,N
 28,Hauptgebäude,Untergeschoss,Mehrzweckhalle,Mehrzweckhalle,"Theater: Ausstellung, Fachbereich Sport, Zirkus-AG, Schulhockey","Almuth Schäfer, Hans Peters, Lars Schwartz, Johanna Gewand",Y,Y
