@@ -20,7 +20,7 @@ export const App = ({ dataURL }) => {
   const svgContainerRef = useRef(null);
 
   const [data, setData] = useState(null);
-  const [svgContent, setSvgContent] = useState(null);
+  const [svgContents, setSvgContents] = useState({});
 
   useEffect(() => {
     // read data from dataURL (CSV file)
@@ -77,9 +77,11 @@ export const App = ({ dataURL }) => {
   }, [dataURL]);
   console.log("Data updated:", data);
 
-  // Load SVG based on selected level and manipulate based on data
+  // Load all SVGs at once and manipulate based on data
   useEffect(() => {
-    const loadSVG = async () => {
+    if (!data) return;
+
+    const loadAllSVGs = async () => {
       try {
         // Map level labels to SVG filenames
         const svgMap = {
@@ -92,69 +94,80 @@ export const App = ({ dataURL }) => {
           "NB 1": "Neubau_Obergeschoss.svg",
         };
 
-        const svgFileName = svgMap[selectedLevel];
-        if (svgFileName) {
-          const response = await fetch(`${mapsBasePath}${svgFileName}`);
-          if (response.ok) {
-            const svgText = await response.text();
+        const loadedSVGs = {};
 
-            // Parse SVG and manipulate based on data
-            const parser = new DOMParser();
-            const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
+        // Load all SVGs in parallel
+        await Promise.all(
+          Object.entries(svgMap).map(async ([levelLabel, svgFileName]) => {
+            try {
+              const response = await fetch(`${mapsBasePath}${svgFileName}`);
+              if (response.ok) {
+                const svgText = await response.text();
 
-            // Get rooms for this level
-            const roomsForLevel =
-              data?.filter((room) => room.levelLabel === selectedLevel) || [];
+                // Parse SVG and manipulate based on data
+                const parser = new DOMParser();
+                const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
 
-            // Hide text elements for rooms where labelled_in_map is false
-            roomsForLevel.forEach((room) => {
-              if (room.number) {
-                // Find group with id like "room_005" for room number "005"
-                const roomGroup = svgDoc.getElementById(`room_${room.number}`);
-                if (roomGroup) {
-                  // Find the .text group within this room group
-                  if (!room.labelled_in_map) {
-                    const textElements = roomGroup.querySelectorAll(".text");
-                    textElements.forEach((textEl) => {
-                      textEl.style.display = "none";
-                    });
+                // Get rooms for this level
+                const roomsForLevel =
+                  data?.filter((room) => room.levelLabel === levelLabel) || [];
+
+                // Hide text elements for rooms where labelled_in_map is false
+                roomsForLevel.forEach((room) => {
+                  if (room.number) {
+                    // Find group with id like "room_005" for room number "005"
+                    const roomGroup = svgDoc.getElementById(
+                      `room_${room.number}`
+                    );
+                    if (roomGroup) {
+                      // Find the .text group within this room group
+                      if (!room.labelled_in_map) {
+                        const textElements = roomGroup.querySelectorAll(".text");
+                        textElements.forEach((textEl) => {
+                          textEl.style.display = "none";
+                        });
+                      }
+                      if (!room.listed_clickable) {
+                        const areaElements = roomGroup.querySelectorAll(".area");
+                        areaElements.forEach((areaEl) => {
+                          areaEl.style.display = "none";
+                        });
+                      }
+                      if (room.listed_clickable) {
+                        const areaElements = roomGroup.querySelectorAll(".area");
+                        areaElements.forEach((areaEl) => {
+                          areaEl.style.cursor = "pointer";
+                          areaEl.setAttribute(
+                            "data-room-area-number",
+                            room.number
+                          );
+                        });
+                      }
+                    }
                   }
-                  if (!room.listed_clickable) {
-                    const areaElements = roomGroup.querySelectorAll(".area");
-                    areaElements.forEach((areaEl) => {
-                      areaEl.style.display = "none";
-                    });
-                  }
-                  if (room.listed_clickable) {
-                    const areaElements = roomGroup.querySelectorAll(".area");
-                    areaElements.forEach((areaEl) => {
-                      areaEl.style.cursor = "pointer";
-                      areaEl.setAttribute("data-room-area-number", room.number);
-                    });
-                  }
-                }
+                });
+
+                // Serialize back to string
+                const serializer = new XMLSerializer();
+                const manipulatedSVG = serializer.serializeToString(svgDoc);
+                loadedSVGs[levelLabel] = manipulatedSVG;
+              } else {
+                console.error(`SVG file not found: ${svgFileName}`);
               }
-            });
+            } catch (error) {
+              console.error(`Error loading SVG ${svgFileName}:`, error);
+            }
+          })
+        );
 
-            // Serialize back to string
-            const serializer = new XMLSerializer();
-            const manipulatedSVG = serializer.serializeToString(svgDoc);
-            setSvgContent(manipulatedSVG);
-          } else {
-            console.error(`SVG file not found: ${svgFileName}`);
-            setSvgContent(null);
-          }
-        } else {
-          setSvgContent(null);
-        }
+        setSvgContents(loadedSVGs);
       } catch (error) {
-        console.error("Error loading SVG:", error);
-        setSvgContent(null);
+        console.error("Error loading SVGs:", error);
       }
     };
 
-    loadSVG();
-  }, [selectedLevel, data]);
+    loadAllSVGs();
+  }, [data]);
 
   // Attach click listeners after SVG is rendered in the DOM
   useEffect(() => {
@@ -178,7 +191,7 @@ export const App = ({ dataURL }) => {
     return () => {
       svgContainer.removeEventListener("click", handleRoomClick);
     };
-  }, [svgContent, data]);
+  }, [svgContents, data]);
 
   const sortedDataByLevelLabel = {};
   if (data) {
@@ -306,7 +319,7 @@ export const App = ({ dataURL }) => {
 
       <div style="overflow: auto;">
         <${FloorPlan}
-          svgContent=${svgContent}
+          svgContent=${svgContents[selectedLevel]}
           svgContainerRef=${svgContainerRef}
         />
       </div>
