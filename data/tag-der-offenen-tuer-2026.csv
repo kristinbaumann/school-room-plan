@@ -103,6 +103,7 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
 109,Neubau,1. Obergeschoss,N1.1,N1.1,Klasse 10c (Ln),,N,N
 110,Neubau,1. Obergeschoss,N1.2,N1.2,Klasse 10d (Dw),,N,N
 111,Neubau,1. Obergeschoss,N1.3,N1.3,Arbeitsraum,,N,N
+111a,Neubau,1. Obergeschoss,,N1Arbeitsraum,Arbeitsraum,,N,N
 112,Neubau,1. Obergeschoss,N1.4,N1.4,,,N,N
 113,Neubau,1. Obergeschoss,N1.5,N1.5,,,N,N
 114,Neubau,1. Obergeschoss,N1.6,N1.6,,,N,N
@@ -120,6 +121,7 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
  Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG","Dr. Björn Reetz, Herr Dr. Stephan Benzmann, Caroline Jahn, Birte Rösler, Rabea Gausepohl, b@s-Schülerteam",Y,Y
 103,Neubau,Erdgeschoss,N5,N5,,,N,N
 104,Neubau,Erdgeschoss,N6,N6,Oberstufenraum,,N,N
+104a,Neubau,Erdgeschoss,,Oberstufenraum,Oberstufenraum,,N,N
 19,Hauptgebäude,Untergeschoss,UG1,UG1,Ruheraum L,,N,N
 20,Hauptgebäude,Untergeschoss,UG14,UG14,Sozialpädagogin,Helle Westermann,N,N
 21,Hauptgebäude,Untergeschoss,UG2,UG2,Beratung & Lerncoaching,"Maria Matschiner, Jana Welling, Johanna Gewand",Y,Y
@@ -153,8 +155,10 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
 106,Neubau,Erdgeschoss,,Sonstiges_21,,Technik,N,N
 107,Neubau,Erdgeschoss,,Sonstiges_22,,Technik,N,N
 108,Neubau,Erdgeschoss,,WC_5,,"WC Damen, barrierefrei",Y,N
+108a,Neubau,Erdgeschoss,,WC_6,,WC Damen,Y,N
 115,Neubau,1. Obergeschoss,,Sonstiges_23,,Technik,N,N
 116,Neubau,1. Obergeschoss,,Sonstiges_24,,Technik,N,N
 117,Neubau,1. Obergeschoss,,WC_1,,WC Damen,Y,N
+118a,Neubau,1. Obergeschoss,,WC_7,,WC Herren,Y,N
 118,Neubau,1. Obergeschoss,,WC_2,,WC Herren,Y,N
 119,Neubau,1. Obergeschoss,,WC_3,,"WC Herren, barrierefrei",Y,N

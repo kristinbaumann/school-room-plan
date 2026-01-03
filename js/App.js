@@ -90,9 +90,9 @@ export const App = ({ dataURL }) => {
           "HG -1": "Hauptgebaeude_Untergeschoss_edited.svg",
           "HG 1": "Hauptgebaeude_1_Obergeschoss_edited.svg",
           "HG 2": "Hauptgebaeude_2_Obergeschoss_edited.svg",
-          "HG 3": "Hauptgebaeude_3_Obergeschoss.svg",
-          "NB 0": "Neubau_Erdgeschoss.svg",
-          "NB 1": "Neubau_Obergeschoss.svg",
+          "HG 3": "Hauptgebaeude_3_Obergeschoss_edited.svg",
+          "NB 0": "Neubau_Erdgeschoss_edited.svg",
+          "NB 1": "Neubau_Obergeschoss_edited.svg",
         };
 
         const loadedSVGs = {};
