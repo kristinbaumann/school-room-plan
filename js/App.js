@@ -1,6 +1,8 @@
 import { html, useState, useEffect, useRef } from "./preact-htm.js";
 import { parseCSV } from "./helper.js";
 
+const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
+
 export const App = ({ dataURL }) => {
   const levels = [
     { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
@@ -85,7 +87,7 @@ export const App = ({ dataURL }) => {
 
         const svgFileName = svgMap[selectedLevel];
         if (svgFileName) {
-          const response = await fetch(`../maps/${svgFileName}`);
+          const response = await fetch(`${mapsBasePath}${svgFileName}`);
           if (response.ok) {
             const svgText = await response.text();
 
