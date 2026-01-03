@@ -122,19 +122,22 @@ export const App = ({ dataURL }) => {
                     if (roomGroup) {
                       // Find the .text group within this room group
                       if (!room.labelled_in_map) {
-                        const textElements = roomGroup.querySelectorAll(".text");
+                        const textElements =
+                          roomGroup.querySelectorAll(".text");
                         textElements.forEach((textEl) => {
                           textEl.style.display = "none";
                         });
                       }
                       if (!room.listed_clickable) {
-                        const areaElements = roomGroup.querySelectorAll(".area");
+                        const areaElements =
+                          roomGroup.querySelectorAll(".area");
                         areaElements.forEach((areaEl) => {
                           areaEl.style.display = "none";
                         });
                       }
                       if (room.listed_clickable) {
-                        const areaElements = roomGroup.querySelectorAll(".area");
+                        const areaElements =
+                          roomGroup.querySelectorAll(".area");
                         areaElements.forEach((areaEl) => {
                           areaEl.style.cursor = "pointer";
                           areaEl.setAttribute(
@@ -263,16 +266,22 @@ export const App = ({ dataURL }) => {
   };
 
   return html`
-    <div class="app">
+    <div class="container">
       <style>
-        .app {
+        .app.desktop {
           display: grid;
           grid-template-columns: 60% 40%;
           gap: 10px;
         }
+        .app.mobile {
+          display: none;
+        }
         @media (max-width: 800px) {
-          .app {
-            display: flex;
+          .app.desktop {
+            display: none;
+          }
+          .app.mobile {
+            display: block;
           }
         }
         .event {
@@ -289,42 +298,75 @@ export const App = ({ dataURL }) => {
           fill: #e2b2a4;
         }
       </style>
-      <div>
-        <div
-          style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
-        >
-          ${levels.map(
-            (level) => html` <${Button}
-              isSelected=${selectedLevel === level.label}
-              onClick=${() => scrollToLevel(level.label)}
-              >${level.label}<//
-            >`
-          )}
+
+      <div class="app desktop">
+        <div>
+          <${LevelSelector}
+            selectedLevel=${selectedLevel}
+            scrollToLevel=${scrollToLevel}
+          />
+          <div
+            class="event-list"
+            style="overflow-y: auto; height: calc(100vh - 150px); margin-top: 20px;"
+          >
+            ${Object.entries(sortedDataByLevelLabel).map(
+              ([levelLabel, events]) => {
+                return html`<${EventsPerLevel}
+                  levelLabel=${levelLabel}
+                  events=${events}
+                  sectionRefs=${sectionRefs}
+                />`;
+              }
+            )}
+          </div>
         </div>
-        <div
-          class="event-list"
-          style="overflow-y: auto; height: calc(100vh - 150px); margin-top: 20px;"
-        >
+        <div style="overflow: auto;">
+          <${FloorPlan}
+            svgContent=${svgContents[selectedLevel]}
+            svgContainerRef=${svgContainerRef}
+          />
+        </div>
+      </div>
+
+      <div class="app mobile">
+        <${LevelSelector}
+          selectedLevel=${selectedLevel}
+          scrollToLevel=${scrollToLevel}
+        />
+        <div class="event-list">
           ${Object.entries(sortedDataByLevelLabel).map(
             ([levelLabel, events]) => {
-              return html`<${EventsPerLevel}
-                levelLabel=${levelLabel}
-                events=${events}
-                sectionRefs=${sectionRefs}
-              />`;
+              return html`<div>
+                <${EventsPerLevel}
+                  levelLabel=${levelLabel}
+                  events=${events}
+                  sectionRefs=${sectionRefs}
+                />
+                <${FloorPlan}
+                  svgContent=${svgContents[levelLabel]}
+                  svgContainerRef=${svgContainerRef}
+                />
+              </div>`;
             }
           )}
         </div>
       </div>
-
-      <div style="overflow: auto;">
-        <${FloorPlan}
-          svgContent=${svgContents[selectedLevel]}
-          svgContainerRef=${svgContainerRef}
-        />
-      </div>
     </div>
   `;
+};
+
+const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
+  return html`<div
+    style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
+  >
+    ${levels.map(
+      (level) => html` <${Button}
+        isSelected=${selectedLevel === level.label}
+        onClick=${() => scrollToLevel(level.label)}
+        >${level.label}<//
+      >`
+    )}
+  </div>`;
 };
 
 const FloorPlan = ({ svgContent, svgContainerRef }) => {
