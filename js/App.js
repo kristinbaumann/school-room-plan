@@ -1,8 +1,8 @@
 import { html, useState, useEffect, useRef } from "./preact-htm.js";
 import { parseCSV } from "./helper.js";
 
-// const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
-const mapsBasePath = "../maps/";
+const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
+// const mapsBasePath = "../maps/";
 
 const levels = [
   { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
@@ -17,7 +17,7 @@ const levels = [
 export const App = ({ dataURL }) => {
   const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
   const sectionRefs = useRef({});
-  const svgContainerRef = useRef(null);
+  const appContainerRef = useRef(null);
 
   const [data, setData] = useState(null);
   const [svgContents, setSvgContents] = useState({});
@@ -45,6 +45,7 @@ export const App = ({ dataURL }) => {
             let el = {
               id: row["ID"] ? row["ID"].trim() : null,
               number: row["Nummer"] ? row["Nummer"].trim() : null,
+              roomId: row["Raum ID"] ? row["Raum ID"].trim() : null,
               level: row["Etage"] ? row["Etage"].trim() : null,
               building: row["Gebaeude"] ? row["Gebaeude"].trim() : null,
               name1: row["Name_1"] ? row["Name_1"].trim() : null,
@@ -86,7 +87,7 @@ export const App = ({ dataURL }) => {
         // Map level labels to SVG filenames
         const svgMap = {
           "HG 0": "Hauptgebaeude_Erdgeschoss_edited.svg",
-          "HG -1": "Hauptgebaeude_Untergeschoss.svg",
+          "HG -1": "Hauptgebaeude_Untergeschoss_edited.svg",
           "HG 1": "Hauptgebaeude_1_Obergeschoss.svg",
           "HG 2": "Hauptgebaeude_2_Obergeschoss.svg",
           "HG 3": "Hauptgebaeude_3_Obergeschoss.svg",
@@ -114,10 +115,10 @@ export const App = ({ dataURL }) => {
 
                 // Hide text elements for rooms where labelled_in_map is false
                 roomsForLevel.forEach((room) => {
-                  if (room.number) {
+                  if (room.roomId) {
                     // Find group with id like "room_005" for room number "005"
                     const roomGroup = svgDoc.getElementById(
-                      `room_${room.number}`
+                      `room_${room.roomId}`
                     );
                     if (roomGroup) {
                       // Find the .text group within this room group
@@ -140,10 +141,7 @@ export const App = ({ dataURL }) => {
                           roomGroup.querySelectorAll(".area");
                         areaElements.forEach((areaEl) => {
                           areaEl.style.cursor = "pointer";
-                          areaEl.setAttribute(
-                            "data-room-area-number",
-                            room.number
-                          );
+                          areaEl.setAttribute("data-area-roomid", room.roomId);
                         });
                       }
                     }
@@ -174,25 +172,29 @@ export const App = ({ dataURL }) => {
 
   // Attach click listeners after SVG is rendered in the DOM
   useEffect(() => {
-    if (!svgContainerRef.current || !data) return;
+    if (
+      !appContainerRef.current ||
+      !data ||
+      Object.keys(svgContents).length === 0
+    )
+      return;
 
     const handleRoomClick = (event) => {
-      const roomNumber = event.target.getAttribute("data-room-area-number");
-      if (roomNumber) {
-        console.log(`Clicked on room ${roomNumber}`);
-        const roomData = data.find((room) => room.number === roomNumber);
+      const roomId = event.target.getAttribute("data-area-roomid");
+      console.log(`Clicked on room ${roomId}`);
+      if (roomId) {
+        const roomData = data.find((room) => room.roomId === roomId);
         if (roomData) {
           console.log("Room data:", roomData);
-          // TODO: Add your click handler logic here
         }
       }
     };
 
-    const svgContainer = svgContainerRef.current;
-    svgContainer.addEventListener("click", handleRoomClick);
+    const appContainer = appContainerRef.current;
+    appContainer.addEventListener("click", handleRoomClick);
 
     return () => {
-      svgContainer.removeEventListener("click", handleRoomClick);
+      appContainer.removeEventListener("click", handleRoomClick);
     };
   }, [svgContents, data]);
 
@@ -266,7 +268,7 @@ export const App = ({ dataURL }) => {
   };
 
   return html`
-    <div class="container">
+    <div class="container" ref=${appContainerRef}>
       <style>
         .app.desktop {
           display: grid;
@@ -321,10 +323,7 @@ export const App = ({ dataURL }) => {
           </div>
         </div>
         <div style="overflow: auto;">
-          <${FloorPlan}
-            svgContent=${svgContents[selectedLevel]}
-            svgContainerRef=${svgContainerRef}
-          />
+          <${FloorPlan} svgContent=${svgContents[selectedLevel]} />
         </div>
       </div>
 
@@ -342,10 +341,7 @@ export const App = ({ dataURL }) => {
                   events=${events}
                   sectionRefs=${sectionRefs}
                 />
-                <${FloorPlan}
-                  svgContent=${svgContents[levelLabel]}
-                  svgContainerRef=${svgContainerRef}
-                />
+                <${FloorPlan} svgContent=${svgContents[levelLabel]} />
               </div>`;
             }
           )}
@@ -369,14 +365,11 @@ const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
   </div>`;
 };
 
-const FloorPlan = ({ svgContent, svgContainerRef }) => {
+const FloorPlan = ({ svgContent }) => {
   if (!svgContent) {
     return html`<p>Kein Grundriss für diese Ebene verfügbar.</p>`;
   }
-  return html`<div
-    ref=${svgContainerRef}
-    dangerouslySetInnerHTML=${{ __html: svgContent }}
-  />`;
+  return html`<div dangerouslySetInnerHTML=${{ __html: svgContent }} />`;
 };
 
 const EventsPerLevel = ({ levelLabel, events, sectionRefs }) => {
