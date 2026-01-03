@@ -13,8 +13,10 @@ export const App = ({ dataURL }) => {
   ];
   const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
   const sectionRefs = useRef({});
+  const svgContainerRef = useRef(null);
 
   const [data, setData] = useState(null);
+  const [svgContent, setSvgContent] = useState(null);
 
   useEffect(() => {
     // read data from dataURL (CSV file)
@@ -67,6 +69,112 @@ export const App = ({ dataURL }) => {
     }
   }, [dataURL]);
   console.log("Data updated:", data);
+
+  // Load SVG based on selected level and manipulate based on data
+  useEffect(() => {
+    const loadSVG = async () => {
+      try {
+        // Map level labels to SVG filenames
+        const svgMap = {
+          "HG 0": "Hauptgebaeude_Erdgeschoss_edited.svg",
+          // Add more mappings as needed
+        };
+
+        const svgFileName = svgMap[selectedLevel];
+        if (svgFileName) {
+          const response = await fetch(`maps/${svgFileName}`);
+          if (response.ok) {
+            const svgText = await response.text();
+
+            // Parse SVG and manipulate based on data
+            const parser = new DOMParser();
+            const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
+
+            // Get rooms for this level
+            const roomsForLevel =
+              data?.filter((room) => room.levelLabel === selectedLevel) || [];
+
+            // Hide text elements for rooms where sichtbar is false
+            roomsForLevel.forEach((room) => {
+              console.log(
+                "Processing room:",
+                room.number,
+                "sichtbar:",
+                room.sichtbar,
+                "klickbar:",
+                room.klickbar
+              );
+              if (room.number) {
+                // Find group with id like "room_005" for room number "005"
+                const roomGroup = svgDoc.getElementById(`room_${room.number}`);
+                if (roomGroup) {
+                  // Find the .text group within this room group
+                  if (!room.sichtbar) {
+                    const textElements = roomGroup.querySelectorAll(".text");
+                    textElements.forEach((textEl) => {
+                      textEl.style.display = "none";
+                    });
+                  }
+                  if (!room.klickbar) {
+                    const areaElements = roomGroup.querySelectorAll(".area");
+                    areaElements.forEach((areaEl) => {
+                      areaEl.style.display = "none";
+                    });
+                  }
+                  if (room.klickbar) {
+                    const areaElements = roomGroup.querySelectorAll(".area");
+                    areaElements.forEach((areaEl) => {
+                      areaEl.style.cursor = "pointer";
+                      areaEl.setAttribute("data-room-area-number", room.number);
+                    });
+                  }
+                }
+              }
+            });
+
+            // Serialize back to string
+            const serializer = new XMLSerializer();
+            const manipulatedSVG = serializer.serializeToString(svgDoc);
+            setSvgContent(manipulatedSVG);
+          } else {
+            console.error(`SVG file not found: ${svgFileName}`);
+            setSvgContent(null);
+          }
+        } else {
+          setSvgContent(null);
+        }
+      } catch (error) {
+        console.error("Error loading SVG:", error);
+        setSvgContent(null);
+      }
+    };
+
+    loadSVG();
+  }, [selectedLevel, data]);
+
+  // Attach click listeners after SVG is rendered in the DOM
+  useEffect(() => {
+    if (!svgContainerRef.current || !data) return;
+
+    const handleRoomClick = (event) => {
+      const roomNumber = event.target.getAttribute("data-room-area-number");
+      if (roomNumber) {
+        console.log(`Clicked on room ${roomNumber}`);
+        const roomData = data.find((room) => room.number === roomNumber);
+        if (roomData) {
+          console.log("Room data:", roomData);
+          // TODO: Add your click handler logic here
+        }
+      }
+    };
+
+    const svgContainer = svgContainerRef.current;
+    svgContainer.addEventListener("click", handleRoomClick);
+
+    return () => {
+      svgContainer.removeEventListener("click", handleRoomClick);
+    };
+  }, [svgContent, data]);
 
   const sortedDataByLevelLabel = {};
   if (data) {
@@ -190,15 +298,23 @@ export const App = ({ dataURL }) => {
         </div>
       </div>
 
-      <div style="background-color: #d9e1ff82;">
-        Grundriss für aktuell ausgewählte Ebene: ${selectedLevel}
+      <div style="background-color: #d9e1ff82; padding: 20px; overflow: auto;">
+        <h3 style="margin-top: 0;">
+          Grundriss für aktuell ausgewählte Ebene: ${selectedLevel}
+        </h3>
+        ${svgContent
+          ? html`<div
+              ref=${svgContainerRef}
+              dangerouslySetInnerHTML=${{ __html: svgContent }}
+            />`
+          : html`<p>Kein Grundriss für diese Ebene verfügbar.</p>`}
       </div>
     </div>
   `;
 };
 
 const Event = ({ event }) => {
-  if (!event.sichtbar && !event.klickbar) {
+  if (!event.klickbar) {
     return null;
   }
   return html`<div style="border: 1px solid black; padding: 4px;">
