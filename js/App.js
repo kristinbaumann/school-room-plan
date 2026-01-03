@@ -45,11 +45,14 @@ export const App = ({ dataURL }) => {
               building: row["Gebaeude"] ? row["Gebaeude"].trim() : null,
               name1: row["Name_1"] ? row["Name_1"].trim() : null,
               name2: row["Name_2"] ? row["Name_2"].trim() : null,
-              klickbar: row["klickbar"]
-                ? row["klickbar"].trim().toLowerCase() === "y"
+              listed_clickable: row["gelistet & in Karte klickbar"]
+                ? row["gelistet & in Karte klickbar"].trim().toLowerCase() ===
+                  "y"
                 : false,
-              sichtbar: row["sichtbar"]
-                ? row["sichtbar"].trim().toLowerCase() === "y"
+              labelled_in_map: row["in Karte zusätzlich beschriftet"]
+                ? row["in Karte zusätzlich beschriftet"]
+                    .trim()
+                    .toLowerCase() === "y"
                 : false,
             };
             // match level labels
@@ -94,34 +97,26 @@ export const App = ({ dataURL }) => {
             const roomsForLevel =
               data?.filter((room) => room.levelLabel === selectedLevel) || [];
 
-            // Hide text elements for rooms where sichtbar is false
+            // Hide text elements for rooms where labelled_in_map is false
             roomsForLevel.forEach((room) => {
-              console.log(
-                "Processing room:",
-                room.number,
-                "sichtbar:",
-                room.sichtbar,
-                "klickbar:",
-                room.klickbar
-              );
               if (room.number) {
                 // Find group with id like "room_005" for room number "005"
                 const roomGroup = svgDoc.getElementById(`room_${room.number}`);
                 if (roomGroup) {
                   // Find the .text group within this room group
-                  if (!room.sichtbar) {
+                  if (!room.labelled_in_map) {
                     const textElements = roomGroup.querySelectorAll(".text");
                     textElements.forEach((textEl) => {
                       textEl.style.display = "none";
                     });
                   }
-                  if (!room.klickbar) {
+                  if (!room.listed_clickable) {
                     const areaElements = roomGroup.querySelectorAll(".area");
                     areaElements.forEach((areaEl) => {
                       areaEl.style.display = "none";
                     });
                   }
-                  if (room.klickbar) {
+                  if (room.listed_clickable) {
                     const areaElements = roomGroup.querySelectorAll(".area");
                     areaElements.forEach((areaEl) => {
                       areaEl.style.cursor = "pointer";
@@ -314,7 +309,7 @@ export const App = ({ dataURL }) => {
 };
 
 const Event = ({ event }) => {
-  if (!event.klickbar) {
+  if (!event.listed_clickable) {
     return null;
   }
   return html`<div style="border: 1px solid black; padding: 4px;">
