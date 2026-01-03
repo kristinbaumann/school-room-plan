@@ -85,7 +85,7 @@ export const App = ({ dataURL }) => {
 
         const svgFileName = svgMap[selectedLevel];
         if (svgFileName) {
-          const response = await fetch(`maps/${svgFileName}`);
+          const response = await fetch(`../maps/${svgFileName}`);
           if (response.ok) {
             const svgText = await response.text();
 

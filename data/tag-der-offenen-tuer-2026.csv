@@ -37,7 +37,7 @@ ID,Gebaeude,Etage,Nummer,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet
  Dr. Heide Pilarczyk",N,N
 52,Hauptgebäude,1. Obergeschoss,114,Medienraum,,N,N
 53,Hauptgebäude,1. Obergeschoss,115,Lehrerzimmer,,N,N
-54,Hauptgebäude,1. Obergeschoss,117,,WC Damen,Y,Y
+54,Hauptgebäude,1. Obergeschoss,117,,WC Damen,Y,N
 55,Hauptgebäude,1. Obergeschoss,118,,"IT-Admin: Michael König, David Hähningen",N,N
 56,Hauptgebäude,1. Obergeschoss,119,Physik 2,,N,N
 57,Hauptgebäude,1. Obergeschoss,121,Mathe/Physik,(Es)/(Jo),N,N
@@ -60,7 +60,7 @@ ID,Gebaeude,Etage,Nummer,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet
 75,Hauptgebäude,2. Obergeschoss,215,Informatik – Vorstellung „Scratch“ und „Python“,"David Hähnigen, Michael Fiehn, Ralf Kohler",Y,Y
 76,Hauptgebäude,2. Obergeschoss,216,Mitspielstück(e) • Instrumente ausprobieren,Fabian Kenk,Y,Y
 77,Hauptgebäude,2. Obergeschoss,216p,,,N,N
-78,Hauptgebäude,2. Obergeschoss,218,,WC Herren,Y,Y
+78,Hauptgebäude,2. Obergeschoss,218,,WC Herren,Y,N
 79,Hauptgebäude,2. Obergeschoss,220,Aula,"11:00–11:15 Uhr
  Schulchor
  Sarah-Jiny Kisker, Fabian Kenk
@@ -140,7 +140,7 @@ ID,Gebaeude,Etage,Nummer,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet
 37,Hauptgebäude,Untergeschoss,,,Umkleiden & Duschen,N,N
 38,Hauptgebäude,Untergeschoss,,,Umkleiden & Duschen,N,N
 39,Hauptgebäude,Untergeschoss,,,Waschküche,N,N
-40,Hauptgebäude,Untergeschoss,,,WC Damen,Y,Y
+40,Hauptgebäude,Untergeschoss,,,WC Damen,Y,N
 61,Hauptgebäude,1. Obergeschoss,,Freiarbeitsbereich,,N,N
 62,Hauptgebäude,1. Obergeschoss,,Lehrerzimmer,,N,N
 82,Hauptgebäude,2. Obergeschoss,,Biologie-Arbeitsraum,,N,N
@@ -152,9 +152,9 @@ ID,Gebaeude,Etage,Nummer,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet
 105,Neubau,Erdgeschoss,,,Technik,N,N
 106,Neubau,Erdgeschoss,,,Technik,N,N
 107,Neubau,Erdgeschoss,,,Technik,N,N
-108,Neubau,Erdgeschoss,,,"WC Damen, barrierefrei",Y,Y
+108,Neubau,Erdgeschoss,,,"WC Damen, barrierefrei",Y,N
 115,Neubau,1. Obergeschoss,,,Technik,N,N
 116,Neubau,1. Obergeschoss,,,Technik,N,N
-117,Neubau,1. Obergeschoss,,,WC Damen,Y,Y
-118,Neubau,1. Obergeschoss,,,WC Herren,Y,Y
-119,Neubau,1. Obergeschoss,,,"WC Herren, barrierefrei",Y,Y
+117,Neubau,1. Obergeschoss,,,WC Damen,Y,N
+118,Neubau,1. Obergeschoss,,,WC Herren,Y,N
+119,Neubau,1. Obergeschoss,,,"WC Herren, barrierefrei",Y,N
