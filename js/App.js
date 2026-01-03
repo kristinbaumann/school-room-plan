@@ -1,18 +1,20 @@
 import { html, useState, useEffect, useRef } from "./preact-htm.js";
 import { parseCSV } from "./helper.js";
 
-const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
+// const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
+const mapsBasePath = "../maps/";
+
+const levels = [
+  { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
+  { label: "HG 0", building: "Hauptgebäude", level: "Erdgeschoss" },
+  { label: "HG 1", building: "Hauptgebäude", level: "1. Obergeschoss" },
+  { label: "HG 2", building: "Hauptgebäude", level: "2. Obergeschoss" },
+  { label: "HG 3", building: "Hauptgebäude", level: "3. Obergeschoss" },
+  { label: "NB 0", building: "Neubau", level: "Erdgeschoss" },
+  { label: "NB 1", building: "Neubau", level: "1. Obergeschoss" },
+];
 
 export const App = ({ dataURL }) => {
-  const levels = [
-    { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
-    { label: "HG 0", building: "Hauptgebäude", level: "Erdgeschoss" },
-    { label: "HG 1", building: "Hauptgebäude", level: "1. Obergeschoss" },
-    { label: "HG 2", building: "Hauptgebäude", level: "2. Obergeschoss" },
-    { label: "HG 3", building: "Hauptgebäude", level: "3. Obergeschoss" },
-    { label: "NB 0", building: "Neubau", level: "Erdgeschoss" },
-    { label: "NB 1", building: "Neubau", level: "1. Obergeschoss" },
-  ];
   const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
   const sectionRefs = useRef({});
   const svgContainerRef = useRef(null);
@@ -82,7 +84,12 @@ export const App = ({ dataURL }) => {
         // Map level labels to SVG filenames
         const svgMap = {
           "HG 0": "Hauptgebaeude_Erdgeschoss_edited.svg",
-          // Add more mappings as needed
+          "HG -1": "Hauptgebaeude_Untergeschoss.svg",
+          "HG 1": "Hauptgebaeude_1_Obergeschoss.svg",
+          "HG 2": "Hauptgebaeude_2_Obergeschoss.svg",
+          "HG 3": "Hauptgebaeude_3_Obergeschoss.svg",
+          "NB 0": "Neubau_Erdgeschoss.svg",
+          "NB 1": "Neubau_Obergeschoss.svg",
         };
 
         const svgFileName = svgMap[selectedLevel];
@@ -243,8 +250,18 @@ export const App = ({ dataURL }) => {
   };
 
   return html`
-    <div style="display: grid; grid-template-columns: 60% 40%; gap: 10px;">
+    <div class="app">
       <style>
+        .app {
+          display: grid;
+          grid-template-columns: 60% 40%;
+          gap: 10px;
+        }
+        @media (max-width: 800px) {
+          .app {
+            display: flex;
+          }
+        }
         .event {
           transition: background-color 0.3s;
         }
@@ -277,49 +294,65 @@ export const App = ({ dataURL }) => {
         >
           ${Object.entries(sortedDataByLevelLabel).map(
             ([levelLabel, events]) => {
-              const levelObject = levels.find(
-                (lvl) => lvl.label === levelLabel
-              );
-              if (!levelObject) {
-                return null;
-              }
-
-              return html`
-                <div
-                  style="margin-top: 10px; margin-bottom: 30px;"
-                  data-level-label=${levelLabel}
-                  ref=${(el) => (sectionRefs.current[levelLabel] = el)}
-                >
-                  <h3
-                    style="position: sticky; top: 0; background-color: white; z-index: 10; padding: 10px 0; margin: 0;"
-                  >
-                    <b>${levelObject.building}</b>${" "}<span
-                      style="font-weight: normal;"
-                      >${levelObject.level}</span
-                    >
-                  </h3>
-                  <div
-                    style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;"
-                  >
-                    ${events.map((event) => html`<${Event} event=${event} />`)}
-                  </div>
-                </div>
-              `;
+              return html`<${EventsPerLevel}
+                levelLabel=${levelLabel}
+                events=${events}
+                sectionRefs=${sectionRefs}
+              />`;
             }
           )}
         </div>
       </div>
 
       <div style="overflow: auto;">
-        ${svgContent
-          ? html`<div
-              ref=${svgContainerRef}
-              dangerouslySetInnerHTML=${{ __html: svgContent }}
-            />`
-          : html`<p>Kein Grundriss für diese Ebene verfügbar.</p>`}
+        <${FloorPlan}
+          svgContent=${svgContent}
+          svgContainerRef=${svgContainerRef}
+        />
       </div>
     </div>
   `;
+};
+
+const FloorPlan = ({ svgContent, svgContainerRef }) => {
+  if (!svgContent) {
+    return html`<p>Kein Grundriss für diese Ebene verfügbar.</p>`;
+  }
+  return html`<div
+    ref=${svgContainerRef}
+    dangerouslySetInnerHTML=${{ __html: svgContent }}
+  />`;
+};
+
+const EventsPerLevel = ({ levelLabel, events, sectionRefs }) => {
+  console.log("Rendering events for level:", levelLabel, events);
+  const levelObject = levels.find((lvl) => lvl.label === levelLabel);
+  if (!levelObject || events.length === 0) {
+    return null;
+  }
+  // get number of listed_clickable events
+  const listedEvents = events.filter((ev) => ev.listed_clickable);
+  if (listedEvents.length === 0) {
+    return null;
+  }
+  return html`<div
+    style="margin-top: 10px; margin-bottom: 30px;"
+    data-level-label=${levelLabel}
+    ref=${(el) => (sectionRefs.current[levelLabel] = el)}
+  >
+    <h3
+      style="position: sticky; top: 0; background-color: white; z-index: 10; padding: 10px 0; margin: 0;"
+    >
+      <b>${levelObject.building}</b>${" "}<span style="font-weight: normal;"
+        >${levelObject.level}</span
+      >
+    </h3>
+    <div
+      style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;"
+    >
+      ${listedEvents.map((event) => html`<${Event} event=${event} />`)}
+    </div>
+  </div>`;
 };
 
 const Event = ({ event }) => {
