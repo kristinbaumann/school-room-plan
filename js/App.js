@@ -244,6 +244,21 @@ export const App = ({ dataURL }) => {
 
   return html`
     <div style="display: grid; grid-template-columns: 60% 40%; gap: 10px;">
+      <style>
+        .event {
+          transition: background-color 0.3s;
+        }
+        .event:hover {
+          background-color: #e2b2a4;
+        }
+        .area {
+          fill: #dfdfdf;
+          transition: fill 0.3s;
+        }
+        .area:hover {
+          fill: #e2b2a4;
+        }
+      </style>
       <div>
         <div
           style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
@@ -295,10 +310,7 @@ export const App = ({ dataURL }) => {
         </div>
       </div>
 
-      <div style="background-color: #d9e1ff82; padding: 20px; overflow: auto;">
-        <h3 style="margin-top: 0;">
-          Grundriss für aktuell ausgewählte Ebene: ${selectedLevel}
-        </h3>
+      <div style="overflow: auto;">
         ${svgContent
           ? html`<div
               ref=${svgContainerRef}
@@ -314,7 +326,13 @@ const Event = ({ event }) => {
   if (!event.listed_clickable) {
     return null;
   }
-  return html`<div style="border: 1px solid black; padding: 4px;">
+  return html`<div
+    class="event"
+    style="border: 1px solid black; padding: 4px; cursor: pointer;"
+    onclick=${() => {
+      console.log("Clicked on event:", event);
+    }}
+  >
     ${event.number ? html`<p style="margin: 0;">Raum: ${event.number}</p>` : ""}
     ${event.name1
       ? html`<p style="font-weight: bold; margin: 0;">${event.name1}</p>`
