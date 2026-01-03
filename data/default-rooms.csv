@@ -20,7 +20,7 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
 120,Hauptgebäude,Erdgeschoss,Foyer,0foyer,Foyer,,N,N
 121,Hauptgebäude,Erdgeschoss,Gang vor Raum 003,003gang,Gang vor Raum 003,,N,N
 122,Hauptgebäude,Erdgeschoss,Gang vor Raum 005,005gang,Gang vor Raum 005,,N,N
-19,Hauptgebäude,Untergeschoss,UG1,UG1,Ruheruam L,,Y,Y
+19,Hauptgebäude,Untergeschoss,UG1,UG1,Ruheraum L,,Y,Y
 20,Hauptgebäude,Untergeschoss,UG14,UG14,Sozialpädagogin,Helle Westermann,Y,Y
 21,Hauptgebäude,Untergeschoss,UG2,UG2,Beratung & Lerncoaching,,Y,Y
 22,Hauptgebäude,Untergeschoss,UG3,UG3,"Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung","Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand",Y,Y
