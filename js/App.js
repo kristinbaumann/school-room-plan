@@ -79,7 +79,7 @@ export const App = ({ dataURL }) => {
         });
     }
   }, [dataURL]);
-  console.log("Data updated:", data);
+  //   console.log("Data updated:", data);
 
   // Load all SVGs at once and manipulate based on data
   useEffect(() => {
@@ -217,48 +217,91 @@ export const App = ({ dataURL }) => {
       }
     });
   }
-  console.log("Data by level label:", sortedDataByLevelLabel);
+  //   console.log("Data by level label:", sortedDataByLevelLabel);
 
-  // Intersection Observer to update selectedLevel based on scroll position
+  // Level detection: scroll listener for both mobile and desktop
   useEffect(() => {
     if (!data || Object.keys(sortedDataByLevelLabel).length === 0) return;
 
-    const eventListElement = document.querySelector(".event-list");
-    if (!eventListElement) return;
+    let cleanupFn = null;
 
-    const observerOptions = {
-      root: eventListElement,
-      rootMargin: "-10% 0px -80% 0px",
-      threshold: 0,
-    };
+    // Wait for layout to complete before setting up scroll detection
+    const timeoutId = setTimeout(() => {
+      const isMobile = window.innerWidth <= 800;
 
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const levelLabel = entry.target.dataset.levelLabel;
-          if (levelLabel) {
-            setSelectedLevel(levelLabel);
+      const handleScroll = () => {
+        // Query sections from the correct view (desktop or mobile)
+        const viewSelector = isMobile ? ".app.mobile" : ".app.desktop";
+        const view = document.querySelector(viewSelector);
+        if (!view) return;
+
+        const sectionElements = view.querySelectorAll("[data-level-label]");
+        const sections = Array.from(sectionElements).map((el) => ({
+          label: el.getAttribute("data-level-label"),
+          element: el,
+        }));
+
+        if (sections.length === 0) return;
+
+        let scrollContainer, scrollTop, viewportHeight;
+
+        if (isMobile) {
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          viewportHeight = window.innerHeight;
+        } else {
+          const desktopView = document.querySelector(".app.desktop");
+          scrollContainer = desktopView?.querySelector(".event-list");
+          if (!scrollContainer) return;
+          scrollTop = scrollContainer.scrollTop;
+          viewportHeight = scrollContainer.clientHeight;
+        }
+
+        const triggerPoint = scrollTop + viewportHeight * 0.2;
+        let activeSection = sections[0].label;
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const { label, element } = sections[i];
+
+          // Use offsetTop for both mobile and desktop
+          // This gives us the element's position relative to its offsetParent
+          const elementTop = element.offsetTop;
+
+          if (
+            elementTop <= triggerPoint &&
+            activeSection === sections[0].label
+          ) {
+            activeSection = label;
           }
         }
-      });
-    };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+        setSelectedLevel(activeSection);
+      };
 
-    // Observe all sections
-    Object.keys(sectionRefs.current).forEach((key) => {
-      if (sectionRefs.current[key]) {
-        observer.observe(sectionRefs.current[key]);
+      if (isMobile) {
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        cleanupFn = () => window.removeEventListener("scroll", handleScroll);
+      } else {
+        const desktopView = document.querySelector(".app.desktop");
+        const scrollContainer = desktopView?.querySelector(".event-list");
+        if (scrollContainer) {
+          scrollContainer.addEventListener("scroll", handleScroll, {
+            passive: true,
+          });
+          cleanupFn = () =>
+            scrollContainer.removeEventListener("scroll", handleScroll);
+        }
       }
-    });
+
+      handleScroll(); // Initial check
+    }, 500); // Increased timeout to ensure content is rendered
 
     return () => {
-      observer.disconnect();
+      clearTimeout(timeoutId);
+      if (cleanupFn) {
+        cleanupFn();
+      }
     };
-  }, [data, sortedDataByLevelLabel]);
+  }, [data, svgContents]);
 
   // Scroll detection for sticky header on mobile
   useEffect(() => {
@@ -296,11 +339,23 @@ export const App = ({ dataURL }) => {
 
   const scrollToLevel = (levelLabel) => {
     setSelectedLevel(levelLabel);
-    const eventListElement = document.querySelector(".event-list");
     const sectionElement = sectionRefs.current[levelLabel];
-    if (sectionElement && eventListElement) {
-      const offsetTop = sectionElement.offsetTop - eventListElement.offsetTop;
-      eventListElement.scrollTo({ top: offsetTop, behavior: "smooth" });
+    if (!sectionElement) return;
+
+    // Detect if we're on mobile or desktop
+    const isMobile = window.innerWidth <= 800;
+
+    if (isMobile) {
+      // On mobile, scroll the window
+      const offsetTop = sectionElement.offsetTop;
+      window.scrollTo({ top: offsetTop - 120, behavior: "smooth" }); // 120px offset for sticky header
+    } else {
+      // On desktop, scroll the event-list container
+      const eventListElement = document.querySelector(".event-list");
+      if (eventListElement) {
+        const offsetTop = sectionElement.offsetTop - eventListElement.offsetTop;
+        eventListElement.scrollTo({ top: offsetTop, behavior: "smooth" });
+      }
     }
   };
 
@@ -330,6 +385,7 @@ export const App = ({ dataURL }) => {
             max-height: 95vh;
 
             .event-list {
+              position: relative;
               overflow-y: auto;
               margin-top: 10px;
 
@@ -478,7 +534,6 @@ const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
     acc[level.building].push(level);
     return acc;
   }, {});
-  console.log("Grouped levels:", groupedLevels);
 
   return html`<div style="display: flex; flex-direction: column; gap: 6px;">
     ${Object.entries(groupedLevels).map(
@@ -508,13 +563,13 @@ const FloorPlan = ({ svgContent }) => {
 };
 
 const EventsPerLevel = ({ levelLabel, listedEvents, sectionRefs }) => {
-  console.log("Rendering EventsPerLevel for", levelLabel, listedEvents);
+  //   console.log("Rendering EventsPerLevel for", levelLabel, listedEvents);
   const levelObject = levels.find((lvl) => lvl.label === levelLabel);
   if (!levelObject || !listedEvents) {
     return null;
   }
   return html`<div
-    style="margin-bottom: 30px;"
+    style="margin-bottom: 30px; position: relative;"
     data-level-label=${levelLabel}
     ref=${(el) => (sectionRefs.current[levelLabel] = el)}
   >
