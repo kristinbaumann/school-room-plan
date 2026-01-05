@@ -323,7 +323,7 @@ export const App = ({ dataURL }) => {
                 }
                 return html`<${EventsPerLevel}
                   levelLabel=${levelLabel}
-                  events=${events}
+                  listedEvents=${listedEvents}
                   sectionRefs=${sectionRefs}
                 />`;
               }
