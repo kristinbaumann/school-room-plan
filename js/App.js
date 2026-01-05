@@ -267,8 +267,11 @@ export const App = ({ dataURL }) => {
     }
   };
 
-  if (!data || Object.keys(svgContents).length === 0) {
-    return html`<p>Lade Daten...</p>`;
+  if (!data) {
+    return html`<p style="text-align: center;">Lade Daten...</p>`;
+  }
+  if (Object.keys(svgContents).length === 0) {
+    return html`<p style="text-align: center;">Lade Grundrisse...</p>`;
   }
 
   return html`
