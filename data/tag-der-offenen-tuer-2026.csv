@@ -4,11 +4,11 @@ Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gel
 002a,002a,Hauptgebäude,Erdgeschoss,Schulleiterin,Dr. Maike Languth,N,N
 003,003,Hauptgebäude,Erdgeschoss,Stellv. Schulleiter,Tino Fischer,N,N
 004,004,Hauptgebäude,Erdgeschoss,Hege Helping Hands e.V.,"Yvonne Böcker, Matthias Wilksen",N,Y
-005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Frau Aschenbrenner",N,Y
+005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner",N,Y
 006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch
- Hier: Geschichte & Geografie
- Beate Behrens, Gerhard Wille
- Biology im 2. OG",N,Y
+Hier: Geschichte & Geografie
+Beate Behrens, Gerhard Wille
+Biology im 2. OG",N,Y
 007,007,Hauptgebäude,Erdgeschoss,Klasse 5d (Fo),,N,N
 008,008,Hauptgebäude,Erdgeschoss,Klasse 5c (Be),,N,N
 011,011,Hauptgebäude,Erdgeschoss,Klasse 5a (Wg),,N,N
@@ -28,24 +28,16 @@ Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gel
 102,102,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",N,N
 103,103,Hauptgebäude,1. Obergeschoss,Deutsch am Gymnasium Eppendorf – Schwerpunkte und Projekte,"Kristina Duncan, Frau Schroth",N,Y
 104,104,Hauptgebäude,1. Obergeschoss,Mathematik zum Mitmachen,Gesa Einsporn,N,Y
-105,105,Hauptgebäude,1. Obergeschoss,"Berufsorientierung: Wie entwickelt man ein
-Gefühl für eigene Stärken und Interessen?
- 
-
- PGW (Politik, Gesellschaft, Wirtschaft) – ein Fach ab Klasse 8 und im Profil 
- 
-
- Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG","Dr. Björn Reetz, Herr Dr. Stephan Benzmann, Caroline Jahn, Birte Rösler, Rabea Gausepohl, b@s-Schülerteam",N,Y
+105,105,Hauptgebäude,1. Obergeschoss,"Berufsorientierung: Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
+PGW (Politik, Gesellschaft, Wirtschaft) – ein Fach ab Klasse 8 und im Profil 
+Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG","Dr. Björn Reetz, Herr Dr. Stephan Benzmann, Caroline Jahn, Birte Rösler, Rabea Gausepohl, b@s-Schülerteam",N,Y
 106,106,Hauptgebäude,1. Obergeschoss,"Vive la France – Vive l’échange
-
 Französisch und unser Frankreichaustausch","Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas",N,Y
 107,107,Hauptgebäude,1. Obergeschoss,Klasse 9d (Ho),,N,N
 108,108,Hauptgebäude,1. Obergeschoss,Klasse 9c (Er),,N,N
 111,111,Hauptgebäude,1. Obergeschoss,Klasse 9a (Ka),,N,N
 112,112,Hauptgebäude,1. Obergeschoss,"Geografie – Auf dem Weg zur Nachhaltigkeit
-
 Crafting - Gutes Gewissen mit Seegrasskissen
-
 Hege Studies-AG","Dr. Jean-Marie Schwarzkopf, Florian Hogg",N,Y
 113,113,Hauptgebäude,1. Obergeschoss,12:00 Uhr: »Franz en France«: 15-minütiges deutsch-französisches Theaterstück,"Von Schülerinnen und Schülern aus Jg. 7, Dr. Heide Pilarczyk",N,N
 114,114,Hauptgebäude,1. Obergeschoss,Medienraum,,N,N
