@@ -628,6 +628,7 @@ export const App = ({ dataURL }) => {
           <${LevelSelector}
             selectedLevel=${selectedLevel}
             scrollToLevel=${scrollToLevel}
+            sortedDataByLevelLabel=${sortedDataByLevelLabel}
           />
           <div class="event-list">
             ${Object.entries(sortedDataByLevelLabel).map(
@@ -659,6 +660,7 @@ export const App = ({ dataURL }) => {
           <${LevelSelector}
             selectedLevel=${selectedLevel}
             scrollToLevel=${scrollToLevel}
+            sortedDataByLevelLabel=${sortedDataByLevelLabel}
           />
         </div>
         <div class=${`sticky-placeholder ${isFixed ? "active" : ""}`}></div>
@@ -689,15 +691,26 @@ export const App = ({ dataURL }) => {
   `;
 };
 
-const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
+const LevelSelector = ({
+  selectedLevel,
+  scrollToLevel,
+  sortedDataByLevelLabel,
+}) => {
+  // Filter levels to only show those with events
+  const levelsWithEvents = levels.filter((level) => {
+    const eventsForLevel = sortedDataByLevelLabel[level.key] || [];
+    const listedEvents = eventsForLevel.filter((ev) => ev.listed_clickable);
+    return listedEvents.length > 0;
+  });
+
   return html`<div>
     <p style="margin: 0;">Unsere Gebäude & Etagen:</p>
     <div style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 6px;">
-      ${levels.map(
+      ${levelsWithEvents.map(
         (level) => html`<${Button}
           isSelected=${selectedLevel === level.key}
           onClick=${() => scrollToLevel(level.key)}
-          >${level.label}<//
+          >${level.label}</${Button}
         >`
       )}
     </div>
