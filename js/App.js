@@ -18,6 +18,9 @@ export const App = ({ dataURL }) => {
   const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
   const sectionRefs = useRef({});
   const appContainerRef = useRef(null);
+  const stickyHeaderRef = useRef(null);
+  const [isFixed, setIsFixed] = useState(false);
+  const [headerTop, setHeaderTop] = useState(0);
 
   const [data, setData] = useState(null);
   const [svgContents, setSvgContents] = useState({});
@@ -257,6 +260,40 @@ export const App = ({ dataURL }) => {
     };
   }, [data, sortedDataByLevelLabel]);
 
+  // Scroll detection for sticky header on mobile
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!stickyHeaderRef.current || !appContainerRef.current) return;
+
+      const rect = stickyHeaderRef.current.getBoundingClientRect();
+      const appRect = appContainerRef.current.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      // Get the original position of the header
+      if (headerTop === 0 && rect.top > 0) {
+        setHeaderTop(rect.top + scrollTop);
+      }
+
+      // Check if the app container is still in view
+      const appInView = appRect.bottom > 0;
+
+      // Check if we've scrolled past the header's original position
+      if (headerTop > 0) {
+        if (scrollTop >= headerTop && !isFixed && appInView) {
+          setIsFixed(true);
+        } else if ((scrollTop < headerTop || !appInView) && isFixed) {
+          setIsFixed(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isFixed, headerTop]);
+
   const scrollToLevel = (levelLabel) => {
     setSelectedLevel(levelLabel);
     const eventListElement = document.querySelector(".event-list");
@@ -279,8 +316,50 @@ export const App = ({ dataURL }) => {
       <style>
         .app.desktop {
           display: grid;
-          grid-template-columns: 60% 40%;
-          gap: 10px;
+          grid-template-columns: 50% 50%;
+          gap: 60px;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 0 10px;
+          max-height: 95vh;
+          overflow: hidden;
+
+          .event-list-container {
+            display: flex;
+            flex-direction: column;
+            max-height: 95vh;
+
+            .event-list {
+              overflow-y: auto;
+              margin-top: 10px;
+
+              .events-list-headline {
+                position: sticky;
+                top: 0;
+                background-color: white;
+              }
+            }
+          }
+          .floor-plan-container {
+            max-height: 95vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+          }
+          .floor-plan-container > div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .floor-plan-container svg {
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+            width: auto;
+          }
         }
         .app.mobile {
           display: none;
@@ -291,6 +370,27 @@ export const App = ({ dataURL }) => {
           }
           .app.mobile {
             display: block;
+
+            .event-list {
+              margin-top: 10px;
+            }
+
+            .sticky-header {
+              z-index: 999;
+              background-color: white;
+
+              &.is-fixed {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+              }
+            }
+            .sticky-placeholder.active {
+              height: 100px;
+            }
           }
         }
         .event {
@@ -309,15 +409,12 @@ export const App = ({ dataURL }) => {
       </style>
 
       <div class="app desktop">
-        <div>
+        <div class="event-list-container">
           <${LevelSelector}
             selectedLevel=${selectedLevel}
             scrollToLevel=${scrollToLevel}
           />
-          <div
-            class="event-list"
-            style="overflow-y: auto; height: calc(100vh - 150px); margin-top: 20px;"
-          >
+          <div class="event-list">
             ${Object.entries(sortedDataByLevelLabel).map(
               ([levelLabel, events]) => {
                 const listedEvents = events.filter((ev) => ev.listed_clickable);
@@ -333,16 +430,22 @@ export const App = ({ dataURL }) => {
             )}
           </div>
         </div>
-        <div style="overflow: auto;">
+        <div class="floor-plan-container">
           <${FloorPlan} svgContent=${svgContents[selectedLevel]} />
         </div>
       </div>
 
       <div class="app mobile">
-        <${LevelSelector}
-          selectedLevel=${selectedLevel}
-          scrollToLevel=${scrollToLevel}
-        />
+        <div
+          ref=${stickyHeaderRef}
+          class=${`sticky-header ${isFixed ? "is-fixed" : ""}`}
+        >
+          <${LevelSelector}
+            selectedLevel=${selectedLevel}
+            scrollToLevel=${scrollToLevel}
+          />
+        </div>
+        <div class=${`sticky-placeholder ${isFixed ? "active" : ""}`}></div>
         <div class="event-list">
           ${Object.entries(sortedDataByLevelLabel).map(
             ([levelLabel, events]) => {
@@ -377,9 +480,9 @@ const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
   }, {});
   console.log("Grouped levels:", groupedLevels);
 
-  return html`<div>
+  return html`<div style="display: flex; flex-direction: column; gap: 6px;">
     ${Object.entries(groupedLevels).map(
-      ([building, buildingLevels]) => html`<div style="margin-bottom: 10px;">
+      ([building, buildingLevels]) => html`<div>
         <p style="margin: 0;">${building}</p>
         <div
           style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
@@ -411,12 +514,13 @@ const EventsPerLevel = ({ levelLabel, listedEvents, sectionRefs }) => {
     return null;
   }
   return html`<div
-    style="margin-top: 10px; margin-bottom: 30px;"
+    style="margin-bottom: 30px;"
     data-level-label=${levelLabel}
     ref=${(el) => (sectionRefs.current[levelLabel] = el)}
   >
     <h3
-      style="position: sticky; top: 0; background-color: white; z-index: 10; padding: 10px 0; margin: 0;"
+      class="events-list-headline"
+      style="z-index: 10; margin: 0; padding-bottom: 10px;"
     >
       <b>${levelObject.building}</b>${" "}<span style="font-weight: normal;"
         >${levelObject.level}</span
