@@ -1,8 +1,8 @@
 import { html, useState, useEffect, useRef } from "./preact-htm.js";
 import { parseCSV } from "./helper.js";
 
-const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
-// const mapsBasePath = "../maps/";
+// const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
+const mapsBasePath = "../maps/";
 
 const levels = [
   { label: "HG 0", building: "Hauptgebäude", level: "Erdgeschoss" },
@@ -267,6 +267,10 @@ export const App = ({ dataURL }) => {
     }
   };
 
+  if (!data || Object.keys(svgContents).length === 0) {
+    return html`<p>Lade Daten...</p>`;
+  }
+
   return html`
     <div class="container" ref=${appContainerRef}>
       <style>
@@ -313,6 +317,10 @@ export const App = ({ dataURL }) => {
           >
             ${Object.entries(sortedDataByLevelLabel).map(
               ([levelLabel, events]) => {
+                const listedEvents = events.filter((ev) => ev.listed_clickable);
+                if (listedEvents.length === 0) {
+                  return null;
+                }
                 return html`<${EventsPerLevel}
                   levelLabel=${levelLabel}
                   events=${events}
@@ -335,10 +343,14 @@ export const App = ({ dataURL }) => {
         <div class="event-list">
           ${Object.entries(sortedDataByLevelLabel).map(
             ([levelLabel, events]) => {
+              const listedEvents = events.filter((ev) => ev.listed_clickable);
+              if (listedEvents.length === 0) {
+                return null;
+              }
               return html`<div>
                 <${EventsPerLevel}
                   levelLabel=${levelLabel}
-                  events=${events}
+                  listedEvents=${listedEvents}
                   sectionRefs=${sectionRefs}
                 />
                 <${FloorPlan} svgContent=${svgContents[levelLabel]} />
@@ -382,18 +394,6 @@ const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
   </div>`;
 };
 
-//   return html`<div
-//     style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
-//   >
-//     ${levels.map(
-//       (level) => html` <${Button}
-//         isSelected=${selectedLevel === level.label}
-//         onClick=${() => scrollToLevel(level.label)}
-//         >${level.label}<//
-//       >`
-//     )}
-//   </div>`;
-
 const FloorPlan = ({ svgContent }) => {
   if (!svgContent) {
     return html`<p>Kein Grundriss für diese Ebene verfügbar.</p>`;
@@ -401,15 +401,10 @@ const FloorPlan = ({ svgContent }) => {
   return html`<div dangerouslySetInnerHTML=${{ __html: svgContent }} />`;
 };
 
-const EventsPerLevel = ({ levelLabel, events, sectionRefs }) => {
-  console.log("Rendering events for level:", levelLabel, events);
+const EventsPerLevel = ({ levelLabel, listedEvents, sectionRefs }) => {
+  console.log("Rendering EventsPerLevel for", levelLabel, listedEvents);
   const levelObject = levels.find((lvl) => lvl.label === levelLabel);
-  if (!levelObject || events.length === 0) {
-    return null;
-  }
-  // get number of listed_clickable events
-  const listedEvents = events.filter((ev) => ev.listed_clickable);
-  if (listedEvents.length === 0) {
+  if (!levelObject || !listedEvents) {
     return null;
   }
   return html`<div
