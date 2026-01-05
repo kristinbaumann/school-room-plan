@@ -5,17 +5,47 @@ const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
 // const mapsBasePath = "../maps/";
 
 const levels = [
-  { label: "HG 0", building: "Hauptgebäude", level: "Erdgeschoss" },
-  { label: "HG 1", building: "Hauptgebäude", level: "1. Obergeschoss" },
-  { label: "HG 2", building: "Hauptgebäude", level: "2. Obergeschoss" },
-  { label: "HG 3", building: "Hauptgebäude", level: "3. Obergeschoss" },
-  { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
-  { label: "NB 0", building: "Neubau", level: "Erdgeschoss" },
-  { label: "NB 1", building: "Neubau", level: "1. Obergeschoss" },
+  {
+    key: "HG 0",
+    label: "Hauptgebäude EG",
+    building: "Hauptgebäude",
+    level: "Erdgeschoss",
+  },
+  {
+    key: "HG 1",
+    label: "Hauptgebäude 1.OG",
+    building: "Hauptgebäude",
+    level: "1. Obergeschoss",
+  },
+  {
+    key: "HG 2",
+    label: "Hauptgebäude 2.OG",
+    building: "Hauptgebäude",
+    level: "2. Obergeschoss",
+  },
+  {
+    key: "HG 3",
+    label: "Hauptgebäude 3.OG",
+    building: "Hauptgebäude",
+    level: "3. Obergeschoss",
+  },
+  {
+    key: "HG -1",
+    label: "Hauptgebäude UG",
+    building: "Hauptgebäude",
+    level: "Untergeschoss",
+  },
+  { key: "NB 0", label: "Neubau EG", building: "Neubau", level: "Erdgeschoss" },
+  {
+    key: "NB 1",
+    label: "Neubau OG",
+    building: "Neubau",
+    level: "1. Obergeschoss",
+  },
 ];
 
 export const App = ({ dataURL }) => {
-  const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
+  const [selectedLevel, setSelectedLevel] = useState(levels[0].key);
   const appContainerRef = useRef(null);
   const stickyHeaderRef = useRef(null);
   const [isFixed, setIsFixed] = useState(false);
@@ -68,7 +98,7 @@ export const App = ({ dataURL }) => {
             const levelObj = levels.find(
               (lvl) => lvl.building === el.building && lvl.level === el.level
             );
-            el.levelLabel = levelObj ? levelObj.label : null;
+            el.levelLabel = levelObj ? levelObj.key : null;
             return el;
           });
 
@@ -321,8 +351,8 @@ export const App = ({ dataURL }) => {
     });
     // sort dataByLevelLabel in order of levels array
     levels.forEach((lvl) => {
-      if (dataByLevelLabel[lvl.label]) {
-        sortedDataByLevelLabel[lvl.label] = dataByLevelLabel[lvl.label];
+      if (dataByLevelLabel[lvl.key]) {
+        sortedDataByLevelLabel[lvl.key] = dataByLevelLabel[lvl.key];
       }
     });
   }
@@ -369,7 +399,7 @@ export const App = ({ dataURL }) => {
         }
 
         const triggerPoint = scrollTop + viewportHeight * 0.2;
-        let activeSection = sections[0].label;
+        let activeSection = sections[0].key;
 
         for (let i = sections.length - 1; i >= 0; i--) {
           const { label, element } = sections[i];
@@ -378,10 +408,7 @@ export const App = ({ dataURL }) => {
           // This gives us the element's position relative to its offsetParent
           const elementTop = element.offsetTop;
 
-          if (
-            elementTop <= triggerPoint &&
-            activeSection === sections[0].label
-          ) {
+          if (elementTop <= triggerPoint && activeSection === sections[0].key) {
             activeSection = label;
           }
         }
@@ -547,6 +574,10 @@ export const App = ({ dataURL }) => {
           .app.mobile {
             display: block;
 
+            .elementor-button-text {
+              font-size: 14px;
+            }
+
             .event-list {
               margin-top: 10px;
             }
@@ -651,32 +682,17 @@ export const App = ({ dataURL }) => {
 };
 
 const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
-  // group levels by building
-  const groupedLevels = levels.reduce((acc, level) => {
-    if (!acc[level.building]) {
-      acc[level.building] = [];
-    }
-    acc[level.building].push(level);
-    return acc;
-  }, {});
-
-  return html`<div style="display: flex; flex-direction: column; gap: 6px;">
-    ${Object.entries(groupedLevels).map(
-      ([building, buildingLevels]) => html`<div>
-        <p style="margin: 0;">${building}</p>
-        <div
-          style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
-        >
-          ${buildingLevels.map(
-            (level) => html` <${Button}
-              isSelected=${selectedLevel === level.label}
-              onClick=${() => scrollToLevel(level.label)}
-              >${level.label}<//
-            >`
-          )}
-        </div>
-      </div>`
-    )}
+  return html`<div>
+    <p style="margin: 0;">Gebäude & Etagen:</p>
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 6px;">
+      ${levels.map(
+        (level) => html`<${Button}
+          isSelected=${selectedLevel === level.key}
+          onClick=${() => scrollToLevel(level.key)}
+          >${level.label}<//
+        >`
+      )}
+    </div>
   </div>`;
 };
 
@@ -697,7 +713,7 @@ const EventsPerLevel = ({
   setHighlightedRoomId,
 }) => {
   //   console.log("Rendering EventsPerLevel for", levelLabel, listedEvents);
-  const levelObject = levels.find((lvl) => lvl.label === levelLabel);
+  const levelObject = levels.find((lvl) => lvl.key === levelLabel);
   if (!levelObject || !listedEvents) {
     return null;
   }
@@ -782,7 +798,7 @@ const Button = ({ onClick, children, isSelected }) => {
       <button
         class="elementor-button elementor-button-link elementor-size-sm"
         onClick=${onClick}
-        style=${`border-color: black; background: ${
+        style=${`padding: 12px; border-color: black; background: ${
           isSelected ? "var(--e-global-color-accent)" : "transparent"
         };`}
       >
