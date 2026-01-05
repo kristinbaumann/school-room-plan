@@ -5,11 +5,11 @@ const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
 // const mapsBasePath = "../maps/";
 
 const levels = [
-  { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
   { label: "HG 0", building: "Hauptgebäude", level: "Erdgeschoss" },
   { label: "HG 1", building: "Hauptgebäude", level: "1. Obergeschoss" },
   { label: "HG 2", building: "Hauptgebäude", level: "2. Obergeschoss" },
   { label: "HG 3", building: "Hauptgebäude", level: "3. Obergeschoss" },
+  { label: "HG -1", building: "Hauptgebäude", level: "Untergeschoss" },
   { label: "NB 0", building: "Neubau", level: "Erdgeschoss" },
   { label: "NB 1", building: "Neubau", level: "1. Obergeschoss" },
 ];
@@ -352,18 +352,47 @@ export const App = ({ dataURL }) => {
 };
 
 const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
-  return html`<div
-    style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
-  >
-    ${levels.map(
-      (level) => html` <${Button}
-        isSelected=${selectedLevel === level.label}
-        onClick=${() => scrollToLevel(level.label)}
-        >${level.label}<//
-      >`
+  // group levels by building
+  const groupedLevels = levels.reduce((acc, level) => {
+    if (!acc[level.building]) {
+      acc[level.building] = [];
+    }
+    acc[level.building].push(level);
+    return acc;
+  }, {});
+  console.log("Grouped levels:", groupedLevels);
+
+  return html`<div>
+    ${Object.entries(groupedLevels).map(
+      ([building, buildingLevels]) => html`<div style="margin-bottom: 10px;">
+        <p style="margin: 0;">${building}</p>
+        <div
+          style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
+        >
+          ${buildingLevels.map(
+            (level) => html` <${Button}
+              isSelected=${selectedLevel === level.label}
+              onClick=${() => scrollToLevel(level.label)}
+              >${level.label}<//
+            >`
+          )}
+        </div>
+      </div>`
     )}
   </div>`;
 };
+
+//   return html`<div
+//     style="display: flex; flex-wrap: wrap; row-gap: 10px; column-gap: 18px;"
+//   >
+//     ${levels.map(
+//       (level) => html` <${Button}
+//         isSelected=${selectedLevel === level.label}
+//         onClick=${() => scrollToLevel(level.label)}
+//         >${level.label}<//
+//       >`
+//     )}
+//   </div>`;
 
 const FloorPlan = ({ svgContent }) => {
   if (!svgContent) {
