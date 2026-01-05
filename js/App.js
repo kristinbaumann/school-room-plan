@@ -254,7 +254,7 @@ export const App = ({ dataURL }) => {
                 // Get position relative to document
                 const elementTop =
                   eventElement.getBoundingClientRect().top + window.pageYOffset;
-                const offset = 150; // Account for sticky header
+                const offset = 160; // Account for sticky header
 
                 // Scroll the window to the event
                 window.scrollTo({
@@ -479,6 +479,9 @@ export const App = ({ dataURL }) => {
   const scrollToLevel = (levelLabel) => {
     setSelectedLevel(levelLabel);
 
+    // Disable scroll detection temporarily
+    isProgrammaticScrollRef.current = true;
+
     // Detect if we're on mobile or desktop
     const isMobile = window.innerWidth <= 800;
 
@@ -504,6 +507,11 @@ export const App = ({ dataURL }) => {
         eventListElement.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     }
+
+    // Re-enable scroll detection after scrolling completes
+    setTimeout(() => {
+      isProgrammaticScrollRef.current = false;
+    }, 1000);
   };
 
   if (!data) {
@@ -575,16 +583,16 @@ export const App = ({ dataURL }) => {
             display: block;
 
             .elementor-button-text {
-              font-size: 14px;
+              font-size: 12px;
             }
 
             .event-list {
-              margin-top: 10px;
+              margin-top: 40px;
             }
 
             .sticky-header {
               z-index: 999;
-              background-color: white;
+              background-color: #fffffffb;
 
               &.is-fixed {
                 position: fixed;
@@ -661,7 +669,7 @@ export const App = ({ dataURL }) => {
               if (listedEvents.length === 0) {
                 return null;
               }
-              return html`<div>
+              return html`<div style="margin-bottom: 40px;">
                 <${EventsPerLevel}
                   levelLabel=${levelLabel}
                   listedEvents=${listedEvents}
@@ -683,7 +691,7 @@ export const App = ({ dataURL }) => {
 
 const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
   return html`<div>
-    <p style="margin: 0;">Gebäude & Etagen:</p>
+    <p style="margin: 0;">Unsere Gebäude & Etagen:</p>
     <div style="display: flex; flex-wrap: wrap; flex-direction: row; gap: 6px;">
       ${levels.map(
         (level) => html`<${Button}
@@ -798,7 +806,7 @@ const Button = ({ onClick, children, isSelected }) => {
       <button
         class="elementor-button elementor-button-link elementor-size-sm"
         onClick=${onClick}
-        style=${`padding: 12px; border-color: black; background: ${
+        style=${`padding: 10px; border-color: black; background: ${
           isSelected ? "var(--e-global-color-accent)" : "transparent"
         };`}
       >
