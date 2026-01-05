@@ -16,7 +16,6 @@ const levels = [
 
 export const App = ({ dataURL }) => {
   const [selectedLevel, setSelectedLevel] = useState(levels[0].label);
-  const sectionRefs = useRef({});
   const appContainerRef = useRef(null);
   const stickyHeaderRef = useRef(null);
   const [isFixed, setIsFixed] = useState(false);
@@ -339,21 +338,29 @@ export const App = ({ dataURL }) => {
 
   const scrollToLevel = (levelLabel) => {
     setSelectedLevel(levelLabel);
-    const sectionElement = sectionRefs.current[levelLabel];
-    if (!sectionElement) return;
 
     // Detect if we're on mobile or desktop
     const isMobile = window.innerWidth <= 800;
 
+    // Query section from the correct view
+    const viewSelector = isMobile ? ".app.mobile" : ".app.desktop";
+    const view = document.querySelector(viewSelector);
+    if (!view) return;
+
+    const sectionElement = view.querySelector(
+      `[data-level-label="${levelLabel}"]`
+    );
+    if (!sectionElement) return;
+
     if (isMobile) {
       // On mobile, scroll the window
       const offsetTop = sectionElement.offsetTop;
-      window.scrollTo({ top: offsetTop - 120, behavior: "smooth" }); // 120px offset for sticky header
+      window.scrollTo({ top: offsetTop, behavior: "smooth" }); // Offset for sticky header
     } else {
       // On desktop, scroll the event-list container
-      const eventListElement = document.querySelector(".event-list");
+      const eventListElement = view.querySelector(".event-list");
       if (eventListElement) {
-        const offsetTop = sectionElement.offsetTop - eventListElement.offsetTop;
+        const offsetTop = sectionElement.offsetTop;
         eventListElement.scrollTo({ top: offsetTop, behavior: "smooth" });
       }
     }
@@ -371,7 +378,7 @@ export const App = ({ dataURL }) => {
       <style>
         .app.desktop {
           display: grid;
-          grid-template-columns: 50% 50%;
+          grid-template-columns: 1fr 1fr;
           gap: 60px;
           max-width: 1400px;
           margin: 0 auto;
@@ -480,7 +487,6 @@ export const App = ({ dataURL }) => {
                 return html`<${EventsPerLevel}
                   levelLabel=${levelLabel}
                   listedEvents=${listedEvents}
-                  sectionRefs=${sectionRefs}
                 />`;
               }
             )}
@@ -513,7 +519,6 @@ export const App = ({ dataURL }) => {
                 <${EventsPerLevel}
                   levelLabel=${levelLabel}
                   listedEvents=${listedEvents}
-                  sectionRefs=${sectionRefs}
                 />
                 <${FloorPlan} svgContent=${svgContents[levelLabel]} />
               </div>`;
@@ -562,7 +567,7 @@ const FloorPlan = ({ svgContent }) => {
   return html`<div dangerouslySetInnerHTML=${{ __html: svgContent }} />`;
 };
 
-const EventsPerLevel = ({ levelLabel, listedEvents, sectionRefs }) => {
+const EventsPerLevel = ({ levelLabel, listedEvents }) => {
   //   console.log("Rendering EventsPerLevel for", levelLabel, listedEvents);
   const levelObject = levels.find((lvl) => lvl.label === levelLabel);
   if (!levelObject || !listedEvents) {
@@ -571,7 +576,6 @@ const EventsPerLevel = ({ levelLabel, listedEvents, sectionRefs }) => {
   return html`<div
     style="margin-bottom: 30px; position: relative;"
     data-level-label=${levelLabel}
-    ref=${(el) => (sectionRefs.current[levelLabel] = el)}
   >
     <h3
       class="events-list-headline"
