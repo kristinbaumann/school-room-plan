@@ -1,8 +1,8 @@
 import { html, useState, useEffect, useRef } from "./preact-htm.js";
 import { parseCSV } from "./helper.js";
 
-// const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
-const mapsBasePath = "../maps/";
+const mapsBasePath = "https://kristinbaumann.github.io/school-room-plan/maps/";
+// const mapsBasePath = "../maps/";
 
 const levels = [
   { label: "HG 0", building: "Hauptgebäude", level: "Erdgeschoss" },
