@@ -516,6 +516,9 @@
       <g id="room_106gang" class="room_106gang">
         <rect id="area_24" width="28" height="65" x="63.5" y="316.67" fill="#D9D9D9" class="area"/>
       </g>
+      <g id="room_124gang" class="room_124gang">
+        <rect id="area_25" width="41" height="19.738" x="78.099" y="640.592" fill="#D9D9D9" class="area" transform="rotate(49.902 78.099 640.592)"/>
+      </g>
     </g>
     <g id="walls" class="walls">
       <path id="Vector_360" stroke="#000" stroke-miterlimit="10" d="M2.02 314.97v383.78l25.28 33.54 240.5 68.96 43.24-150.81-126.85-36.37" class="Vector"/>
