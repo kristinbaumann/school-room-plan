@@ -25,7 +25,6 @@ export const App = ({ dataURL }) => {
   const [svgContents, setSvgContents] = useState({});
   const [highlightedRoomId, setHighlightedRoomId] = useState(null);
   const isProgrammaticScrollRef = useRef(false);
-  console.log("highlightedRoomId:", highlightedRoomId);
 
   useEffect(() => {
     // read data from dataURL (CSV file)
@@ -149,6 +148,16 @@ export const App = ({ dataURL }) => {
                           areaEl.setAttribute("data-area-roomid", room.roomId);
                         });
                       }
+
+                      const textElements = roomGroup.querySelectorAll(".text");
+                      textElements.forEach((textEl) => {
+                        textEl.style.pointerEvents = "none";
+                      });
+                      const numberElements =
+                        roomGroup.querySelectorAll(".number");
+                      numberElements.forEach((numberEl) => {
+                        numberEl.style.pointerEvents = "none";
+                      });
                     }
                   }
                 });
@@ -186,11 +195,10 @@ export const App = ({ dataURL }) => {
 
     const handleRoomClick = (event) => {
       const roomId = event.target.getAttribute("data-area-roomid");
-      console.log(`Clicked on room ${roomId}`);
+      //   console.log(`Clicked on room ${roomId}`);
       if (roomId) {
         const roomData = data.find((room) => room.roomId === roomId);
         if (roomData) {
-          console.log("Room data:", roomData);
           // Highlight the event
           setHighlightedRoomId(roomId);
 
@@ -205,25 +213,58 @@ export const App = ({ dataURL }) => {
           // Scroll to the event
           setTimeout(() => {
             const isMobile = window.innerWidth <= 800;
-            const eventElement = document.querySelector(
-              `[data-event-roomid="${roomId}"]`
-            );
 
-            if (eventElement) {
-              if (isMobile) {
-                // On mobile, scroll the window
-                const offsetTop = eventElement.offsetTop - 120; // Account for sticky header
-                window.scrollTo({ top: offsetTop, behavior: "smooth" });
+            if (isMobile) {
+              // On mobile, scroll to the event in the event list
+              const eventElement = document.querySelector(
+                `.app.mobile [data-event-roomid="${roomId}"]`
+              );
+
+              if (eventElement) {
+                // Get position relative to document
+                const elementTop =
+                  eventElement.getBoundingClientRect().top + window.pageYOffset;
+                const offset = 150; // Account for sticky header
+
+                // Scroll the window to the event
+                window.scrollTo({
+                  top: elementTop - offset,
+                  behavior: "smooth",
+                });
               } else {
-                // On desktop, scroll within the event-list container
+                console.error("Event element not found for roomId:", roomId);
+                // Try without mobile selector
+                const fallbackElement = document.querySelector(
+                  `[data-event-roomid="${roomId}"]`
+                );
+                console.log("Fallback element:", fallbackElement);
+              }
+            } else {
+              // On desktop, scroll within the event-list container
+              const eventElement = document.querySelector(
+                `[data-event-roomid="${roomId}"]`
+              );
+              if (eventElement) {
                 const eventListContainer = document.querySelector(
                   ".app.desktop .event-list"
                 );
                 if (eventListContainer) {
-                  // Use scrollIntoView for more reliable scrolling
-                  eventElement.scrollIntoView({
+                  // Calculate scroll position relative to container
+                  const containerRect =
+                    eventListContainer.getBoundingClientRect();
+                  const elementRect = eventElement.getBoundingClientRect();
+
+                  // Calculate the target scroll position to center the element
+                  const targetScroll =
+                    eventListContainer.scrollTop +
+                    (elementRect.top - containerRect.top) -
+                    containerRect.height / 2 +
+                    elementRect.height / 2;
+
+                  // Scroll the container only
+                  eventListContainer.scrollTo({
+                    top: targetScroll,
                     behavior: "smooth",
-                    block: "center",
                   });
                 }
               }
@@ -596,7 +637,10 @@ export const App = ({ dataURL }) => {
                   highlightedRoomId=${highlightedRoomId}
                   setHighlightedRoomId=${setHighlightedRoomId}
                 />
-                <${FloorPlan} svgContent=${svgContents[levelLabel]} />
+                <${FloorPlan}
+                  svgContent=${svgContents[levelLabel]}
+                  levelLabel=${levelLabel}
+                />
               </div>`;
             }
           )}
@@ -636,11 +680,14 @@ const LevelSelector = ({ selectedLevel, scrollToLevel }) => {
   </div>`;
 };
 
-const FloorPlan = ({ svgContent }) => {
+const FloorPlan = ({ svgContent, levelLabel }) => {
   if (!svgContent) {
     return html`<p>Kein Grundriss für diese Ebene verfügbar.</p>`;
   }
-  return html`<div dangerouslySetInnerHTML=${{ __html: svgContent }} />`;
+  return html`<div
+    data-floor-plan-level=${levelLabel || ""}
+    dangerouslySetInnerHTML=${{ __html: svgContent }}
+  />`;
 };
 
 const EventsPerLevel = ({
@@ -693,8 +740,30 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
       ? "#e2b2a4"
       : "transparent"};"
     onclick=${() => {
-      console.log("Clicked on event:", event);
       setHighlightedRoomId(event.roomId);
+
+      // Scroll to floor plan on mobile
+      setTimeout(() => {
+        const isMobile = window.innerWidth <= 800;
+
+        if (isMobile && event.levelLabel) {
+          const floorPlanElement = document.querySelector(
+            `[data-floor-plan-level="${event.levelLabel}"]`
+          );
+          if (floorPlanElement) {
+            // Use scrollIntoView for reliable scrolling on mobile
+            floorPlanElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          } else {
+            console.error(
+              "Floor plan element not found for level:",
+              event.levelLabel
+            );
+          }
+        }
+      }, 100);
     }}
   >
     ${event.number ? html`<p style="margin: 0;">Raum: ${event.number}</p>` : ""}
