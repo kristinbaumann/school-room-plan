@@ -23,6 +23,9 @@ export const App = ({ dataURL }) => {
 
   const [data, setData] = useState(null);
   const [svgContents, setSvgContents] = useState({});
+  const [highlightedRoomId, setHighlightedRoomId] = useState(null);
+  const isProgrammaticScrollRef = useRef(false);
+  console.log("highlightedRoomId:", highlightedRoomId);
 
   useEffect(() => {
     // read data from dataURL (CSV file)
@@ -45,7 +48,7 @@ export const App = ({ dataURL }) => {
           });
           const mappedRows = rows.map((row) => {
             let el = {
-              id: row["ID"] ? row["ID"].trim() : null,
+              //   id: row["ID"] ? row["ID"].trim() : null,
               number: row["Nummer"] ? row["Nummer"].trim() : null,
               roomId: row["Raum ID"] ? row["Raum ID"].trim() : null,
               level: row["Etage"] ? row["Etage"].trim() : null,
@@ -70,7 +73,7 @@ export const App = ({ dataURL }) => {
             return el;
           });
 
-          const filteredRows = mappedRows.filter((row) => row.id);
+          const filteredRows = mappedRows.filter((row) => row.roomId);
           setData(filteredRows);
         })
         .catch((error) => {
@@ -188,6 +191,49 @@ export const App = ({ dataURL }) => {
         const roomData = data.find((room) => room.roomId === roomId);
         if (roomData) {
           console.log("Room data:", roomData);
+          // Highlight the event
+          setHighlightedRoomId(roomId);
+
+          // Set the selected level to match the room's level
+          if (roomData.levelLabel) {
+            setSelectedLevel(roomData.levelLabel);
+          }
+
+          // Disable scroll detection temporarily
+          isProgrammaticScrollRef.current = true;
+
+          // Scroll to the event
+          setTimeout(() => {
+            const isMobile = window.innerWidth <= 800;
+            const eventElement = document.querySelector(
+              `[data-event-roomid="${roomId}"]`
+            );
+
+            if (eventElement) {
+              if (isMobile) {
+                // On mobile, scroll the window
+                const offsetTop = eventElement.offsetTop - 120; // Account for sticky header
+                window.scrollTo({ top: offsetTop, behavior: "smooth" });
+              } else {
+                // On desktop, scroll within the event-list container
+                const eventListContainer = document.querySelector(
+                  ".app.desktop .event-list"
+                );
+                if (eventListContainer) {
+                  // Use scrollIntoView for more reliable scrolling
+                  eventElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }
+              }
+            }
+
+            // Re-enable scroll detection after scrolling completes
+            setTimeout(() => {
+              isProgrammaticScrollRef.current = false;
+            }, 1000);
+          }, 100);
         }
       }
     };
@@ -199,6 +245,29 @@ export const App = ({ dataURL }) => {
       appContainer.removeEventListener("click", handleRoomClick);
     };
   }, [svgContents, data]);
+
+  // Highlight SVG area when room is selected
+  useEffect(() => {
+    if (!appContainerRef.current) return;
+
+    // Reset all area fills to default
+    const allAreas = appContainerRef.current.querySelectorAll(
+      ".area[data-area-roomid]"
+    );
+    allAreas.forEach((area) => {
+      area.style.fill = "#dfdfdf"; // Reset to default color
+    });
+
+    // Highlight the selected room area
+    if (highlightedRoomId) {
+      const selectedAreas = appContainerRef.current.querySelectorAll(
+        `.area[data-area-roomid="${highlightedRoomId}"]`
+      );
+      selectedAreas.forEach((area) => {
+        area.style.fill = "#e2b2a4";
+      });
+    }
+  }, [highlightedRoomId, svgContents]);
 
   const sortedDataByLevelLabel = {};
   if (data) {
@@ -229,6 +298,9 @@ export const App = ({ dataURL }) => {
       const isMobile = window.innerWidth <= 800;
 
       const handleScroll = () => {
+        // Skip level detection if we're programmatically scrolling
+        if (isProgrammaticScrollRef.current) return;
+
         // Query sections from the correct view (desktop or mobile)
         const viewSelector = isMobile ? ".app.mobile" : ".app.desktop";
         const view = document.querySelector(viewSelector);
@@ -487,6 +559,8 @@ export const App = ({ dataURL }) => {
                 return html`<${EventsPerLevel}
                   levelLabel=${levelLabel}
                   listedEvents=${listedEvents}
+                  highlightedRoomId=${highlightedRoomId}
+                  setHighlightedRoomId=${setHighlightedRoomId}
                 />`;
               }
             )}
@@ -519,6 +593,8 @@ export const App = ({ dataURL }) => {
                 <${EventsPerLevel}
                   levelLabel=${levelLabel}
                   listedEvents=${listedEvents}
+                  highlightedRoomId=${highlightedRoomId}
+                  setHighlightedRoomId=${setHighlightedRoomId}
                 />
                 <${FloorPlan} svgContent=${svgContents[levelLabel]} />
               </div>`;
@@ -567,7 +643,12 @@ const FloorPlan = ({ svgContent }) => {
   return html`<div dangerouslySetInnerHTML=${{ __html: svgContent }} />`;
 };
 
-const EventsPerLevel = ({ levelLabel, listedEvents }) => {
+const EventsPerLevel = ({
+  levelLabel,
+  listedEvents,
+  highlightedRoomId,
+  setHighlightedRoomId,
+}) => {
   //   console.log("Rendering EventsPerLevel for", levelLabel, listedEvents);
   const levelObject = levels.find((lvl) => lvl.label === levelLabel);
   if (!levelObject || !listedEvents) {
@@ -588,20 +669,32 @@ const EventsPerLevel = ({ levelLabel, listedEvents }) => {
     <div
       style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;"
     >
-      ${listedEvents.map((event) => html`<${Event} event=${event} />`)}
+      ${listedEvents.map(
+        (event) =>
+          html`<${Event}
+            event=${event}
+            highlightedRoomId=${highlightedRoomId}
+            setHighlightedRoomId=${setHighlightedRoomId}
+          />`
+      )}
     </div>
   </div>`;
 };
 
-const Event = ({ event }) => {
+const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
   if (!event.listed_clickable) {
     return null;
   }
+  const isHighlighted = event.roomId === highlightedRoomId;
   return html`<div
     class="event"
-    style="border: 1px solid black; padding: 4px; cursor: pointer;"
+    data-event-roomid=${event.roomId}
+    style="border: 1px solid black; padding: 4px; cursor: pointer; background-color: ${isHighlighted
+      ? "#e2b2a4"
+      : "transparent"};"
     onclick=${() => {
       console.log("Clicked on event:", event);
+      setHighlightedRoomId(event.roomId);
     }}
   >
     ${event.number ? html`<p style="margin: 0;">Raum: ${event.number}</p>` : ""}

@@ -1,129 +1,129 @@
-ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet & in Karte klickbar
-1,Hauptgebäude,Erdgeschoss,001,002,Hausmeister,,Y,Y
-2,Hauptgebäude,Erdgeschoss,002,003,Schulbüro,"Nadja Nagorsnik, Katrin Wiese",Y,Y
-3,Hauptgebäude,Erdgeschoss,002a,002a,Schulleiterin,Dr. Maike Languth,Y,Y
-4,Hauptgebäude,Erdgeschoss,003,004,Stellv. Schulleiter,Tino Fischer,Y,Y
-5,Hauptgebäude,Erdgeschoss,004,005,Klasse 7c (Wks),,Y,Y
-6,Hauptgebäude,Erdgeschoss,005,006,Klasse 7b (Mar),,Y,Y
-7,Hauptgebäude,Erdgeschoss,006,007,Klasse 7a (Es),,Y,Y
-8,Hauptgebäude,Erdgeschoss,007,008,Klasse 5d (Fo),,Y,Y
-9,Hauptgebäude,Erdgeschoss,008,009,Klasse 5c (Be),,Y,Y
-10,Hauptgebäude,Erdgeschoss,011,012,Klasse 5a (Wg),,Y,Y
-11,Hauptgebäude,Erdgeschoss,012,013,Klasse 5b (To),,Y,Y
-12,Hauptgebäude,Erdgeschoss,013,014,Klasse 6a (Sf/Sz),,Y,Y
-13,Hauptgebäude,Erdgeschoss,014,015,Klasse 6b (Lo),,Y,Y
-14,Hauptgebäude,Erdgeschoss,015,016,Klasse 6c (Gm),,Y,Y
-15,Hauptgebäude,Erdgeschoss,016,017,Klasse 6d (Sü),,Y,Y
-16,Hauptgebäude,Erdgeschoss,017,018,,WC Herren (WC Damen 1/2 Etage tiefer),Y,Y
-17,Hauptgebäude,Erdgeschoss,021,022,Konferenzraum,,Y,Y
-18,Hauptgebäude,Erdgeschoss,022,023,Schulbüro & Krankenzimmer,Linn Gellermann,Y,Y
-120,Hauptgebäude,Erdgeschoss,Foyer,0foyer,Foyer,,N,N
-121,Hauptgebäude,Erdgeschoss,Gang vor Raum 003,003gang,Gang vor Raum 003,,N,N
-122,Hauptgebäude,Erdgeschoss,Gang vor Raum 005,005gang,Gang vor Raum 005,,N,N
-19,Hauptgebäude,Untergeschoss,UG1,UG1,Ruheraum L,,Y,Y
-20,Hauptgebäude,Untergeschoss,UG14,UG14,Sozialpädagogin,Helle Westermann,Y,Y
-21,Hauptgebäude,Untergeschoss,UG2,UG2,Beratung & Lerncoaching,,Y,Y
-22,Hauptgebäude,Untergeschoss,UG3,UG3,"Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung","Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand",Y,Y
-23,Hauptgebäude,Untergeschoss,UG7,UG7,Ganztag (PerLe),,Y,Y
-24,Hauptgebäude,Untergeschoss,UG7a,UG7a,Ganztag (Ruhe),Büro: Oliver Nielsen,Y,Y
-25,Hauptgebäude,Untergeschoss,UG8,UG8,,Personalraum Reinigung,Y,Y
-26,Hauptgebäude,Untergeschoss,,UG_kleine_Halle,Kleine Halle,,Y,Y
-27,Hauptgebäude,Untergeschoss,,Mensa,Mensa HEGElicious,,Y,Y
-28,Hauptgebäude,Untergeschoss,Mehrzweckhalle,Mehrzweckhalle,Multifunktionshalle,,Y,Y
-29,Hauptgebäude,Untergeschoss,,Sonstiges_1,,"Hausmeister, Technik, Heizung",Y,Y
-30,Hauptgebäude,Untergeschoss,,Sonstiges_2,,"Hausmeister, Technik, Heizung",Y,Y
-31,Hauptgebäude,Untergeschoss,,Sonstiges_3,,"Hausmeister, Technik, Heizung",Y,Y
-32,Hauptgebäude,Untergeschoss,,Sonstiges_4,,"Hausmeister, Technik, Heizung",Y,Y
-33,Hauptgebäude,Untergeschoss,,Sonstiges_5,,Küche,Y,Y
-34,Hauptgebäude,Untergeschoss,,Sonstiges_6,,Reinigung,Y,Y
-35,Hauptgebäude,Untergeschoss,,Sonstiges_7,,Reinigung,Y,Y
-36,Hauptgebäude,Untergeschoss,,Sonstiges_8,,Umkleiden & Duschen,Y,Y
-37,Hauptgebäude,Untergeschoss,,Sonstiges_9,,Umkleiden & Duschen,Y,Y
-38,Hauptgebäude,Untergeschoss,,Sonstiges_10,,Umkleiden & Duschen,Y,Y
-39,Hauptgebäude,Untergeschoss,,Sonstiges_11,,Waschküche,Y,Y
-40,Hauptgebäude,Untergeschoss,,WC_4,,WC Damen,Y,Y
-41,Hauptgebäude,1. Obergeschoss,101,101,Abteilungsleitung 11–12,Dr. Björn Reetz,Y,Y
-42,Hauptgebäude,1. Obergeschoss,102,102,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",Y,Y
-43,Hauptgebäude,1. Obergeschoss,103,103,Klasse 8d (Sch),,Y,Y
-44,Hauptgebäude,1. Obergeschoss,104,104,Klasse 8c (Fn),,Y,Y
-45,Hauptgebäude,1. Obergeschoss,105,105,Klasse 8b (Pr),,Y,Y
-46,Hauptgebäude,1. Obergeschoss,106,106,Klasse 8a (Krp),,Y,Y
-47,Hauptgebäude,1. Obergeschoss,107,107,Klasse 9d (Ho),,Y,Y
-48,Hauptgebäude,1. Obergeschoss,108,108,Klasse 9c (Er),,Y,Y
-49,Hauptgebäude,1. Obergeschoss,111,111,Klasse 9a (Ka),,Y,Y
-50,Hauptgebäude,1. Obergeschoss,112,112,Klasse 9b (Ku),,Y,Y
-51,Hauptgebäude,1. Obergeschoss,113,113,Klasse 7d (Bz/Vo),,Y,Y
-52,Hauptgebäude,1. Obergeschoss,114,114,Medienraum,,Y,Y
-53,Hauptgebäude,1. Obergeschoss,115,115,Lehrerzimmer,,Y,Y
-54,Hauptgebäude,1. Obergeschoss,117,117,,WC Damen,Y,Y
-55,Hauptgebäude,1. Obergeschoss,118,118,,"IT-Admin: Michael König, David Hähningen",Y,Y
-56,Hauptgebäude,1. Obergeschoss,119,119,Physik 2,,Y,Y
-57,Hauptgebäude,1. Obergeschoss,121,121,Mathe/Physik,(Es)/(Jo),Y,Y
-58,Hauptgebäude,1. Obergeschoss,122,122,Physik 1,,Y,Y
-59,Hauptgebäude,1. Obergeschoss,123,123,Physik-Sammlung,,Y,Y
-60,Hauptgebäude,1. Obergeschoss,124,124,Lehrerarbeitsraum,,Y,Y
-61,Hauptgebäude,1. Obergeschoss,,Sonstiges_12,Freiarbeitsbereich,,Y,Y
-62,Hauptgebäude,1. Obergeschoss,,Sonstiges_13,Lehrerzimmer,,Y,Y
-123,Hauptgebäude,1. Obergeschoss,Gang vor Raum 104,104gang,Gang vor Raum 106,,N,N
-124,Hauptgebäude,1. Obergeschoss,Gang vor Raum 106,106gang,Gang vor Raum 104,,N,N
-63,Hauptgebäude,2. Obergeschoss,201,201,Chemie 2,,Y,Y
-64,Hauptgebäude,2. Obergeschoss,202,202,Chemie-Sammlung,,Y,Y
-65,Hauptgebäude,2. Obergeschoss,203,203,Chemie 1,,Y,Y
-66,Hauptgebäude,2. Obergeschoss,204,204,Chemie-Verwaltung,Dr. Frank Jürgensen,Y,Y
-67,Hauptgebäude,2. Obergeschoss,205,205,Comupterraum 2,,Y,Y
-68,Hauptgebäude,2. Obergeschoss,206,206,Musik 2,,Y,Y
-69,Hauptgebäude,2. Obergeschoss,207,207,Biologie 1,,Y,Y
-70,Hauptgebäude,2. Obergeschoss,208,208,,,N,N
-71,Hauptgebäude,2. Obergeschoss,211,211,Biologie 2,,Y,Y
-72,Hauptgebäude,2. Obergeschoss,212,212,Biologie-Sammlung,,Y,Y
-73,Hauptgebäude,2. Obergeschoss,213,213,Geographie-Sammlung,Dr. Jean-Marie Schwarzkopf,Y,Y
-74,Hauptgebäude,2. Obergeschoss,214,214,Geographie,,Y,Y
-75,Hauptgebäude,2. Obergeschoss,215,215,Computerraum 1,,Y,Y
-76,Hauptgebäude,2. Obergeschoss,216,216,Musik 1,,Y,Y
-77,Hauptgebäude,2. Obergeschoss,216p,216p,,,N,N
-78,Hauptgebäude,2. Obergeschoss,218,218,,WC Herren,Y,Y
-79,Hauptgebäude,2. Obergeschoss,220,220,Aula,,Y,Y
-80,Hauptgebäude,2. Obergeschoss,222,222,Musik-Sammlung,,Y,Y
-81,Hauptgebäude,2. Obergeschoss,223,223,Chemie-Sammlung,,Y,Y
-82,Hauptgebäude,2. Obergeschoss,,Sonstiges_14,Biologie-Arbeitsraum,,Y,Y
-83,Hauptgebäude,2. Obergeschoss,,Sonstiges_15,,Aufgang zur Schülerbibliothek,Y,Y
-84,Hauptgebäude,2. Obergeschoss,,Sonstiges_16,,WC Lehrkräfte,Y,Y
-85,Hauptgebäude,3. Obergeschoss,301,301,Terrasse,,Y,Y
-86,Hauptgebäude,3. Obergeschoss,302,302,,,N,N
-87,Hauptgebäude,3. Obergeschoss,302a,302a,,,N,N
-88,Hauptgebäude,3. Obergeschoss,304,304,Kunst-Sammlung und -Vorbereitung,,Y,Y
-89,Hauptgebäude,3. Obergeschoss,304a,304a,,,N,N
-90,Hauptgebäude,3. Obergeschoss,304b,304b,,,N,N
-91,Hauptgebäude,3. Obergeschoss,306,306,Kunst-Brennraum,,Y,Y
-92,Hauptgebäude,3. Obergeschoss,308,308,Kunst 2,,Y,Y
-93,Hauptgebäude,3. Obergeschoss,309,309,Kunst 1,,Y,Y
-94,Hauptgebäude,3. Obergeschoss,,Sonstiges_17,Kunst-Vorbereitung,,Y,Y
-95,Hauptgebäude,3. Obergeschoss,,Sonstiges_18,Schülerbibliothek,,Y,Y
-96,Hauptgebäude,3. Obergeschoss,,Sonstiges_19,,Lager,Y,Y
-97,Neubau,Erdgeschoss,L1,L1,,,N,N
-98,Neubau,Erdgeschoss,L2,L2,,,N,N
-99,Neubau,Erdgeschoss,N1,N1,Klasse 10a (Jo),,Y,Y
-100,Neubau,Erdgeschoss,N2,N2,Klasse 10b (Gw),,Y,Y
-101,Neubau,Erdgeschoss,N3,N3,,,N,N
-102,Neubau,Erdgeschoss,N4,N4,,,N,N
-103,Neubau,Erdgeschoss,N5,N5,,,N,N
-104,Neubau,Erdgeschoss,N6,N6,Oberstufenraum,,Y,Y
-104a,Neubau,Erdgeschoss,,Oberstufenraum,Oberstufenraum,,Y,Y
-105,Neubau,Erdgeschoss,,Sonstiges_20,,Technik,Y,Y
-106,Neubau,Erdgeschoss,,Sonstiges_21,,Technik,Y,Y
-107,Neubau,Erdgeschoss,,Sonstiges_22,,Technik,Y,Y
-108,Neubau,Erdgeschoss,,WC_5,,"WC Damen, barrierefrei",Y,Y
-108a,Neubau,Erdgeschoss,,WC_6,,WC Damen,Y,Y
-109,Neubau,1. Obergeschoss,N1.1,N1.1,Klasse 10c (Ln),,Y,Y
-110,Neubau,1. Obergeschoss,N1.2,N1.2,Klasse 10d (Dw),,Y,Y
-111,Neubau,1. Obergeschoss,N1.3,N1.3,Arbeitsraum,,Y,Y
-111a,Neubau,1. Obergeschoss,,N1Arbeitsraum,Arbeitsraum,,Y,Y
-112,Neubau,1. Obergeschoss,N1.4,N1.4,,,N,N
-113,Neubau,1. Obergeschoss,N1.5,N1.5,,,N,N
-114,Neubau,1. Obergeschoss,N1.6,N1.6,,,N,N
-115,Neubau,1. Obergeschoss,,Sonstiges_23,,Technik,Y,Y
-116,Neubau,1. Obergeschoss,,Sonstiges_24,,Technik,Y,Y
-117,Neubau,1. Obergeschoss,,WC_1,,WC Damen,Y,Y
-118,Neubau,1. Obergeschoss,,WC_2,,WC Herren,Y,Y
-118a,Neubau,1. Obergeschoss,,WC_7,,WC Herren,Y,Y
-119,Neubau,1. Obergeschoss,,WC_3,,"WC Herren, barrierefrei",Y,Y
+Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet & in Karte klickbar
+001,001,Hauptgebäude,Erdgeschoss,Hausmeister,,Y,Y
+002,002,Hauptgebäude,Erdgeschoss,Schulbüro,"Nadja Nagorsnik, Katrin Wiese",Y,Y
+002a,002a,Hauptgebäude,Erdgeschoss,Schulleiterin,Dr. Maike Languth,Y,Y
+003,003,Hauptgebäude,Erdgeschoss,Stellv. Schulleiter,Tino Fischer,Y,Y
+004,004,Hauptgebäude,Erdgeschoss,Klasse 7c (Wks),,Y,Y
+005,005,Hauptgebäude,Erdgeschoss,Klasse 7b (Mar),,Y,Y
+006,006,Hauptgebäude,Erdgeschoss,Klasse 7a (Es),,Y,Y
+007,007,Hauptgebäude,Erdgeschoss,Klasse 5d (Fo),,Y,Y
+008,008,Hauptgebäude,Erdgeschoss,Klasse 5c (Be),,Y,Y
+011,011,Hauptgebäude,Erdgeschoss,Klasse 5a (Wg),,Y,Y
+012,012,Hauptgebäude,Erdgeschoss,Klasse 5b (To),,Y,Y
+013,013,Hauptgebäude,Erdgeschoss,Klasse 6a (Sf/Sz),,Y,Y
+014,014,Hauptgebäude,Erdgeschoss,Klasse 6b (Lo),,Y,Y
+015,015,Hauptgebäude,Erdgeschoss,Klasse 6c (Gm),,Y,Y
+016,016,Hauptgebäude,Erdgeschoss,Klasse 6d (Sü),,Y,Y
+017,017,Hauptgebäude,Erdgeschoss,,WC Herren (WC Damen 1/2 Etage tiefer),Y,Y
+021,021,Hauptgebäude,Erdgeschoss,Konferenzraum,,Y,Y
+022,022,Hauptgebäude,Erdgeschoss,Schulbüro & Krankenzimmer,Linn Gellermann,Y,Y
+0foyer,Foyer,Hauptgebäude,Erdgeschoss,Foyer,,N,N
+003gang,Gang vor Raum 003,Hauptgebäude,Erdgeschoss,Gang vor Raum 003,,N,N
+005gang,Gang vor Raum 005,Hauptgebäude,Erdgeschoss,Gang vor Raum 005,,N,N
+UG1,UG1,Hauptgebäude,Untergeschoss,Ruheraum L,,Y,Y
+UG14,UG14,Hauptgebäude,Untergeschoss,Sozialpädagogin,Helle Westermann,Y,Y
+UG2,UG2,Hauptgebäude,Untergeschoss,Beratung & Lerncoaching,,Y,Y
+UG3,UG3,Hauptgebäude,Untergeschoss,"Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung","Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand",Y,Y
+UG7,UG7,Hauptgebäude,Untergeschoss,Ganztag (PerLe),,Y,Y
+UG7a,UG7a,Hauptgebäude,Untergeschoss,Ganztag (Ruhe),Büro: Oliver Nielsen,Y,Y
+UG8,UG8,Hauptgebäude,Untergeschoss,,Personalraum Reinigung,Y,Y
+UG_kleine_Halle,,Hauptgebäude,Untergeschoss,Kleine Halle,,Y,Y
+Mensa,,Hauptgebäude,Untergeschoss,Mensa HEGElicious,,Y,Y
+Mehrzweckhalle,Mehrzweckhalle,Hauptgebäude,Untergeschoss,Multifunktionshalle,,Y,Y
+Sonstiges_1,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",Y,Y
+Sonstiges_2,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",Y,Y
+Sonstiges_3,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",Y,Y
+Sonstiges_4,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",Y,Y
+Sonstiges_5,,Hauptgebäude,Untergeschoss,,Küche,Y,Y
+Sonstiges_6,,Hauptgebäude,Untergeschoss,,Reinigung,Y,Y
+Sonstiges_7,,Hauptgebäude,Untergeschoss,,Reinigung,Y,Y
+Sonstiges_8,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,Y,Y
+Sonstiges_9,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,Y,Y
+Sonstiges_10,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,Y,Y
+Sonstiges_11,,Hauptgebäude,Untergeschoss,,Waschküche,Y,Y
+WC_4,,Hauptgebäude,Untergeschoss,,WC Damen,Y,Y
+101,101,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 11–12,Dr. Björn Reetz,Y,Y
+102,102,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",Y,Y
+103,103,Hauptgebäude,1. Obergeschoss,Klasse 8d (Sch),,Y,Y
+104,104,Hauptgebäude,1. Obergeschoss,Klasse 8c (Fn),,Y,Y
+105,105,Hauptgebäude,1. Obergeschoss,Klasse 8b (Pr),,Y,Y
+106,106,Hauptgebäude,1. Obergeschoss,Klasse 8a (Krp),,Y,Y
+107,107,Hauptgebäude,1. Obergeschoss,Klasse 9d (Ho),,Y,Y
+108,108,Hauptgebäude,1. Obergeschoss,Klasse 9c (Er),,Y,Y
+111,111,Hauptgebäude,1. Obergeschoss,Klasse 9a (Ka),,Y,Y
+112,112,Hauptgebäude,1. Obergeschoss,Klasse 9b (Ku),,Y,Y
+113,113,Hauptgebäude,1. Obergeschoss,Klasse 7d (Bz/Vo),,Y,Y
+114,114,Hauptgebäude,1. Obergeschoss,Medienraum,,Y,Y
+115,115,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,Y,Y
+117,117,Hauptgebäude,1. Obergeschoss,,WC Damen,Y,Y
+118,118,Hauptgebäude,1. Obergeschoss,,"IT-Admin: Michael König, David Hähningen",Y,Y
+119,119,Hauptgebäude,1. Obergeschoss,Physik 2,,Y,Y
+121,121,Hauptgebäude,1. Obergeschoss,Mathe/Physik,(Es)/(Jo),Y,Y
+122,122,Hauptgebäude,1. Obergeschoss,Physik 1,,Y,Y
+123,123,Hauptgebäude,1. Obergeschoss,Physik-Sammlung,,Y,Y
+124,124,Hauptgebäude,1. Obergeschoss,Lehrerarbeitsraum,,Y,Y
+Sonstiges_12,,Hauptgebäude,1. Obergeschoss,Freiarbeitsbereich,,Y,Y
+Sonstiges_13,,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,Y,Y
+104gang,Gang vor Raum 104,Hauptgebäude,1. Obergeschoss,Gang vor Raum 106,,N,N
+106gang,Gang vor Raum 106,Hauptgebäude,1. Obergeschoss,Gang vor Raum 104,,N,N
+201,201,Hauptgebäude,2. Obergeschoss,Chemie 2,,Y,Y
+202,202,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,Y,Y
+203,203,Hauptgebäude,2. Obergeschoss,Chemie 1,,Y,Y
+204,204,Hauptgebäude,2. Obergeschoss,Chemie-Verwaltung,Dr. Frank Jürgensen,Y,Y
+205,205,Hauptgebäude,2. Obergeschoss,Comupterraum 2,,Y,Y
+206,206,Hauptgebäude,2. Obergeschoss,Musik 2,,Y,Y
+207,207,Hauptgebäude,2. Obergeschoss,Biologie 1,,Y,Y
+208,208,Hauptgebäude,2. Obergeschoss,,,N,N
+211,211,Hauptgebäude,2. Obergeschoss,Biologie 2,,Y,Y
+212,212,Hauptgebäude,2. Obergeschoss,Biologie-Sammlung,,Y,Y
+213,213,Hauptgebäude,2. Obergeschoss,Geographie-Sammlung,Dr. Jean-Marie Schwarzkopf,Y,Y
+214,214,Hauptgebäude,2. Obergeschoss,Geographie,,Y,Y
+215,215,Hauptgebäude,2. Obergeschoss,Computerraum 1,,Y,Y
+216,216,Hauptgebäude,2. Obergeschoss,Musik 1,,Y,Y
+216p,216p,Hauptgebäude,2. Obergeschoss,,,N,N
+218,218,Hauptgebäude,2. Obergeschoss,,WC Herren,Y,Y
+220,220,Hauptgebäude,2. Obergeschoss,Aula,,Y,Y
+222,222,Hauptgebäude,2. Obergeschoss,Musik-Sammlung,,Y,Y
+223,223,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,Y,Y
+Sonstiges_14,,Hauptgebäude,2. Obergeschoss,Biologie-Arbeitsraum,,Y,Y
+Sonstiges_15,,Hauptgebäude,2. Obergeschoss,,Aufgang zur Schülerbibliothek,Y,Y
+Sonstiges_16,,Hauptgebäude,2. Obergeschoss,,WC Lehrkräfte,Y,Y
+301,301,Hauptgebäude,3. Obergeschoss,Terrasse,,Y,Y
+302,302,Hauptgebäude,3. Obergeschoss,,,N,N
+302a,302a,Hauptgebäude,3. Obergeschoss,,,N,N
+304,304,Hauptgebäude,3. Obergeschoss,Kunst-Sammlung und -Vorbereitung,,Y,Y
+304a,304a,Hauptgebäude,3. Obergeschoss,,,N,N
+304b,304b,Hauptgebäude,3. Obergeschoss,,,N,N
+306,306,Hauptgebäude,3. Obergeschoss,Kunst-Brennraum,,Y,Y
+308,308,Hauptgebäude,3. Obergeschoss,Kunst 2,,Y,Y
+309,309,Hauptgebäude,3. Obergeschoss,Kunst 1,,Y,Y
+Sonstiges_17,,Hauptgebäude,3. Obergeschoss,Kunst-Vorbereitung,,Y,Y
+Sonstiges_18,,Hauptgebäude,3. Obergeschoss,Schülerbibliothek,,Y,Y
+Sonstiges_19,,Hauptgebäude,3. Obergeschoss,,Lager,Y,Y
+L1,L1,Neubau,Erdgeschoss,,,N,N
+L2,L2,Neubau,Erdgeschoss,,,N,N
+N1,N1,Neubau,Erdgeschoss,Klasse 10a (Jo),,Y,Y
+N2,N2,Neubau,Erdgeschoss,Klasse 10b (Gw),,Y,Y
+N3,N3,Neubau,Erdgeschoss,,,N,N
+N4,N4,Neubau,Erdgeschoss,,,N,N
+N5,N5,Neubau,Erdgeschoss,,,N,N
+N6,N6,Neubau,Erdgeschoss,Oberstufenraum,,Y,Y
+Oberstufenraum,,Neubau,Erdgeschoss,Oberstufenraum,,Y,Y
+Sonstiges_20,,Neubau,Erdgeschoss,,Technik,Y,Y
+Sonstiges_21,,Neubau,Erdgeschoss,,Technik,Y,Y
+Sonstiges_22,,Neubau,Erdgeschoss,,Technik,Y,Y
+WC_5,,Neubau,Erdgeschoss,,"WC Damen, barrierefrei",Y,Y
+WC_6,,Neubau,Erdgeschoss,,WC Damen,Y,Y
+N1.1,N1.1,Neubau,1. Obergeschoss,Klasse 10c (Ln),,Y,Y
+N1.2,N1.2,Neubau,1. Obergeschoss,Klasse 10d (Dw),,Y,Y
+N1.3,N1.3,Neubau,1. Obergeschoss,Arbeitsraum,,Y,Y
+N1Arbeitsraum,,Neubau,1. Obergeschoss,Arbeitsraum,,Y,Y
+N1.4,N1.4,Neubau,1. Obergeschoss,,,N,N
+N1.5,N1.5,Neubau,1. Obergeschoss,,,N,N
+N1.6,N1.6,Neubau,1. Obergeschoss,,,N,N
+Sonstiges_23,,Neubau,1. Obergeschoss,,Technik,Y,Y
+Sonstiges_24,,Neubau,1. Obergeschoss,,Technik,Y,Y
+WC_1,,Neubau,1. Obergeschoss,,WC Damen,Y,Y
+WC_2,,Neubau,1. Obergeschoss,,WC Herren,Y,Y
+WC_7,,Neubau,1. Obergeschoss,,WC Herren,Y,Y
+WC_3,,Neubau,1. Obergeschoss,,"WC Herren, barrierefrei",Y,Y

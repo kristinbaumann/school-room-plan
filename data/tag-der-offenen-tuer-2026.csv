@@ -1,67 +1,75 @@
-ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet & in Karte klickbar
-1,Hauptgebäude,Erdgeschoss,001,001,Hausmeister,,N,N
-2,Hauptgebäude,Erdgeschoss,002,002,Schulbüro,"Nadja Nagorsnik, Katrin Wiese",Y,Y
-3,Hauptgebäude,Erdgeschoss,002a,002a,Schulleiterin,Dr. Maike Languth,N,N
-4,Hauptgebäude,Erdgeschoss,003,003,Stellv. Schulleiter,Tino Fischer,N,N
-5,Hauptgebäude,Erdgeschoss,004,004,Hege Helping Hands e.V.,"Yvonne Böcker, Matthias Wilksen",N,Y
-6,Hauptgebäude,Erdgeschoss,005,005,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Frau Aschenbrenner",N,Y
-7,Hauptgebäude,Erdgeschoss,006,006,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch
+Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet & in Karte klickbar
+001,001,Hauptgebäude,Erdgeschoss,Hausmeister,,N,N
+002,002,Hauptgebäude,Erdgeschoss,Schulbüro,"Nadja Nagorsnik, Katrin Wiese",Y,Y
+002a,002a,Hauptgebäude,Erdgeschoss,Schulleiterin,Dr. Maike Languth,N,N
+003,003,Hauptgebäude,Erdgeschoss,Stellv. Schulleiter,Tino Fischer,N,N
+004,004,Hauptgebäude,Erdgeschoss,Hege Helping Hands e.V.,"Yvonne Böcker, Matthias Wilksen",N,Y
+005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Frau Aschenbrenner",N,Y
+006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch
  Hier: Geschichte & Geografie
  Beate Behrens, Gerhard Wille
  Biology im 2. OG",N,Y
-8,Hauptgebäude,Erdgeschoss,007,007,Klasse 5d (Fo),,N,N
-9,Hauptgebäude,Erdgeschoss,008,008,Klasse 5c (Be),,N,N
-10,Hauptgebäude,Erdgeschoss,011,011,Klasse 5a (Wg),,N,N
-11,Hauptgebäude,Erdgeschoss,012,012,Klasse 5b (To),,N,N
-12,Hauptgebäude,Erdgeschoss,013,013,Klasse 6a (Sf/Sz),,N,N
-13,Hauptgebäude,Erdgeschoss,014,014,"Begabungs-, Lern- und Sprachförderung","Dr. Heide Pilarczyk, Sara-Marie Kummerfeldt, Stefanie Hahn",N,Y
-14,Hauptgebäude,Erdgeschoss,015,015,Klasse 6c (Gm),,N,N
-15,Hauptgebäude,Erdgeschoss,016,016,Verstärkter Englischunterricht und die Vorbereitung auf den bilingualen Unterricht,"Linn Gellermann, Till van der Ven",N,Y
-16,Hauptgebäude,Erdgeschoss,017,017,,WC Herren (WC Damen 1/2 Etage tiefer),Y,N
-17,Hauptgebäude,Erdgeschoss,021,021,Konferenzraum,,N,N
-18,Hauptgebäude,Erdgeschoss,022,022,Schulbüro & Krankenzimmer,Linn Gellermann,N,N
-41,Hauptgebäude,1. Obergeschoss,101,101,Abteilungsleitung 11–12,Dr. Björn Reetz,N,N
-42,Hauptgebäude,1. Obergeschoss,102,102,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",N,N
-43,Hauptgebäude,1. Obergeschoss,103,103,Hege For Future-AG,,N,Y
-44,Hauptgebäude,1. Obergeschoss,104,104,Mathematik zum Mitmachen,Gesa Einsporn,N,Y
-45,Hauptgebäude,1. Obergeschoss,105,105,Deutsch – Schwerpunkte und Projekte,Kristina Duncan,N,Y
-46,Hauptgebäude,1. Obergeschoss,106,106,"Vive la France – Vive l’échange
+007,007,Hauptgebäude,Erdgeschoss,Klasse 5d (Fo),,N,N
+008,008,Hauptgebäude,Erdgeschoss,Klasse 5c (Be),,N,N
+011,011,Hauptgebäude,Erdgeschoss,Klasse 5a (Wg),,N,N
+012,012,Hauptgebäude,Erdgeschoss,Klasse 5b (To),,N,N
+013,013,Hauptgebäude,Erdgeschoss,Klasse 6a (Sf/Sz),,N,N
+014,014,Hauptgebäude,Erdgeschoss,"Begabungs-, Lern- und Sprachförderung","Dr. Heide Pilarczyk, Sara-Marie Kummerfeldt, Stefanie Hahn",N,Y
+015,015,Hauptgebäude,Erdgeschoss,Klasse 6c (Gm),,N,N
+016,016,Hauptgebäude,Erdgeschoss,Verstärkter Englischunterricht und die Vorbereitung auf den bilingualen Unterricht,"Linn Gellermann, Till van der Ven",N,Y
+017,017,Hauptgebäude,Erdgeschoss,,WC Herren (WC Damen 1/2 Etage tiefer),Y,N
+021,021,Hauptgebäude,Erdgeschoss,Konferenzraum,,N,N
+022,022,Hauptgebäude,Erdgeschoss,Schulbüro & Krankenzimmer,Linn Gellermann,N,N
+0foyer,Foyer,Hauptgebäude,Erdgeschoss,Allgemeine Informationen,"Informationen der Schulleitung, des Elternrats und des Schülerrats; 
+ Meeting-Point der Scouts",Y,Y
+003gang,Gang vor Raum 003,Hauptgebäude,Erdgeschoss,Info-Point »Unsere Beobachtungs- und Mittelstufe«,Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7) und Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10) beraten Sie gern,Y,Y
+005gang,Gang vor Raum 005,Hauptgebäude,Erdgeschoss,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
+101,101,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 11–12,Dr. Björn Reetz,N,N
+102,102,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",N,N
+103,103,Hauptgebäude,1. Obergeschoss,Hege For Future-AG,,N,Y
+104,104,Hauptgebäude,1. Obergeschoss,Mathematik zum Mitmachen,Gesa Einsporn,N,Y
+105,105,Hauptgebäude,1. Obergeschoss,Deutsch – Schwerpunkte und Projekte,Kristina Duncan,N,Y
+106,106,Hauptgebäude,1. Obergeschoss,"Vive la France – Vive l’échange
  Französisch und unser Frankreichaustausch","Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas",N,Y
-47,Hauptgebäude,1. Obergeschoss,107,107,Klasse 9d (Ho),,N,N
-48,Hauptgebäude,1. Obergeschoss,108,108,Klasse 9c (Er),,N,N
-49,Hauptgebäude,1. Obergeschoss,111,111,Klasse 9a (Ka),,N,N
-50,Hauptgebäude,1. Obergeschoss,112,112,"Geografie – Auf dem Weg zur Nachhaltigkeit
+107,107,Hauptgebäude,1. Obergeschoss,Klasse 9d (Ho),,N,N
+108,108,Hauptgebäude,1. Obergeschoss,Klasse 9c (Er),,N,N
+111,111,Hauptgebäude,1. Obergeschoss,Klasse 9a (Ka),,N,N
+112,112,Hauptgebäude,1. Obergeschoss,"Geografie – Auf dem Weg zur Nachhaltigkeit
  Crafting - Gutes Gewissen mit Seegrasskissen","Hege Studies-AG
  Dr. Jean-Marie Schwarzkopf, Florian Hogg",N,Y
-51,Hauptgebäude,1. Obergeschoss,113,113,12:00 Uhr: »Franz en France«: 15-minütiges deutsch-französisches Theaterstück,"Von Schülerinnen und Schülern aus Jg. 7
+113,113,Hauptgebäude,1. Obergeschoss,12:00 Uhr: »Franz en France«: 15-minütiges deutsch-französisches Theaterstück,"Von Schülerinnen und Schülern aus Jg. 7
  Dr. Heide Pilarczyk",N,N
-52,Hauptgebäude,1. Obergeschoss,114,114,Medienraum,,N,N
-53,Hauptgebäude,1. Obergeschoss,115,115,Lehrerzimmer,,N,N
-54,Hauptgebäude,1. Obergeschoss,117,117,,WC Damen,Y,N
-55,Hauptgebäude,1. Obergeschoss,118,118,,"IT-Admin: Michael König, David Hähningen",N,N
-56,Hauptgebäude,1. Obergeschoss,119,119,Physik 2,,N,N
-57,Hauptgebäude,1. Obergeschoss,121,121,Mathe/Physik,(Es)/(Jo),N,N
-58,Hauptgebäude,1. Obergeschoss,122,122,Physik entdecken – physikalischen Phänomenen auf der Spur,"Der Fachbereich Physik: Experimente zum Mitmachen
+114,114,Hauptgebäude,1. Obergeschoss,Medienraum,,N,N
+115,115,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,N,N
+117,117,Hauptgebäude,1. Obergeschoss,,WC Damen,Y,N
+118,118,Hauptgebäude,1. Obergeschoss,,"IT-Admin: Michael König, David Hähningen",N,N
+119,119,Hauptgebäude,1. Obergeschoss,Physik 2,,N,N
+121,121,Hauptgebäude,1. Obergeschoss,Mathe/Physik,(Es)/(Jo),N,N
+122,122,Hauptgebäude,1. Obergeschoss,Physik entdecken – physikalischen Phänomenen auf der Spur,"Der Fachbereich Physik: Experimente zum Mitmachen
  Silas Fobel",Y,Y
-59,Hauptgebäude,1. Obergeschoss,123,123,Physik-Sammlung,,N,N
-60,Hauptgebäude,1. Obergeschoss,124,124,Lehrerarbeitsraum,,N,N
-63,Hauptgebäude,2. Obergeschoss,201,201,Chemie zum Anfassen (II),"Dr. Frank Jürgensen, Mattes Jokmin",Y,Y
-64,Hauptgebäude,2. Obergeschoss,202,202,Chemie-Sammlung,,N,N
-65,Hauptgebäude,2. Obergeschoss,203,203,Chemie zum Anfassen (I),"Dr. Frank Jürgensen, Mattes Jokmin",Y,Y
-66,Hauptgebäude,2. Obergeschoss,204,204,Chemie-Verwaltung,Dr. Frank Jürgensen,N,N
-67,Hauptgebäude,2. Obergeschoss,205,205,Digitales Arbeiten,"Catharine Kausche, Jörn Ole Augustin",Y,Y
-68,Hauptgebäude,2. Obergeschoss,206,206,Musik 2,,N,N
-69,Hauptgebäude,2. Obergeschoss,207,207,Biologie 1,,N,N
-70,Hauptgebäude,2. Obergeschoss,208,208,,,N,N
-71,Hauptgebäude,2. Obergeschoss,211,211,Biologie entdecken und Discovering Biology,"Sarah Heerdmann, Agnes Kruppa, Gunnar Scheehl",Y,Y
-72,Hauptgebäude,2. Obergeschoss,212,212,Biologie-Sammlung,,N,N
-73,Hauptgebäude,2. Obergeschoss,213,213,Geographie-Sammlung,Dr. Jean-Marie Schwarzkopf,N,N
-74,Hauptgebäude,2. Obergeschoss,214,214,Geographie,,N,N
-75,Hauptgebäude,2. Obergeschoss,215,215,Informatik – Vorstellung „Scratch“ und „Python“,"David Hähnigen, Michael Fiehn, Ralf Kohler",Y,Y
-76,Hauptgebäude,2. Obergeschoss,216,216,Mitspielstück(e) • Instrumente ausprobieren,Fabian Kenk,Y,Y
-77,Hauptgebäude,2. Obergeschoss,216p,216p,,,N,N
-78,Hauptgebäude,2. Obergeschoss,218,218,,WC Herren,Y,N
-79,Hauptgebäude,2. Obergeschoss,220,220,Aula,"11:00–11:15 Uhr
+123,123,Hauptgebäude,1. Obergeschoss,Physik-Sammlung,,N,N
+124,124,Hauptgebäude,1. Obergeschoss,Lehrerarbeitsraum,,N,N
+104gang,Gang vor Raum 104,Hauptgebäude,1. Obergeschoss,Hege-Café,,Y,Y
+106gang,Gang vor Raum 106,Hauptgebäude,1. Obergeschoss,Wir lernen gemeinsam Frankreich kennen,Dr. Heide Pilarczyk,Y,Y
+Sonstiges_12,,Hauptgebäude,1. Obergeschoss,Freiarbeitsbereich,,N,N
+Sonstiges_13,,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,N,N
+201,201,Hauptgebäude,2. Obergeschoss,Chemie zum Anfassen (II),"Dr. Frank Jürgensen, Mattes Jokmin",Y,Y
+202,202,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,N,N
+203,203,Hauptgebäude,2. Obergeschoss,Chemie zum Anfassen (I),"Dr. Frank Jürgensen, Mattes Jokmin",Y,Y
+204,204,Hauptgebäude,2. Obergeschoss,Chemie-Verwaltung,Dr. Frank Jürgensen,N,N
+205,205,Hauptgebäude,2. Obergeschoss,Digitales Arbeiten,"Catharine Kausche, Jörn Ole Augustin",Y,Y
+206,206,Hauptgebäude,2. Obergeschoss,Musik 2,,N,N
+207,207,Hauptgebäude,2. Obergeschoss,Biologie 1,,N,N
+208,208,Hauptgebäude,2. Obergeschoss,,,N,N
+211,211,Hauptgebäude,2. Obergeschoss,Biologie entdecken und Discovering Biology,"Sarah Heerdmann, Agnes Kruppa, Gunnar Scheehl",Y,Y
+212,212,Hauptgebäude,2. Obergeschoss,Biologie-Sammlung,,N,N
+213,213,Hauptgebäude,2. Obergeschoss,Geographie-Sammlung,Dr. Jean-Marie Schwarzkopf,N,N
+214,214,Hauptgebäude,2. Obergeschoss,Geographie,,N,N
+215,215,Hauptgebäude,2. Obergeschoss,Informatik – Vorstellung „Scratch“ und „Python“,"David Hähnigen, Michael Fiehn, Ralf Kohler",Y,Y
+216,216,Hauptgebäude,2. Obergeschoss,Mitspielstück(e) • Instrumente ausprobieren,Fabian Kenk,Y,Y
+216p,216p,Hauptgebäude,2. Obergeschoss,,,N,N
+218,218,Hauptgebäude,2. Obergeschoss,,WC Herren,Y,N
+220,220,Hauptgebäude,2. Obergeschoss,Aula,"11:00–11:15 Uhr
  Schulchor
  Sarah-Jiny Kisker, Fabian Kenk
  
@@ -75,41 +83,55 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
  Schüler:innen-Aufführung der 5b
  „Zauberblumen“ 
  Almuth Schäfer",Y,Y
-80,Hauptgebäude,2. Obergeschoss,222,222,Musik-Sammlung,,N,N
-81,Hauptgebäude,2. Obergeschoss,223,223,Chemie-Sammlung,,N,N
-85,Hauptgebäude,3. Obergeschoss,301,301,Terrasse,,N,N
-86,Hauptgebäude,3. Obergeschoss,302,302,,,N,N
-87,Hauptgebäude,3. Obergeschoss,302a,302a,,,N,N
-88,Hauptgebäude,3. Obergeschoss,304,304,Kunst-Sammlung und -Vorbereitung,,N,N
-89,Hauptgebäude,3. Obergeschoss,304a,304a,,,N,N
-90,Hauptgebäude,3. Obergeschoss,304b,304b,,,N,N
-91,Hauptgebäude,3. Obergeschoss,306,306,Kunst-Brennraum,,N,N
-92,Hauptgebäude,3. Obergeschoss,308,308,Kunst entdecken (I),"Präsentation von Schüler:innenarbeiten
+222,222,Hauptgebäude,2. Obergeschoss,Musik-Sammlung,,N,N
+223,223,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,N,N
+Sonstiges_14,,Hauptgebäude,2. Obergeschoss,Biologie-Arbeitsraum,,N,N
+Sonstiges_15,,Hauptgebäude,2. Obergeschoss,,Aufgang zur Schülerbibliothek,N,N
+Sonstiges_16,,Hauptgebäude,2. Obergeschoss,,WC Lehrkräfte,N,N
+301,301,Hauptgebäude,3. Obergeschoss,Terrasse,,N,N
+302,302,Hauptgebäude,3. Obergeschoss,,,N,N
+302a,302a,Hauptgebäude,3. Obergeschoss,,,N,N
+304,304,Hauptgebäude,3. Obergeschoss,Kunst-Sammlung und -Vorbereitung,,N,N
+304a,304a,Hauptgebäude,3. Obergeschoss,,,N,N
+304b,304b,Hauptgebäude,3. Obergeschoss,,,N,N
+306,306,Hauptgebäude,3. Obergeschoss,Kunst-Brennraum,,N,N
+308,308,Hauptgebäude,3. Obergeschoss,Kunst entdecken (I),"Präsentation von Schüler:innenarbeiten
  Ergebnisse der Kunst-Ag und Street-Art-Ag
  Janina Arlt, Sebastian Gehnen, Katja Lehmann, Herr Taube, Freda Wehowski",Y,Y
-93,Hauptgebäude,3. Obergeschoss,309,309,Kunst entdecken (II),"Präsentation von Schüler:innenarbeiten
+309,309,Hauptgebäude,3. Obergeschoss,Kunst entdecken (II),"Präsentation von Schüler:innenarbeiten
  Ergebnisse der Kunst-Ag und Street-Art-Ag
  Janina Arlt, Sebastian Gehnen, Katja Lehmann, Herr Taube, Freda Wehowski",Y,Y
-120,Hauptgebäude,Erdgeschoss,Foyer,0foyer,Allgemeine Informationen,"Informationen der Schulleitung, des Elternrats und des Schülerrats; 
- Meeting-Point der Scouts",Y,Y
-121,Hauptgebäude,Erdgeschoss,Gang vor Raum 003,003gang,Info-Point »Unsere Beobachtungs- und Mittelstufe«,Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7) und Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10) beraten Sie gern,Y,Y
-122,Hauptgebäude,Erdgeschoss,Gang vor Raum 005,005gang,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
-124,Hauptgebäude,1. Obergeschoss,Gang vor Raum 104,104gang,Hege-Café,,Y,Y
-123,Hauptgebäude,1. Obergeschoss,Gang vor Raum 106,106gang,Wir lernen gemeinsam Frankreich kennen,Dr. Heide Pilarczyk,Y,Y
-97,Neubau,Erdgeschoss,L1,L1,,,N,N
-98,Neubau,Erdgeschoss,L2,L2,,,N,N
-28,Hauptgebäude,Untergeschoss,Mehrzweckhalle,Mehrzweckhalle,"Theater: Ausstellung, Fachbereich Sport, Zirkus-AG, Schulhockey","Almuth Schäfer, Hans Peters, Lars Schwartz, Johanna Gewand",Y,Y
-99,Neubau,Erdgeschoss,N1,N1,Klasse 10a (Jo),,N,N
-109,Neubau,1. Obergeschoss,N1.1,N1.1,Klasse 10c (Ln),,N,N
-110,Neubau,1. Obergeschoss,N1.2,N1.2,Klasse 10d (Dw),,N,N
-111,Neubau,1. Obergeschoss,N1.3,N1.3,Arbeitsraum,,N,N
-111a,Neubau,1. Obergeschoss,,N1Arbeitsraum,Arbeitsraum,,N,N
-112,Neubau,1. Obergeschoss,N1.4,N1.4,,,N,N
-113,Neubau,1. Obergeschoss,N1.5,N1.5,,,N,N
-114,Neubau,1. Obergeschoss,N1.6,N1.6,,,N,N
-100,Neubau,Erdgeschoss,N2,N2,Klasse 10b (Gw),,N,N
-101,Neubau,Erdgeschoss,N3,N3,,,N,N
-102,Neubau,Erdgeschoss,N4,N4,"Oberstufe – Profilpräsentation
+Sonstiges_17,,Hauptgebäude,3. Obergeschoss,Kunst-Vorbereitung,,N,N
+Sonstiges_18,,Hauptgebäude,3. Obergeschoss,Schülerbibliothek,,N,N
+Sonstiges_19,,Hauptgebäude,3. Obergeschoss,,Lager,N,N
+Mehrzweckhalle,Mehrzweckhalle,Hauptgebäude,Untergeschoss,"Theater: Ausstellung, Fachbereich Sport, Zirkus-AG, Schulhockey","Almuth Schäfer, Hans Peters, Lars Schwartz, Johanna Gewand",Y,Y
+UG1,UG1,Hauptgebäude,Untergeschoss,Ruheraum L,,N,N
+UG14,UG14,Hauptgebäude,Untergeschoss,Sozialpädagogin,Helle Westermann,N,N
+UG2,UG2,Hauptgebäude,Untergeschoss,Beratung & Lerncoaching,"Maria Matschiner, Jana Welling, Johanna Gewand",Y,Y
+UG3,UG3,Hauptgebäude,Untergeschoss,"Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung","Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand",N,N
+UG7,UG7,Hauptgebäude,Untergeschoss,Unser Ganztag • Kooperation mit der ETV-KiJU,"Oliver Nielsen, Julia Rindsfus",Y,Y
+UG7a,UG7a,Hauptgebäude,Untergeschoss,Ganztag (Ruhe),Büro: Oliver Nielsen,N,N
+UG8,UG8,Hauptgebäude,Untergeschoss,,Personalraum Reinigung,N,N
+UG_kleine_Halle,,Hauptgebäude,Untergeschoss,Kleine Halle,,N,N
+Mensa,,Hauptgebäude,Untergeschoss,Mensa HEGElicious,,Y,N
+Sonstiges_1,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",N,N
+Sonstiges_2,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",N,N
+Sonstiges_3,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",N,N
+Sonstiges_4,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",N,N
+Sonstiges_5,,Hauptgebäude,Untergeschoss,,Küche,N,N
+Sonstiges_6,,Hauptgebäude,Untergeschoss,,Reinigung,N,N
+Sonstiges_7,,Hauptgebäude,Untergeschoss,,Reinigung,N,N
+Sonstiges_8,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,N,N
+Sonstiges_9,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,N,N
+Sonstiges_10,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,N,N
+Sonstiges_11,,Hauptgebäude,Untergeschoss,,Waschküche,N,N
+WC_4,,Hauptgebäude,Untergeschoss,,WC Damen,Y,N
+L1,L1,Neubau,Erdgeschoss,,,N,N
+L2,L2,Neubau,Erdgeschoss,,,N,N
+N1,N1,Neubau,Erdgeschoss,Klasse 10a (Jo),,N,N
+N2,N2,Neubau,Erdgeschoss,Klasse 10b (Gw),,N,N
+N3,N3,Neubau,Erdgeschoss,,,N,N
+N4,N4,Neubau,Erdgeschoss,"Oberstufe – Profilpräsentation
  
 
  Berufsorientierung: Wie geht es nach der Schule weiter? 
@@ -119,46 +141,24 @@ ID,Gebaeude,Etage,Nummer,Raum ID,Name_1,Name_2,in Karte zusätzlich beschriftet,
  
 
  Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG","Dr. Björn Reetz, Herr Dr. Stephan Benzmann, Caroline Jahn, Birte Rösler, Rabea Gausepohl, b@s-Schülerteam",Y,Y
-103,Neubau,Erdgeschoss,N5,N5,,,N,N
-104,Neubau,Erdgeschoss,N6,N6,Oberstufenraum,,N,N
-104a,Neubau,Erdgeschoss,,Oberstufenraum,Oberstufenraum,,N,N
-19,Hauptgebäude,Untergeschoss,UG1,UG1,Ruheraum L,,N,N
-20,Hauptgebäude,Untergeschoss,UG14,UG14,Sozialpädagogin,Helle Westermann,N,N
-21,Hauptgebäude,Untergeschoss,UG2,UG2,Beratung & Lerncoaching,"Maria Matschiner, Jana Welling, Johanna Gewand",Y,Y
-22,Hauptgebäude,Untergeschoss,UG3,UG3,"Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung","Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand",N,N
-23,Hauptgebäude,Untergeschoss,UG7,UG7,Unser Ganztag • Kooperation mit der ETV-KiJU,"Oliver Nielsen, Julia Rindsfus",Y,Y
-24,Hauptgebäude,Untergeschoss,UG7a,UG7a,Ganztag (Ruhe),Büro: Oliver Nielsen,N,N
-25,Hauptgebäude,Untergeschoss,UG8,UG8,,Personalraum Reinigung,N,N
-26,Hauptgebäude,Untergeschoss,,UG_kleine_Halle,Kleine Halle,,N,N
-27,Hauptgebäude,Untergeschoss,,Mensa,Mensa HEGElicious,,Y,N
-29,Hauptgebäude,Untergeschoss,,Sonstiges_1,,"Hausmeister, Technik, Heizung",N,N
-30,Hauptgebäude,Untergeschoss,,Sonstiges_2,,"Hausmeister, Technik, Heizung",N,N
-31,Hauptgebäude,Untergeschoss,,Sonstiges_3,,"Hausmeister, Technik, Heizung",N,N
-32,Hauptgebäude,Untergeschoss,,Sonstiges_4,,"Hausmeister, Technik, Heizung",N,N
-33,Hauptgebäude,Untergeschoss,,Sonstiges_5,,Küche,N,N
-34,Hauptgebäude,Untergeschoss,,Sonstiges_6,,Reinigung,N,N
-35,Hauptgebäude,Untergeschoss,,Sonstiges_7,,Reinigung,N,N
-36,Hauptgebäude,Untergeschoss,,Sonstiges_8,,Umkleiden & Duschen,N,N
-37,Hauptgebäude,Untergeschoss,,Sonstiges_9,,Umkleiden & Duschen,N,N
-38,Hauptgebäude,Untergeschoss,,Sonstiges_10,,Umkleiden & Duschen,N,N
-39,Hauptgebäude,Untergeschoss,,Sonstiges_11,,Waschküche,N,N
-40,Hauptgebäude,Untergeschoss,,WC_4,,WC Damen,Y,N
-61,Hauptgebäude,1. Obergeschoss,,Sonstiges_12,Freiarbeitsbereich,,N,N
-62,Hauptgebäude,1. Obergeschoss,,Sonstiges_13,Lehrerzimmer,,N,N
-82,Hauptgebäude,2. Obergeschoss,,Sonstiges_14,Biologie-Arbeitsraum,,N,N
-83,Hauptgebäude,2. Obergeschoss,,Sonstiges_15,,Aufgang zur Schülerbibliothek,N,N
-84,Hauptgebäude,2. Obergeschoss,,Sonstiges_16,,WC Lehrkräfte,N,N
-94,Hauptgebäude,3. Obergeschoss,,Sonstiges_17,Kunst-Vorbereitung,,N,N
-95,Hauptgebäude,3. Obergeschoss,,Sonstiges_18,Schülerbibliothek,,N,N
-96,Hauptgebäude,3. Obergeschoss,,Sonstiges_19,,Lager,N,N
-105,Neubau,Erdgeschoss,,Sonstiges_20,,Technik,N,N
-106,Neubau,Erdgeschoss,,Sonstiges_21,,Technik,N,N
-107,Neubau,Erdgeschoss,,Sonstiges_22,,Technik,N,N
-108,Neubau,Erdgeschoss,,WC_5,,"WC Damen, barrierefrei",Y,N
-108a,Neubau,Erdgeschoss,,WC_6,,WC Damen,Y,N
-115,Neubau,1. Obergeschoss,,Sonstiges_23,,Technik,N,N
-116,Neubau,1. Obergeschoss,,Sonstiges_24,,Technik,N,N
-117,Neubau,1. Obergeschoss,,WC_1,,WC Damen,Y,N
-118a,Neubau,1. Obergeschoss,,WC_7,,WC Herren,Y,N
-118,Neubau,1. Obergeschoss,,WC_2,,WC Herren,Y,N
-119,Neubau,1. Obergeschoss,,WC_3,,"WC Herren, barrierefrei",Y,N
+N5,N5,Neubau,Erdgeschoss,,,N,N
+N6,N6,Neubau,Erdgeschoss,Oberstufenraum,,N,N
+Oberstufenraum,,Neubau,Erdgeschoss,Oberstufenraum,,N,N
+Sonstiges_20,,Neubau,Erdgeschoss,,Technik,N,N
+Sonstiges_21,,Neubau,Erdgeschoss,,Technik,N,N
+Sonstiges_22,,Neubau,Erdgeschoss,,Technik,N,N
+WC_5,,Neubau,Erdgeschoss,,"WC Damen, barrierefrei",Y,N
+WC_6,,Neubau,Erdgeschoss,,WC Damen,Y,N
+N1.1,N1.1,Neubau,1. Obergeschoss,Klasse 10c (Ln),,N,N
+N1.2,N1.2,Neubau,1. Obergeschoss,Klasse 10d (Dw),,N,N
+N1.3,N1.3,Neubau,1. Obergeschoss,Arbeitsraum,,N,N
+N1Arbeitsraum,,Neubau,1. Obergeschoss,Arbeitsraum,,N,N
+N1.4,N1.4,Neubau,1. Obergeschoss,,,N,N
+N1.5,N1.5,Neubau,1. Obergeschoss,,,N,N
+N1.6,N1.6,Neubau,1. Obergeschoss,,,N,N
+Sonstiges_23,,Neubau,1. Obergeschoss,,Technik,N,N
+Sonstiges_24,,Neubau,1. Obergeschoss,,Technik,N,N
+WC_1,,Neubau,1. Obergeschoss,,WC Damen,Y,N
+WC_7,,Neubau,1. Obergeschoss,,WC Herren,Y,N
+WC_2,,Neubau,1. Obergeschoss,,WC Herren,Y,N
+WC_3,,Neubau,1. Obergeschoss,,"WC Herren, barrierefrei",Y,N
