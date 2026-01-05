@@ -771,14 +771,6 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
     return null;
   }
   const isHighlighted = event.roomId === highlightedRoomId;
-
-  console.log(
-    "Rendering event:",
-    event,
-    "Highlighted:",
-    isHighlighted,
-    event.name1
-  );
   return html`<div
     class="event"
     data-event-roomid=${event.roomId}
@@ -814,7 +806,9 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
   >
     ${event.number ? html`<p style="margin: 0;">Raum: ${event.number}</p>` : ""}
     ${event.name1
-      ? html`<p style="font-weight: bold; margin: 0; white-space: pre-line;">${event.name1}</p>`
+      ? html`<p style="font-weight: bold; margin: 0; white-space: pre-line;">
+          ${event.name1}
+        </p>`
       : ""}
     ${event.name2 ? html`<p style="margin: 0;">${event.name2}</p>` : ""}
   </div>`;
