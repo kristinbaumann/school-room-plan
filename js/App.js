@@ -610,11 +610,37 @@ export const App = ({ dataURL }) => {
           }
         }
         .event {
+          border: 1px solid black;
+          padding: 4px 8px;
+          cursor: pointer;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
           transition: background-color 0.3s;
+
+          svg {
+            flex-shrink: 0;
+            max-width: 32px;
+
+            path {
+              fill: #e2b2a4;
+              transition: fill 0.3s;
+            }
+          }
+
+          &:hover,
+          &.highlighted {
+            background-color: #e2b2a4;
+
+            svg path {
+              fill: #ffffff;
+            }
+          }
         }
-        .event:hover {
-          background-color: #e2b2a4;
-        }
+
         .area {
           fill: none;
           transition: fill 0.3s;
@@ -772,11 +798,8 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
   }
   const isHighlighted = event.roomId === highlightedRoomId;
   return html`<div
-    class="event"
+    class="event ${isHighlighted ? "highlighted" : ""}"
     data-event-roomid=${event.roomId}
-    style="border: 1px solid black; padding: 4px; cursor: pointer; background-color: ${isHighlighted
-      ? "#e2b2a4"
-      : "transparent"};"
     onclick=${() => {
       setHighlightedRoomId(event.roomId);
 
@@ -804,13 +827,29 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
       }, 100);
     }}
   >
-    ${event.number ? html`<p style="margin: 0;">Raum: ${event.number}</p>` : ""}
-    ${event.name1
-      ? html`<p style="font-weight: bold; margin: 0; white-space: pre-line;">
-          ${event.name1}
-        </p>`
-      : ""}
-    ${event.name2 ? html`<p style="margin: 0;">${event.name2}</p>` : ""}
+    <div>
+      ${event.number
+        ? html`<p style="margin: 0;">Raum: ${event.number}</p>`
+        : ""}
+      ${event.name1
+        ? html`<p style="font-weight: bold; margin: 0; white-space: pre-line;">
+            ${event.name1}
+          </p>`
+        : ""}
+      ${event.name2 ? html`<p style="margin: 0;">${event.name2}</p>` : ""}
+    </div>
+    <svg
+      width="52"
+      height="78"
+      viewBox="0 0 52 78"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M26 0.5C40.0832 0.5 51.5005 11.9154 51.5 25.9971C51.5 27.9204 51.2864 29.794 50.8828 31.5947L50.8721 31.6455L50.8711 31.6943C49.8253 36.6088 46.5394 43.491 42.0215 51.4619C37.5202 59.4035 31.8279 68.3709 25.998 77.4629C20.1607 68.4462 14.5077 59.5856 10.0293 51.6797C5.53523 43.7461 2.25209 36.8241 1.13184 31.6934L1.12988 31.6543L1.12109 31.6152L0.977539 30.9336C0.664179 29.3366 0.5 27.6855 0.5 25.9961C0.500144 11.9151 11.9166 0.500256 26 0.5ZM26 12.2695C18.4796 12.2698 12.3828 18.3653 12.3828 25.8848C12.383 33.4041 18.4797 39.4997 26 39.5C33.5205 39.5 39.618 33.4043 39.6182 25.8848C39.6182 18.3652 33.5206 12.2695 26 12.2695Z"
+        stroke="black"
+      />
+    </svg>
   </div>`;
 };
 
