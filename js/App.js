@@ -675,6 +675,7 @@ export const App = ({ dataURL }) => {
                   listedEvents=${listedEvents}
                   highlightedRoomId=${highlightedRoomId}
                   setHighlightedRoomId=${setHighlightedRoomId}
+                  setSelectedLevel=${setSelectedLevel}
                 />`;
               }
             )}
@@ -710,6 +711,7 @@ export const App = ({ dataURL }) => {
                   listedEvents=${listedEvents}
                   highlightedRoomId=${highlightedRoomId}
                   setHighlightedRoomId=${setHighlightedRoomId}
+                  setSelectedLevel=${setSelectedLevel}
                 />
                 <${FloorPlan}
                   svgContent=${svgContents[levelLabel]}
@@ -765,6 +767,7 @@ const EventsPerLevel = ({
   listedEvents,
   highlightedRoomId,
   setHighlightedRoomId,
+  setSelectedLevel,
 }) => {
   //   console.log("Rendering EventsPerLevel for", levelLabel, listedEvents);
   const levelObject = levels.find((lvl) => lvl.key === levelLabel);
@@ -793,13 +796,14 @@ const EventsPerLevel = ({
             event=${event}
             highlightedRoomId=${highlightedRoomId}
             setHighlightedRoomId=${setHighlightedRoomId}
+            setSelectedLevel=${setSelectedLevel}
           />`
       )}
     </div>
   </div>`;
 };
 
-const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
+const Event = ({ event, highlightedRoomId, setHighlightedRoomId, setSelectedLevel }) => {
   if (!event.listed_clickable) {
     return null;
   }
@@ -809,6 +813,12 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
     data-event-roomid=${event.roomId}
     onclick=${() => {
       setHighlightedRoomId(event.roomId);
+
+      // On desktop, set the selected level to the room's level
+      const isMobile = window.innerWidth <= 800;
+      if (!isMobile && event.levelLabel && setSelectedLevel) {
+        setSelectedLevel(event.levelLabel);
+      }
 
       // Scroll to floor plan on mobile
       setTimeout(() => {
