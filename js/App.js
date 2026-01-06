@@ -174,7 +174,7 @@ export const App = ({ dataURL }) => {
                         const areaElements =
                           roomGroup.querySelectorAll(".area");
                         areaElements.forEach((areaEl) => {
-                          //   areaEl.style.fill = "#dfdfdf";
+                          areaEl.classList.add("listed");
                           areaEl.style.cursor = "pointer";
                           areaEl.setAttribute("data-area-roomid", room.roomId);
                         });
@@ -641,11 +641,11 @@ export const App = ({ dataURL }) => {
           }
         }
 
-        .area {
+        .area.listed {
           fill: #dfdfdf;
           transition: fill 0.3s;
         }
-        .area:hover {
+        .area.listed:hover {
           fill: #e2b2a4;
         }
       </style>
@@ -812,11 +812,33 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
             `[data-floor-plan-level="${event.levelLabel}"]`
           );
           if (floorPlanElement) {
-            // Use scrollIntoView for reliable scrolling on mobile
-            floorPlanElement.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-            });
+            // Find the specific highlighted room area within the SVG
+            const roomArea = floorPlanElement.querySelector(
+              `.area[data-area-roomid="${event.roomId}"]`
+            );
+
+            if (roomArea) {
+              // Get the room's bounding box
+              const roomRect = roomArea.getBoundingClientRect();
+              const roomTop = roomRect.top + window.pageYOffset;
+              const roomHeight = roomRect.height;
+              const viewportHeight = window.innerHeight;
+              const stickyHeaderHeight = 150;
+
+              // Calculate scroll position to center the room in the viewport
+              const targetScroll =
+                roomTop -
+                (viewportHeight - stickyHeaderHeight) / 2 +
+                roomHeight / 2;
+
+              // Scroll the window to center the room
+              window.scrollTo({
+                top: Math.max(0, targetScroll),
+                behavior: "smooth",
+              });
+            } else {
+              console.error("Room area not found for roomId:", event.roomId);
+            }
           } else {
             console.error(
               "Floor plan element not found for level:",

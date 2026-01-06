@@ -511,13 +511,13 @@
         </g>
       </g>
       <g id="room_104gang" class="room_104gang">
-        <rect id="area_23" width="28" height="63" x="63.5" y="450.67" fill="#D9D9D9" class="area"/>
+        <rect id="area_23" width="28" height="63" x="63.5" y="450.67" fill="#fff" class="area"/>
       </g>
       <g id="room_106gang" class="room_106gang">
-        <rect id="area_24" width="28" height="65" x="63.5" y="316.67" fill="#D9D9D9" class="area"/>
+        <rect id="area_24" width="28" height="65" x="63.5" y="316.67" fill="#fff" class="area"/>
       </g>
       <g id="room_124gang" class="room_124gang">
-        <rect id="area_25" width="41" height="19.738" x="78.099" y="640.592" fill="#D9D9D9" class="area" transform="rotate(49.902 78.099 640.592)"/>
+        <rect id="area_25" width="41" height="19.738" x="78.099" y="640.592" fill="#fff" class="area" transform="rotate(49.902 78.099 640.592)"/>
       </g>
     </g>
     <g id="walls" class="walls">

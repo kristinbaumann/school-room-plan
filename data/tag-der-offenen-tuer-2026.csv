@@ -4,7 +4,6 @@ Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gel
 Meeting-Point der Scouts",Y,Y
 003gang,Gang vor Raum 003,Hauptgebäude,Erdgeschoss,Info-Point »Unsere Beobachtungs- und Mittelstufe«,"Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7), Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10)",Y,Y
 005gang,Gang vor Raum 005,Hauptgebäude,Erdgeschoss,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
-002,002,Hauptgebäude,Erdgeschoss,Schulbüro,"Nadja Nagorsnik, Katrin Wiese",Y,Y
 005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner",N,Y
 006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch
 
@@ -14,6 +13,7 @@ Hier: Geschichte & Geografie, Beate Behrens, Gerhard Wille (Biology im 2. OG)",N
 004,004,Hauptgebäude,Erdgeschoss,Hege Helping Hands,"Yvonne Böcker, Matthias Wilksen",N,Y
 017,017,Hauptgebäude,Erdgeschoss,,WC Herren (WC Damen 1/2 Etage tiefer),Y,N
 001,001,Hauptgebäude,Erdgeschoss,Hausmeister,,N,N
+002,002,Hauptgebäude,Erdgeschoss,Schulbüro,"Nadja Nagorsnik, Katrin Wiese",N,N
 002a,002a,Hauptgebäude,Erdgeschoss,Schulleiterin,Dr. Maike Languth,N,N
 003,003,Hauptgebäude,Erdgeschoss,Stellv. Schulleiter,Tino Fischer,N,N
 007,007,Hauptgebäude,Erdgeschoss,Klasse 5d (Fo),,N,N
