@@ -1,30 +1,34 @@
 Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gelistet & in Karte klickbar
-001,001,Hauptgebäude,Erdgeschoss,Hausmeister,,N,N
+0foyer,Foyer,Hauptgebäude,Erdgeschoss,Allgemeine Informationen,"Informationen der Schulleitung, des Elternrats und des Schülerrats
+
+Meeting-Point der Scouts",Y,Y
+003gang,Gang vor Raum 003,Hauptgebäude,Erdgeschoss,Info-Point »Unsere Beobachtungs- und Mittelstufe«,"Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7), Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10)",Y,Y
+005gang,Gang vor Raum 005,Hauptgebäude,Erdgeschoss,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
 002,002,Hauptgebäude,Erdgeschoss,Schulbüro,"Nadja Nagorsnik, Katrin Wiese",Y,Y
+005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner",N,Y
+006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch
+
+Hier: Geschichte & Geografie, Beate Behrens, Gerhard Wille (Biology im 2. OG)",N,Y
+014,014,Hauptgebäude,Erdgeschoss,"Begabungs-, Lern- und Sprachförderung","Dr. Heide Pilarczyk, Sara-Marie Kummerfeldt, Stefanie Hahn",N,Y
+016,016,Hauptgebäude,Erdgeschoss,Verstärkter Englischunterricht und die Vorbereitung auf den bilingualen Unterricht,"Linn Gellermann, Till van der Ven",N,Y
+004,004,Hauptgebäude,Erdgeschoss,Hege Helping Hands,"Yvonne Böcker, Matthias Wilksen",N,Y
+017,017,Hauptgebäude,Erdgeschoss,,WC Herren (WC Damen 1/2 Etage tiefer),Y,N
+001,001,Hauptgebäude,Erdgeschoss,Hausmeister,,N,N
 002a,002a,Hauptgebäude,Erdgeschoss,Schulleiterin,Dr. Maike Languth,N,N
 003,003,Hauptgebäude,Erdgeschoss,Stellv. Schulleiter,Tino Fischer,N,N
-004,004,Hauptgebäude,Erdgeschoss,Hege Helping Hands e.V.,"Yvonne Böcker, Matthias Wilksen",N,Y
-005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner",N,Y
-006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch • Hier: Geschichte & Geografie, Beate Behrens, Gerhard Wille • Biology im 2. OG",N,Y
 007,007,Hauptgebäude,Erdgeschoss,Klasse 5d (Fo),,N,N
 008,008,Hauptgebäude,Erdgeschoss,Klasse 5c (Be),,N,N
 011,011,Hauptgebäude,Erdgeschoss,Klasse 5a (Wg),,N,N
 012,012,Hauptgebäude,Erdgeschoss,Klasse 5b (To),,N,N
 013,013,Hauptgebäude,Erdgeschoss,Klasse 6a (Sf/Sz),,N,N
-014,014,Hauptgebäude,Erdgeschoss,"Begabungs-, Lern- und Sprachförderung","Dr. Heide Pilarczyk, Sara-Marie Kummerfeldt, Stefanie Hahn",N,Y
 015,015,Hauptgebäude,Erdgeschoss,Klasse 6c (Gm),,N,N
-016,016,Hauptgebäude,Erdgeschoss,Verstärkter Englischunterricht und die Vorbereitung auf den bilingualen Unterricht,"Linn Gellermann, Till van der Ven",N,Y
-017,017,Hauptgebäude,Erdgeschoss,,WC Herren (WC Damen 1/2 Etage tiefer),Y,N
 021,021,Hauptgebäude,Erdgeschoss,Konferenzraum,,N,N
 022,022,Hauptgebäude,Erdgeschoss,Schulbüro & Krankenzimmer,Linn Gellermann,N,N
-0foyer,Foyer,Hauptgebäude,Erdgeschoss,Allgemeine Informationen,"Informationen der Schulleitung, des Elternrats und des Schülerrats •  Meeting-Point der Scouts",Y,Y
-003gang,Gang vor Raum 003,Hauptgebäude,Erdgeschoss,Info-Point »Unsere Beobachtungs- und Mittelstufe«,Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7) und Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10) beraten Sie gern,Y,Y
-005gang,Gang vor Raum 005,Hauptgebäude,Erdgeschoss,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
 101,101,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 11–12,Dr. Björn Reetz,N,N
 102,102,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",N,N
 103,103,Hauptgebäude,1. Obergeschoss,Deutsch am Gymnasium Eppendorf – Schwerpunkte und Projekte,"Kristina Duncan, Frau Schroth",N,Y
 104,104,Hauptgebäude,1. Obergeschoss,Mathematik zum Mitmachen,Gesa Einsporn,N,Y
-105,105,Hauptgebäude,1. Obergeschoss,BoSo / PGW / Wirtschaft ,"""Berufsorientierung: Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
+105,105,Hauptgebäude,1. Obergeschoss,BoSo / PGW / Wirtschaft ,"Berufsorientierung: Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
 Herr Dr. Stephan Benzmann, Caroline Jahn
 
 PGW (Politik, Gesellschaft, Wirtschaft) – ein Fach ab Klasse 8 und im Profil 
@@ -54,6 +58,18 @@ Hege Studies-AG","Dr. Jean-Marie Schwarzkopf, Florian Hogg",N,Y
 106gang,Gang vor Raum 106,Hauptgebäude,1. Obergeschoss,Wir lernen gemeinsam Frankreich kennen,Ellen Burgemeister,Y,Y
 Sonstiges_12,,Hauptgebäude,1. Obergeschoss,Freiarbeitsbereich,,N,N
 Sonstiges_13,,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,N,N
+220,220,Hauptgebäude,2. Obergeschoss,"Aula: Schulchor, Begrüßung, Vorstellung der Klassenleitungen und Aufführung ","11:00–11:15 Uhr
+Schulchor
+Sarah-Jiny Kisker, Fabian Kenk
+ 
+11:15–11:30 Uhr
+Begrüßung durch die Schulleiterin und Vorstellung der neuen Klassenleitungen Jg. 5
+Dr. Maike Languth
+
+11:35–11:50 Uhr 
+Schüler:innen-Aufführung der 5b
+„Zauberblumen“ 
+Almuth Schäfer",Y,Y
 201,201,Hauptgebäude,2. Obergeschoss,Verschiedene Naturwissenschaftliche Experimente im Hörsaal,Mattes Jokmin,Y,Y
 202,202,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,N,N
 203,203,Hauptgebäude,2. Obergeschoss,,,N,N
@@ -70,18 +86,6 @@ Sonstiges_13,,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,N,N
 216,216,Hauptgebäude,2. Obergeschoss,11:30 - 13:00 Uhr: Instrumentenzirkel,Fabian Kenk,Y,Y
 216p,216p,Hauptgebäude,2. Obergeschoss,,,N,N
 218,218,Hauptgebäude,2. Obergeschoss,,WC Herren,Y,N
-220,220,Hauptgebäude,2. Obergeschoss,"Aula: Schulchor, Begrüßung, Vorstellung der Klassenleitungen und Aufführung ","11:00–11:15 Uhr
-Schulchor
-Sarah-Jiny Kisker, Fabian Kenk
- 
-11:15–11:30 Uhr
-Begrüßung durch die Schulleiterin und Vorstellung der neuen Klassenleitungen Jg. 5
-Dr. Maike Languth
-
-11:35–11:50 Uhr 
-Schüler:innen-Aufführung der 5b
-„Zauberblumen“ 
-Almuth Schäfer",Y,Y
 222,222,Hauptgebäude,2. Obergeschoss,Musik-Sammlung,,N,N
 223,223,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,N,N
 Sonstiges_14,,Hauptgebäude,2. Obergeschoss,Biologie-Arbeitsraum,,N,N
