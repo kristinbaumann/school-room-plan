@@ -174,7 +174,7 @@ export const App = ({ dataURL }) => {
                         const areaElements =
                           roomGroup.querySelectorAll(".area");
                         areaElements.forEach((areaEl) => {
-                          areaEl.style.fill = "#dfdfdf";
+                          //   areaEl.style.fill = "#dfdfdf";
                           areaEl.style.cursor = "pointer";
                           areaEl.setAttribute("data-area-roomid", room.roomId);
                         });
@@ -322,12 +322,12 @@ export const App = ({ dataURL }) => {
   useEffect(() => {
     if (!appContainerRef.current) return;
 
-    // Reset all area fills to default
+    // Reset all area fills to default (remove inline styles)
     const allAreas = appContainerRef.current.querySelectorAll(
       ".area[data-area-roomid]"
     );
     allAreas.forEach((area) => {
-      area.style.fill = "#dfdfdf"; // Reset to default color
+      area.style.fill = ""; // Remove inline style to allow CSS hover
     });
 
     // Highlight the selected room area
@@ -642,7 +642,7 @@ export const App = ({ dataURL }) => {
         }
 
         .area {
-          fill: none;
+          fill: #dfdfdf;
           transition: fill 0.3s;
         }
         .area:hover {
@@ -836,7 +836,9 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId }) => {
             ${event.name1}
           </p>`
         : ""}
-      ${event.name2 ? html`<p style="margin: 0;">${event.name2}</p>` : ""}
+      ${event.name2
+        ? html`<p style="margin: 0; white-space: pre-line;">${event.name2}</p>`
+        : ""}
     </div>
     <svg
       width="52"

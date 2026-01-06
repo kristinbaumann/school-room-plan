@@ -5,10 +5,7 @@ Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gel
 003,003,Hauptgebäude,Erdgeschoss,Stellv. Schulleiter,Tino Fischer,N,N
 004,004,Hauptgebäude,Erdgeschoss,Hege Helping Hands e.V.,"Yvonne Böcker, Matthias Wilksen",N,Y
 005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner",N,Y
-006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch
-Hier: Geschichte & Geografie
-Beate Behrens, Gerhard Wille
-Biology im 2. OG",N,Y
+006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch • Hier: Geschichte & Geografie, Beate Behrens, Gerhard Wille • Biology im 2. OG",N,Y
 007,007,Hauptgebäude,Erdgeschoss,Klasse 5d (Fo),,N,N
 008,008,Hauptgebäude,Erdgeschoss,Klasse 5c (Be),,N,N
 011,011,Hauptgebäude,Erdgeschoss,Klasse 5a (Wg),,N,N
@@ -20,17 +17,21 @@ Biology im 2. OG",N,Y
 017,017,Hauptgebäude,Erdgeschoss,,WC Herren (WC Damen 1/2 Etage tiefer),Y,N
 021,021,Hauptgebäude,Erdgeschoss,Konferenzraum,,N,N
 022,022,Hauptgebäude,Erdgeschoss,Schulbüro & Krankenzimmer,Linn Gellermann,N,N
-0foyer,Foyer,Hauptgebäude,Erdgeschoss,Allgemeine Informationen,"Informationen der Schulleitung, des Elternrats und des Schülerrats; 
- Meeting-Point der Scouts",Y,Y
+0foyer,Foyer,Hauptgebäude,Erdgeschoss,Allgemeine Informationen,"Informationen der Schulleitung, des Elternrats und des Schülerrats •  Meeting-Point der Scouts",Y,Y
 003gang,Gang vor Raum 003,Hauptgebäude,Erdgeschoss,Info-Point »Unsere Beobachtungs- und Mittelstufe«,Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7) und Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10) beraten Sie gern,Y,Y
 005gang,Gang vor Raum 005,Hauptgebäude,Erdgeschoss,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
 101,101,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 11–12,Dr. Björn Reetz,N,N
 102,102,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",N,N
 103,103,Hauptgebäude,1. Obergeschoss,Deutsch am Gymnasium Eppendorf – Schwerpunkte und Projekte,"Kristina Duncan, Frau Schroth",N,Y
 104,104,Hauptgebäude,1. Obergeschoss,Mathematik zum Mitmachen,Gesa Einsporn,N,Y
-105,105,Hauptgebäude,1. Obergeschoss,"Berufsorientierung: Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
+105,105,Hauptgebäude,1. Obergeschoss,BoSo / PGW / Wirtschaft ,"""Berufsorientierung: Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
+Herr Dr. Stephan Benzmann, Caroline Jahn
+
 PGW (Politik, Gesellschaft, Wirtschaft) – ein Fach ab Klasse 8 und im Profil 
-Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG","Dr. Björn Reetz, Herr Dr. Stephan Benzmann, Caroline Jahn, Birte Rösler, Rabea Gausepohl, b@s-Schülerteam",N,Y
+Herr Dr. Stephan Benzmann, Caroline Jahn
+
+Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG""
+Birte Rösler, Rabea Gausepohl, b@s-Schülerteam S1/S3",N,Y
 106,106,Hauptgebäude,1. Obergeschoss,"Vive la France – Vive l’échange
 Französisch und unser Frankreichaustausch","Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas",N,Y
 107,107,Hauptgebäude,1. Obergeschoss,Klasse 9d (Ho),,N,N
@@ -46,8 +47,7 @@ Hege Studies-AG","Dr. Jean-Marie Schwarzkopf, Florian Hogg",N,Y
 118,118,Hauptgebäude,1. Obergeschoss,,"IT-Admin: Michael König, David Hähningen",N,N
 119,119,Hauptgebäude,1. Obergeschoss,Physik 2,,N,N
 121,121,Hauptgebäude,1. Obergeschoss,Mathe/Physik,(Es)/(Jo),N,N
-122,122,Hauptgebäude,1. Obergeschoss,Physik entdecken – physikalischen Phänomenen auf der Spur,"Der Fachbereich Physik: Experimente zum Mitmachen
- Silas Fobel",Y,Y
+122,122,Hauptgebäude,1. Obergeschoss,Physik entdecken – physikalischen Phänomenen auf der Spur,"Der Fachbereich Physik: Experimente zum Mitmachen, Silas Fobel",Y,Y
 123,123,Hauptgebäude,1. Obergeschoss,Physik-Sammlung,,N,N
 124,124,Hauptgebäude,1. Obergeschoss,Lehrerarbeitsraum,,N,N
 124gang,Gang vor Raum 124,Hauptgebäude,1. Obergeschoss,Café Challenge,SchülerInnen des Jahrgangs 10,Y,Y
@@ -70,20 +70,18 @@ Sonstiges_13,,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,N,N
 216,216,Hauptgebäude,2. Obergeschoss,11:30 - 13:00 Uhr: Instrumentenzirkel,Fabian Kenk,Y,Y
 216p,216p,Hauptgebäude,2. Obergeschoss,,,N,N
 218,218,Hauptgebäude,2. Obergeschoss,,WC Herren,Y,N
-220,220,Hauptgebäude,2. Obergeschoss,Aula,"11:00–11:15 Uhr
- Schulchor
- Sarah-Jiny Kisker, Fabian Kenk
+220,220,Hauptgebäude,2. Obergeschoss,"Aula: Schulchor, Begrüßung, Vorstellung der Klassenleitungen und Aufführung ","11:00–11:15 Uhr
+Schulchor
+Sarah-Jiny Kisker, Fabian Kenk
  
+11:15–11:30 Uhr
+Begrüßung durch die Schulleiterin und Vorstellung der neuen Klassenleitungen Jg. 5
+Dr. Maike Languth
 
- 11:15–11:30 Uhr
- Begrüßung durch die Schulleiterin und Vorstellung der neuen Klassenleitungen Jg. 5
- Dr. Maike Languth
- 
-
- 11:35–11:50 Uhr 
- Schüler:innen-Aufführung der 5b
- „Zauberblumen“ 
- Almuth Schäfer",Y,Y
+11:35–11:50 Uhr 
+Schüler:innen-Aufführung der 5b
+„Zauberblumen“ 
+Almuth Schäfer",Y,Y
 222,222,Hauptgebäude,2. Obergeschoss,Musik-Sammlung,,N,N
 223,223,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,N,N
 Sonstiges_14,,Hauptgebäude,2. Obergeschoss,Biologie-Arbeitsraum,,N,N
@@ -99,14 +97,10 @@ Sonstiges_16,,Hauptgebäude,2. Obergeschoss,,WC Lehrkräfte,N,N
 308,308,Hauptgebäude,3. Obergeschoss,"Kunst entdecken (I)
 
 Das Kunstprofil bietet Monotypie zum Mitmachen an.
-","Präsentation von Schüler:innenarbeiten
-Ergebnisse der Kunst-Ag und Street-Art-Ag
-Janina Arlt, Sebastian Gehnen, Katja Lehmann, Herr Taube, Freda Wehowski",Y,Y
+","Präsentation von Schüler:innenarbeiten • Ergebnisse der Kunst-Ag und Street-Art-Ag • Janina Arlt, Sebastian Gehnen, Katja Lehmann, Herr Taube, Freda Wehowski",Y,Y
 309,309,Hauptgebäude,3. Obergeschoss,"Kunst entdecken (II)
 
-Das Kunstprofil bietet Monotypie zum Mitmachen an.","Präsentation von Schüler:innenarbeiten
-Ergebnisse der Kunst-Ag und Street-Art-Ag
-Janina Arlt, Sebastian Gehnen, Katja Lehmann, Herr Taube, Freda Wehowski",Y,Y
+Das Kunstprofil bietet Monotypie zum Mitmachen an.","Präsentation von Schüler:innenarbeiten • Ergebnisse der Kunst-Ag und Street-Art-Ag • Janina Arlt, Sebastian Gehnen, Katja Lehmann, Herr Taube, Freda Wehowski",Y,Y
 Sonstiges_17,,Hauptgebäude,3. Obergeschoss,Kunst-Vorbereitung,,N,N
 Sonstiges_18,,Hauptgebäude,3. Obergeschoss,Schülerbibliothek,,N,N
 Sonstiges_19,,Hauptgebäude,3. Obergeschoss,,Lager,N,N
