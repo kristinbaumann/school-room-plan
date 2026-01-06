@@ -607,6 +607,9 @@ export const App = ({ dataURL }) => {
             .sticky-placeholder.active {
               height: 100px;
             }
+            .event-list-per-level {
+              padding-right: 0;
+            }
           }
         }
         .event {
@@ -639,6 +642,9 @@ export const App = ({ dataURL }) => {
               fill: #ffffff;
             }
           }
+        }
+        .event-list-per-level {
+          padding-right: 14px;
         }
 
         .area.listed {
@@ -778,6 +784,7 @@ const EventsPerLevel = ({
       >
     </h3>
     <div
+      class="event-list-per-level"
       style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;"
     >
       ${listedEvents.map(
