@@ -4,10 +4,10 @@ Raum ID,Nummer,Gebaeude,Etage,Name_1,Name_2,in Karte zusätzlich beschriftet,gel
 Meeting-Point der Scouts",Y,Y
 003gang,Gang vor Raum 003,Hauptgebäude,Erdgeschoss,Info-Point »Unsere Beobachtungs- und Mittelstufe«,"Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7), Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10)",Y,Y
 005gang,Gang vor Raum 005,Hauptgebäude,Erdgeschoss,Vorstellung des Projekts »Wir können etwas für andere tun«,"Stefanie Hahn, Katja Lehmann",Y,Y
-005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Beate Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner",N,Y
+005,005,Hauptgebäude,Erdgeschoss,Einblicke in den Philosophieunterricht und den Religionsunterricht,"Isabell Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner",N,Y
 006,006,Hauptgebäude,Erdgeschoss,Unser bilinguales Konzept (I),"Geschichte, Geographie & Biologie – alles auf Englisch
 
-Hier: Geschichte & Geografie, Beate Behrens, Gerhard Wille (Biology im 2. OG)",N,Y
+Hier: Geschichte & Geographie, Beate Behrens, Gerhard Wille (Biology im 2. OG)",N,Y
 014,014,Hauptgebäude,Erdgeschoss,"Begabungs-, Lern- und Sprachförderung","Dr. Heide Pilarczyk, Sara-Marie Kummerfeldt, Stefanie Hahn",N,Y
 016,016,Hauptgebäude,Erdgeschoss,Verstärkter Englischunterricht und die Vorbereitung auf den bilingualen Unterricht,"Linn Gellermann, Till van der Ven",N,Y
 004,004,Hauptgebäude,Erdgeschoss,Hege Helping Hands,"Yvonne Böcker, Matthias Wilksen",N,Y
@@ -28,26 +28,26 @@ Hier: Geschichte & Geografie, Beate Behrens, Gerhard Wille (Biology im 2. OG)",N
 102,102,Hauptgebäude,1. Obergeschoss,Abteilungsleitung 5–7 & 8–10,"Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius",N,N
 103,103,Hauptgebäude,1. Obergeschoss,Deutsch am Gymnasium Eppendorf – Schwerpunkte und Projekte,Kristina Duncan,N,Y
 104,104,Hauptgebäude,1. Obergeschoss,Mathematik zum Mitmachen,Gesa Einsporn,N,Y
-105,105,Hauptgebäude,1. Obergeschoss,BoSo / PGW / Wirtschaft ,"Berufsorientierung: Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
-Herr Dr. Stephan Benzmann, Caroline Jahn
+105,105,Hauptgebäude,1. Obergeschoss,BOSO / PGW / Wirtschaft ,"BOSO (Berufs- und Studienorientierung): Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
+Dr. Stephan Benzmann, Caroline Jahn
 
 PGW (Politik, Gesellschaft, Wirtschaft) – ein Fach ab Klasse 8 und im Profil 
-Herr Dr. Stephan Benzmann, Caroline Jahn
+Dr. Stephan Benzmann, Caroline Jahn
 
-Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG""
+Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG
 Birte Rösler, Rabea Gausepohl, b@s-Schülerteam S1/S3",N,Y
 106,106,Hauptgebäude,1. Obergeschoss,"Vive la France – Vive l’échange
 Französisch und unser Frankreichaustausch","Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas",N,Y
 107,107,Hauptgebäude,1. Obergeschoss,Klasse 9d (Ho),,N,N
 108,108,Hauptgebäude,1. Obergeschoss,Klasse 9c (Er),,N,N
 111,111,Hauptgebäude,1. Obergeschoss,Klasse 9a (Ka),,N,N
-112,112,Hauptgebäude,1. Obergeschoss,"Geografie – Auf dem Weg zur Nachhaltigkeit
+112,112,Hauptgebäude,1. Obergeschoss,"Geographie – Auf dem Weg zur Nachhaltigkeit
 
 Crafting - Gutes Gewissen mit Seegrasskissen
 
 Hege Studies-AG
 
-Projekt Herausforderungen Skandinavien","Dr. Jean-Marie Schwarzkopf, Florian Hogg",N,Y
+Projekt Herausforderung Skandinavien","Florian Hogg, Dr. Jean-Marie Schwarzkopf, Lars Schwartz, Hendrik von Vöhren",N,Y
 113,113,Hauptgebäude,1. Obergeschoss,12:00 Uhr: »Franz en France«: 15-minütiges deutsch-französisches Theaterstück,"Von Schülerinnen und Schülern aus Jg. 7, Dr. Heide Pilarczyk",N,N
 114,114,Hauptgebäude,1. Obergeschoss,Medienraum,,Y,N
 115,115,Hauptgebäude,1. Obergeschoss,Lehrerzimmer,,Y,N
@@ -74,7 +74,7 @@ Dr. Maike Languth
 Schüler:innen-Aufführung der 5b
 „Zauberblumen“ 
 Almuth Schäfer",Y,Y
-201,201,Hauptgebäude,2. Obergeschoss,Verschiedene Naturwissenschaftliche Experimente im Hörsaal,Mattes Jokmin,Y,Y
+201,201 (Chemie Hörsaal),Hauptgebäude,2. Obergeschoss,Naturwissenschaftliche Experimente,Mattes Jokmin,Y,Y
 202,202,Hauptgebäude,2. Obergeschoss,Chemie-Sammlung,,Y,N
 203,203,Hauptgebäude,2. Obergeschoss,,,Y,N
 204,204,Hauptgebäude,2. Obergeschoss,Chemie-Verwaltung,Dr. Frank Jürgensen,Y,N
@@ -112,7 +112,10 @@ Das Kunstprofil bietet Monotypie zum Mitmachen an.","Präsentation von Schüler:
 Sonstiges_17,,Hauptgebäude,3. Obergeschoss,Kunst-Vorbereitung,,N,N
 Sonstiges_18,,Hauptgebäude,3. Obergeschoss,Schülerbibliothek,,Y,N
 Sonstiges_19,,Hauptgebäude,3. Obergeschoss,,Lager,N,N
-Mehrzweckhalle,Mehrzweckhalle,Hauptgebäude,Untergeschoss,"Theater: Ausstellung, Fachbereich Sport, Zirkus-AG, Schulhockey","Almuth Schäfer, Hans Peters, Lars Schwartz, Johanna Gewand",Y,Y
+Mehrzweckhalle,Multifunktionshalle,Hauptgebäude,Untergeschoss,"Theater Ausstellung, 
+Fachbereich Sport, 
+Zirkus-AG, 
+Schulhockey","Almuth Schäfer, Hans Peters, Lars Schwartz, Johanna Gewand",Y,Y
 UG1,UG1,Hauptgebäude,Untergeschoss,Ruheraum L,,Y,N
 UG14,UG14,Hauptgebäude,Untergeschoss,Sozialpädagogin,Helle Westermann,Y,N
 UG2,UG2,Hauptgebäude,Untergeschoss,Beratung & Lerncoaching,"Maria Matschiner, Jana Welling, Johanna Gewand",Y,Y
