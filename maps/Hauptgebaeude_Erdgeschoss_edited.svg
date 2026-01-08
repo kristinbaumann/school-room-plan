@@ -223,13 +223,13 @@
         </g>
       </g>
       <g id="room_0foyer" class="room_0foyer">
-        <path id="area_19" fill="#DFDFDF" d="M62.63 652.92v-70.5h31.5v41l26.5 35 42 14.5-8 28-68-20-24-28Z" class="area"/>
+        <path id="area_19" fill="#fff" d="M62.63 652.92v-70.5h31.5v41l26.5 35 42 14.5-8 28-68-20-24-28Z" class="area"/>
       </g>
       <g id="room_003gang" class="room_003gang">
-        <rect id="area_20" width="29" height="30" x="62.63" y="515.42" fill="#D9D9D9" class="area"/>
+        <rect id="area_20" width="29" height="30" x="62.63" y="515.42" fill="#fff" class="area"/>
       </g>
       <g id="room_005gang" class="room_005gang">
-        <rect id="area_21" width="29" height="66" x="62.63" y="383.42" fill="#DFDFDF" class="area"/>
+        <rect id="area_21" width="29" height="66" x="62.63" y="383.42" fill="#fff" class="area"/>
       </g>
     </g>
     <g id="walls" class="walls">
