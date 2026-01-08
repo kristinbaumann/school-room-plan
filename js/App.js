@@ -44,6 +44,8 @@ const levels = [
   },
 ];
 
+const isMobile = window.innerWidth <= 800;
+
 export const App = ({ dataURL }) => {
   const [selectedLevel, setSelectedLevel] = useState(levels[0].key);
   const appContainerRef = useRef(null);
@@ -243,8 +245,6 @@ export const App = ({ dataURL }) => {
 
           // Scroll to the event
           setTimeout(() => {
-            const isMobile = window.innerWidth <= 800;
-
             if (isMobile) {
               // On mobile, scroll to the event in the event list
               const eventElement = document.querySelector(
@@ -367,8 +367,6 @@ export const App = ({ dataURL }) => {
 
     // Wait for layout to complete before setting up scroll detection
     const timeoutId = setTimeout(() => {
-      const isMobile = window.innerWidth <= 800;
-
       const handleScroll = () => {
         // Skip level detection if we're programmatically scrolling
         if (isProgrammaticScrollRef.current) return;
@@ -483,9 +481,6 @@ export const App = ({ dataURL }) => {
     // Disable scroll detection temporarily
     isProgrammaticScrollRef.current = true;
 
-    // Detect if we're on mobile or desktop
-    const isMobile = window.innerWidth <= 800;
-
     // Query section from the correct view
     const viewSelector = isMobile ? ".app.mobile" : ".app.desktop";
     const view = document.querySelector(viewSelector);
@@ -518,9 +513,9 @@ export const App = ({ dataURL }) => {
   if (!data) {
     return html`<p style="text-align: center;">Lade Daten...</p>`;
   }
-  if (Object.keys(svgContents).length === 0) {
-    return html`<p style="text-align: center;">Lade Grundrisse...</p>`;
-  }
+  // if (Object.keys(svgContents).length === 0) {
+  //   return html`<p style="text-align: center;">Lade Grundrisse...</p>`;
+  // }
 
   return html`
     <div class="container" ref=${appContainerRef}>
@@ -656,72 +651,84 @@ export const App = ({ dataURL }) => {
         }
       </style>
 
-      <div class="app desktop">
-        <div class="event-list-container">
-          <${LevelSelector}
-            selectedLevel=${selectedLevel}
-            scrollToLevel=${scrollToLevel}
-            sortedDataByLevelLabel=${sortedDataByLevelLabel}
-          />
-          <div class="event-list">
-            ${Object.entries(sortedDataByLevelLabel).map(
-              ([levelLabel, events]) => {
-                const listedEvents = events.filter((ev) => ev.listed_clickable);
-                if (listedEvents.length === 0) {
-                  return null;
+      ${!isMobile
+        ? html` <div class="app desktop">
+            <div class="event-list-container">
+              <${LevelSelector}
+                selectedLevel=${selectedLevel}
+                scrollToLevel=${scrollToLevel}
+                sortedDataByLevelLabel=${sortedDataByLevelLabel}
+              />
+              <div class="event-list">
+                ${Object.entries(sortedDataByLevelLabel).map(
+                  ([levelLabel, events]) => {
+                    const listedEvents = events.filter(
+                      (ev) => ev.listed_clickable
+                    );
+                    if (listedEvents.length === 0) {
+                      return null;
+                    }
+                    return html`<${EventsPerLevel}
+                      levelLabel=${levelLabel}
+                      listedEvents=${listedEvents}
+                      highlightedRoomId=${highlightedRoomId}
+                      setHighlightedRoomId=${setHighlightedRoomId}
+                      setSelectedLevel=${setSelectedLevel}
+                    />`;
+                  }
+                )}
+              </div>
+            </div>
+            <div class="floor-plan-container">
+              ${selectedLevel && svgContents[selectedLevel]
+                ? html`<${FloorPlan}
+                    svgContent=${svgContents[selectedLevel]}
+                    levelLabel=${selectedLevel}
+                  />`
+                : html`<p style="text-align: center;">Lade Grundriss...</p>`}
+            </div>
+          </div>`
+        : null}
+      ${isMobile
+        ? html`<div class="app mobile">
+            <div
+              ref=${stickyHeaderRef}
+              class=${`sticky-header ${isFixed ? "is-fixed" : ""}`}
+            >
+              <${LevelSelector}
+                selectedLevel=${selectedLevel}
+                scrollToLevel=${scrollToLevel}
+                sortedDataByLevelLabel=${sortedDataByLevelLabel}
+              />
+            </div>
+            <div class=${`sticky-placeholder ${isFixed ? "active" : ""}`}></div>
+            <div class="event-list">
+              ${Object.entries(sortedDataByLevelLabel).map(
+                ([levelLabel, events]) => {
+                  const listedEvents = events.filter(
+                    (ev) => ev.listed_clickable
+                  );
+                  if (listedEvents.length === 0) {
+                    return null;
+                  }
+                  return html`<div style="margin-bottom: 40px;">
+                    <${EventsPerLevel}
+                      levelLabel=${levelLabel}
+                      listedEvents=${listedEvents}
+                      highlightedRoomId=${highlightedRoomId}
+                      setHighlightedRoomId=${setHighlightedRoomId}
+                      setSelectedLevel=${setSelectedLevel}
+                    />
+                    <${FloorPlan}
+                      svgContent=${svgContents[levelLabel]}
+                      levelLabel=${levelLabel}
+                    />
+                  </div>`;
                 }
-                return html`<${EventsPerLevel}
-                  levelLabel=${levelLabel}
-                  listedEvents=${listedEvents}
-                  highlightedRoomId=${highlightedRoomId}
-                  setHighlightedRoomId=${setHighlightedRoomId}
-                  setSelectedLevel=${setSelectedLevel}
-                />`;
-              }
-            )}
-          </div>
-        </div>
-        <div class="floor-plan-container">
-          <${FloorPlan} svgContent=${svgContents[selectedLevel]} />
-        </div>
-      </div>
-
-      <div class="app mobile">
-        <div
-          ref=${stickyHeaderRef}
-          class=${`sticky-header ${isFixed ? "is-fixed" : ""}`}
-        >
-          <${LevelSelector}
-            selectedLevel=${selectedLevel}
-            scrollToLevel=${scrollToLevel}
-            sortedDataByLevelLabel=${sortedDataByLevelLabel}
-          />
-        </div>
-        <div class=${`sticky-placeholder ${isFixed ? "active" : ""}`}></div>
-        <div class="event-list">
-          ${Object.entries(sortedDataByLevelLabel).map(
-            ([levelLabel, events]) => {
-              const listedEvents = events.filter((ev) => ev.listed_clickable);
-              if (listedEvents.length === 0) {
-                return null;
-              }
-              return html`<div style="margin-bottom: 40px;">
-                <${EventsPerLevel}
-                  levelLabel=${levelLabel}
-                  listedEvents=${listedEvents}
-                  highlightedRoomId=${highlightedRoomId}
-                  setHighlightedRoomId=${setHighlightedRoomId}
-                  setSelectedLevel=${setSelectedLevel}
-                />
-                <${FloorPlan}
-                  svgContent=${svgContents[levelLabel]}
-                  levelLabel=${levelLabel}
-                />
-              </div>`;
-            }
-          )}
-        </div>
-      </div>
+              )}
+            </div>
+          </div>`
+        : null}
     </div>
   `;
 };
@@ -754,8 +761,18 @@ const LevelSelector = ({
 
 const FloorPlan = ({ svgContent, levelLabel }) => {
   if (!svgContent) {
+    console.warn(
+      `[FloorPlan] Rendering fallback message - no content for ${levelLabel}`
+    );
     return html`<p>Kein Grundriss für diese Ebene verfügbar.</p>`;
   }
+
+  console.log(
+    `[FloorPlan] Rendering SVG container for ${
+      isMobile ? "mobile" : "desktop"
+    } for ${levelLabel}`
+  );
+
   return html`<div
     data-floor-plan-level=${levelLabel || ""}
     dangerouslySetInnerHTML=${{ __html: svgContent }}
@@ -803,7 +820,12 @@ const EventsPerLevel = ({
   </div>`;
 };
 
-const Event = ({ event, highlightedRoomId, setHighlightedRoomId, setSelectedLevel }) => {
+const Event = ({
+  event,
+  highlightedRoomId,
+  setHighlightedRoomId,
+  setSelectedLevel,
+}) => {
   if (!event.listed_clickable) {
     return null;
   }
@@ -815,15 +837,13 @@ const Event = ({ event, highlightedRoomId, setHighlightedRoomId, setSelectedLeve
       setHighlightedRoomId(event.roomId);
 
       // On desktop, set the selected level to the room's level
-      const isMobile = window.innerWidth <= 800;
+
       if (!isMobile && event.levelLabel && setSelectedLevel) {
         setSelectedLevel(event.levelLabel);
       }
 
       // Scroll to floor plan on mobile
       setTimeout(() => {
-        const isMobile = window.innerWidth <= 800;
-
         if (isMobile && event.levelLabel) {
           const floorPlanElement = document.querySelector(
             `[data-floor-plan-level="${event.levelLabel}"]`
