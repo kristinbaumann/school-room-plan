@@ -57,10 +57,10 @@
         </g>
       </g>
       <g id="room_N1" class="room_N1">
-        <path id="area_7" fill="#D9D9D9" d="M85.25 221.99H15.64v81.99h77.33l-7.72-81.99Z" class="area"/>
+        <path id="area_7" fill="#D9D9D9" d="M85.386 221.99H17v81.99h75.97l-7.584-81.99Z" class="area"/>
         <g id="number_6" class="number">
-          <path id="Vector_26" fill="#000" d="M46.64 262.18h-.08v6.47h-.84v-7.68h1.31l2.62 6.47h.08v-6.47h.84v7.68h-1.31l-2.62-6.47Z" class="Vector"/>
-          <path id="Vector_27" fill="#000" d="M52.38 268.65v-.8h2.2v-6.19h-.08l-1.94 1.8-.54-.58 2.04-1.9h1.44v6.88h2.02v.8h-5.15l.01-.01Z" class="Vector"/>
+          <path id="Vector_26" fill="#000" d="M47.455 262.18h-.079v6.47h-.825v-7.68h1.287l2.574 6.47h.078v-6.47h.826v7.68h-1.287l-2.574-6.47Z" class="Vector"/>
+          <path id="Vector_27" fill="#000" d="M53.094 268.65v-.8h2.161v-6.19h-.079l-1.906 1.8-.53-.58 2.004-1.9h1.415v6.88h1.984v.8h-5.06l.01-.01Z" class="Vector"/>
         </g>
       </g>
       <g id="room_L1" class="room_L1">
@@ -144,6 +144,9 @@
           <path id="Vector_76" fill="#000" d="M21.85 312.76c0 .13-.03.22-.08.27a.28.28 0 0 1-.2.08h-.09a.28.28 0 0 1-.2-.08c-.05-.05-.08-.14-.08-.27s.03-.22.08-.27a.28.28 0 0 1 .2-.08h.09c.08 0 .15.03.2.08.05.05.08.14.08.27Zm3.08 1.24v-1.02h-2.08V314h-.38v-1.46h2.46v-.96h.38V314h-.38Z" class="Vector"/>
           <path id="Vector_77" fill="#000" d="M21.24 310.88v-.44h2.57v-.02l-.47-.5-.87-.95v-.54l1.11 1.18 1.73-1.31v.54l-1.47 1.11.45.49h1.03v.44h-4.08Z" class="Vector"/>
         </g>
+      </g>
+      <g id="room_gesamtergang" class="room_gesamtergang">
+        <path id="area_12" fill="#fff" d="M167 81H4v263h10V90h153v-9Z" class="area"/>
       </g>
     </g>
     <g id="walls" class="walls">

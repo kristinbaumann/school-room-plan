@@ -134,7 +134,7 @@ UG7,UG7,Hauptgebäude,Untergeschoss,Unser Ganztag • Kooperation mit der ETV-Ki
 UG7a,UG7a,Hauptgebäude,Untergeschoss,Ganztag (Ruhe),Büro: Oliver Nielsen,Y,N
 UG8,UG8,Hauptgebäude,Untergeschoss,,Personalraum Reinigung,N,N
 UG_kleine_Halle,,Hauptgebäude,Untergeschoss,Kleine Halle,,Y,N
-Mensa,,Hauptgebäude,Untergeschoss,Mensa HEGElicious,,Y,N
+Mensa,,Hauptgebäude,Untergeschoss,Mensa,"KITZ-Catering, Fingerfood",Y,Y
 Sonstiges_1,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",N,N
 Sonstiges_2,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",N,N
 Sonstiges_3,,Hauptgebäude,Untergeschoss,,"Hausmeister, Technik, Heizung",N,N
@@ -147,6 +147,7 @@ Sonstiges_9,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,N,N
 Sonstiges_10,,Hauptgebäude,Untergeschoss,,Umkleiden & Duschen,N,N
 Sonstiges_11,,Hauptgebäude,Untergeschoss,,Waschküche,N,N
 WC_4,,Hauptgebäude,Untergeschoss,,WC Damen,Y,N
+gesamtergang,Oberstufengebäude,Neubau,Erdgeschoss,Infos zur Oberstufe,Dr. Björn Reetz (Abteilungsleiter Oberstufe),N,Y
 L1,L1,Neubau,Erdgeschoss,,,N,N
 L2,L2,Neubau,Erdgeschoss,,,N,N
 N1,N1,Neubau,Erdgeschoss,Klasse 10a (Jo),,N,N
