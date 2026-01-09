@@ -315,16 +315,46 @@
         </g>
       </g>
       <g id="room_104gang" class="room_104gang">
-        <rect id="area_23" width="28" height="63" x="63.5" y="450.67" fill="#fff" class="area"/>
+        <rect id="area_23" width="16" height="63" x="63" y="450.67" fill="#fff" class="area"/>
+      </g>
+      <g id="room_103gang" class="room_103gang">
+        <rect id="area_24" width="16" height="63" x="63" y="516" fill="#fff" class="area"/>
+      </g>
+      <g id="room_102gang" class="room_102gang">
+        <rect id="area_25" width="16" height="39" x="63" y="582" fill="#fff" class="area"/>
       </g>
       <g id="room_106gang" class="room_106gang">
-        <rect id="area_24" width="17.5" height="65" x="63.5" y="316.67" fill="#fff" class="area"/>
+        <rect id="area_26" width="16" height="65" x="63" y="317" fill="#fff" class="area"/>
+      </g>
+      <g id="room_108gang" class="room_108gang">
+        <rect id="area_27" width="16" height="75" x="63" y="23" fill="#fff" class="area"/>
+      </g>
+      <g id="room_111gang" class="room_111gang">
+        <rect id="area_28" width="16" height="75" x="82" y="23" fill="#fff" class="area"/>
+      </g>
+      <g id="room_112gang" class="room_112gang">
+        <rect id="area_29" width="16" height="66" x="82" y="101" fill="#fff" class="area"/>
+      </g>
+      <g id="room_113gang" class="room_113gang">
+        <rect id="area_30" width="16" height="69" x="82" y="170" fill="#fff" class="area"/>
+      </g>
+      <g id="room_114gang" class="room_114gang">
+        <rect id="area_31" width="16" height="39" x="82" y="241" fill="#fff" class="area"/>
+      </g>
+      <g id="room_107gang" class="room_107gang">
+        <rect id="area_32" width="16" height="66" x="63" y="101" fill="#fff" class="area"/>
       </g>
       <g id="room_115gang" class="room_115gang">
-        <rect id="area_25" width="17.5" height="64" x="80" y="384" fill="#fff" class="area"/>
+        <rect id="area_33" width="16" height="131" x="82" y="317" fill="#fff" class="area"/>
+      </g>
+      <g id="room_105gang" class="room_105gang">
+        <rect id="area_34" width="16" height="63" x="63" y="385" fill="#fff" class="area"/>
       </g>
       <g id="room_124gang" class="room_124gang">
-        <rect id="area_26" width="41" height="19.738" x="78.099" y="640.592" fill="#fff" class="area" transform="rotate(49.902 78.099 640.592)"/>
+        <rect id="area_35" width="40" height="16" x="75.098" y="643.592" fill="#fff" class="area" transform="rotate(49.902 75.098 643.592)"/>
+      </g>
+      <g id="room_123gang" class="room_123gang">
+        <rect id="area_36" width="69.579" height="15.797" fill="#fff" class="area" transform="matrix(.96096 .2767 -.26192 .9651 93.996 669.818)"/>
       </g>
     </g>
     <g id="walls" class="walls">
