@@ -64,7 +64,7 @@ export const App = ({ dataURL }) => {
       fetch(dataURL)
         .then((response) => response.text())
         .then((dataText) => {
-          const parsed = parseCSV(dataText);
+          const parsed = parseCSV(dataText, ";");
           if (!parsed || parsed.length === 0) {
             setData([]);
             return;
@@ -145,6 +145,12 @@ export const App = ({ dataURL }) => {
                 const parser = new DOMParser();
                 const svgDoc = parser.parseFromString(svgText, "image/svg+xml");
 
+                // get all elements with class "area" and set the class to "area not-listed" initially
+                const areaElements = svgDoc.querySelectorAll(".area");
+                areaElements.forEach((areaEl) => {
+                  areaEl.classList.add("not-listed-initial");
+                });
+
                 // Get rooms for this level
                 const roomsForLevel =
                   data?.filter((room) => room.levelLabel === levelLabel) || [];
@@ -152,7 +158,7 @@ export const App = ({ dataURL }) => {
                 // Hide text elements for rooms where labelled_in_map is false
                 roomsForLevel.forEach((room) => {
                   if (room.roomId) {
-                    // Find group with id like "room_005" for room number "005"
+                    // Find group with id like "room_105" for room "105"
                     const roomGroup = svgDoc.getElementById(
                       `room_${room.roomId}`
                     );
@@ -169,6 +175,8 @@ export const App = ({ dataURL }) => {
                         const areaElements =
                           roomGroup.querySelectorAll(".area");
                         areaElements.forEach((areaEl) => {
+                          areaEl.classList.remove("not-listed-initial");
+                          areaEl.classList.add("not-listed");
                           areaEl.style.display = "none";
                         });
                       }
@@ -176,6 +184,7 @@ export const App = ({ dataURL }) => {
                         const areaElements =
                           roomGroup.querySelectorAll(".area");
                         areaElements.forEach((areaEl) => {
+                          areaEl.classList.remove("not-listed-initial");
                           areaEl.classList.add("listed");
                           areaEl.style.cursor = "pointer";
                           areaEl.setAttribute("data-area-roomid", room.roomId);
@@ -642,6 +651,10 @@ export const App = ({ dataURL }) => {
           padding-right: 14px;
         }
 
+        .area.not-listed-initial,
+        .area.not-listed {
+          fill: transparent;
+        }
         .area.listed {
           fill: #dfdfdf;
           transition: fill 0.3s;
@@ -830,6 +843,18 @@ const Event = ({
     return null;
   }
   const isHighlighted = event.roomId === highlightedRoomId;
+
+  // format room number with leading zeros if gebäude is Hauptgebäude and level is Erdgeschoss and room number is a number, not a string
+  let formattedRoomNumber = event.number;
+  if (
+    event.number &&
+    event.building === "Hauptgebäude" &&
+    event.level === "Erdgeschoss" &&
+    !isNaN(event.number)
+  ) {
+    formattedRoomNumber = event.number.toString().padStart(3, "0");
+  }
+
   return html`<div
     class="event ${isHighlighted ? "highlighted" : ""}"
     data-event-roomid=${event.roomId}
@@ -888,7 +913,7 @@ const Event = ({
   >
     <div>
       ${event.number
-        ? html`<p style="margin: 0;">Raum: ${event.number}</p>`
+        ? html`<p style="margin: 0;">Raum: ${formattedRoomNumber}</p>`
         : ""}
       ${event.name1
         ? html`<p style="font-weight: bold; margin: 0; white-space: pre-line;">
