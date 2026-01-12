@@ -1,32 +1,32 @@
-Raum ID;Nummer;Gebaeude;Etage;Name_1;Name_2;in Karte zusätzlich beschriftet;gelistet & in Karte klickbar
+Raum ID;Nummer;Gebaeude;Etage;Name_1;Name_2;gelistet & in Karte klickbar;in Karte zusätzlich beschriftet
 foyer;Foyer;Hauptgebäude;Erdgeschoss;Allgemeine Informationen;"Informationen der Schulleitung, des Elternrats und des Schülerrats
 
 Meeting-Point der Scouts";Y;Y
 3gang;Gang vor Raum 003;Hauptgebäude;Erdgeschoss;Info-Point »Unsere Beobachtungs- und Mittelstufe«;Jennifer Senger-Tomiak (Abteilungsleiterin Jg. 5-7), Christian-Ferdinand Thomasius (Abteilungsleiter Jg. 8-10);Y;Y
 5gang;Gang vor Raum 005;Hauptgebäude;Erdgeschoss;Vorstellung des Projekts »Wir können etwas für andere tun«;Stefanie Hahn, Katja Lehmann;Y;Y
-5;5;Hauptgebäude;Erdgeschoss;Einblicke in den Philosophieunterricht und den Religionsunterricht;Isabell Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner;N;Y
+5;5;Hauptgebäude;Erdgeschoss;Einblicke in den Philosophieunterricht und den Religionsunterricht;Isabell Berens, Philipp Lohmüller, Katja Lehmann, Stefanie Hahn, Miriam Aschenbrenner;Y;N
 6;6;Hauptgebäude;Erdgeschoss;Unser bilinguales Konzept (I);"Geschichte, Geographie & Biologie – alles auf Englisch
 
-Hier: Geschichte & Geographie, Beate Behrens, Gerhard Wille (Biology im 2. OG)";N;Y
-14;14;Hauptgebäude;Erdgeschoss;Begabungs-, Lern- und Sprachförderung;Dr. Heide Pilarczyk, Sara-Marie Kummerfeldt, Stefanie Hahn;N;Y
-16;16;Hauptgebäude;Erdgeschoss;Verstärkter Englischunterricht und die Vorbereitung auf den bilingualen Unterricht;Linn Gellermann, Till van der Ven;N;Y
-4;4;Hauptgebäude;Erdgeschoss;Hege Helping Hands;Yvonne Böcker, Matthias Wilksen;N;Y
-17;17;Hauptgebäude;Erdgeschoss;;WC Herren (WC Damen 1/2 Etage tiefer);Y;N
-1;1;Hauptgebäude;Erdgeschoss;Hausmeister;;Y;N
-2;2;Hauptgebäude;Erdgeschoss;Schulbüro;Nadja Nagorsnik, Katrin Wiese;Y;N
-2a;002a;Hauptgebäude;Erdgeschoss;Schulleiterin;Dr. Maike Languth;Y;N
-3;3;Hauptgebäude;Erdgeschoss;Stellv. Schulleiter;Tino Fischer;Y;N
+Hier: Geschichte & Geographie, Beate Behrens, Gerhard Wille (Biology im 2. OG)";Y;N
+14;14;Hauptgebäude;Erdgeschoss;Begabungs-, Lern- und Sprachförderung;Dr. Heide Pilarczyk, Sara-Marie Kummerfeldt, Stefanie Hahn;Y;N
+16;16;Hauptgebäude;Erdgeschoss;Verstärkter Englischunterricht und die Vorbereitung auf den bilingualen Unterricht;Linn Gellermann, Till van der Ven;Y;N
+4;4;Hauptgebäude;Erdgeschoss;Hege Helping Hands;Yvonne Böcker, Matthias Wilksen;Y;N
+17;17;Hauptgebäude;Erdgeschoss;;WC Herren (WC Damen 1/2 Etage tiefer);N;Y
+1;1;Hauptgebäude;Erdgeschoss;Hausmeister;;N;Y
+2;2;Hauptgebäude;Erdgeschoss;Schulbüro;Nadja Nagorsnik, Katrin Wiese;N;Y
+2a;002a;Hauptgebäude;Erdgeschoss;Schulleiterin;Dr. Maike Languth;N;Y
+3;3;Hauptgebäude;Erdgeschoss;Stellv. Schulleiter;Tino Fischer;N;Y
 7;7;Hauptgebäude;Erdgeschoss;Klasse 5d (Fo);;N;N
 8;8;Hauptgebäude;Erdgeschoss;Klasse 5c (Be);;N;N
 11;11;Hauptgebäude;Erdgeschoss;Klasse 5a (Wg);;N;N
 12;12;Hauptgebäude;Erdgeschoss;Klasse 5b (To);;N;N
 13;13;Hauptgebäude;Erdgeschoss;Klasse 6a (Sf/Sz);;N;N
 15;15;Hauptgebäude;Erdgeschoss;Klasse 6c (Gm);;N;N
-21;21;Hauptgebäude;Erdgeschoss;Konferenzraum;;Y;N
-22;22;Hauptgebäude;Erdgeschoss;Schulbüro & Krankenzimmer;Linn Gellermann;Y;N
+21;21;Hauptgebäude;Erdgeschoss;Konferenzraum;;N;Y
+22;22;Hauptgebäude;Erdgeschoss;Schulbüro & Krankenzimmer;Linn Gellermann;N;Y
 101;101;Hauptgebäude;1. Obergeschoss;Abteilungsleitung 11–12;Dr. Björn Reetz;N;N
 102;102;Hauptgebäude;1. Obergeschoss;Abteilungsleitung 5–7 & 8–10;Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius;N;N
-104;104;Hauptgebäude;1. Obergeschoss;Mathematik zum Mitmachen;Gesa Einsporn;N;Y
+104;104;Hauptgebäude;1. Obergeschoss;Mathematik zum Mitmachen;Gesa Einsporn;Y;N
 105;105;Hauptgebäude;1. Obergeschoss;BOSO / PGW / Wirtschaft ;"BOSO (Berufs- und Studienorientierung): Wie entwickelt man ein Gefühl für eigene Stärken und Interessen?
 Dr. Stephan Benzmann, Caroline Jahn
 
@@ -34,12 +34,12 @@ PGW (Politik, Gesellschaft, Wirtschaft) – ein Fach ab Klasse 8 und im Profil
 Dr. Stephan Benzmann, Caroline Jahn
 
 Wirtschaft – Ökonomische Bildung als Teil der Allgemeinbildung: Unterrichtsfach Wirtschaft, business@school, Börsenclub AG
-Birte Rösler, Rabea Gausepohl, b@s-Schülerteam S1/S3";N;Y
-103;103;Hauptgebäude;1. Obergeschoss;Deutsch am Gymnasium Eppendorf – Schwerpunkte und Projekte;Kristina Duncan;N;Y
+Birte Rösler, Rabea Gausepohl, b@s-Schülerteam S1/S3";Y;N
+103;103;Hauptgebäude;1. Obergeschoss;Deutsch am Gymnasium Eppendorf – Schwerpunkte und Projekte;Kristina Duncan;Y;N
 106;106;Hauptgebäude;1. Obergeschoss;"Vive la France – Vive l’échange
-Französisch und unser Frankreichaustausch";Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas;N;Y
+Französisch und unser Frankreichaustausch";Susanne Strohfahrt-Riebl, Kerstin Vogt-Thomas;Y;N
 106gang;Gang vor Raum 106;Hauptgebäude;1. Obergeschoss;Wir lernen gemeinsam Frankreich kennen;Ellen Burgemeister;Y;Y
-113;113;Hauptgebäude;1. Obergeschoss;12:00 Uhr: »Franz en France«: 15-minütiges deutsch-französisches Theaterstück;Von Schülerinnen und Schülern aus Jg. 7, Dr. Heide Pilarczyk;N;Y
+113;113;Hauptgebäude;1. Obergeschoss;12:00 Uhr: »Franz en France«: 15-minütiges deutsch-französisches Theaterstück;Von Schülerinnen und Schülern aus Jg. 7, Dr. Heide Pilarczyk;Y;N
 114gang;Gang vor Raum 114;Hauptgebäude;1. Obergeschoss;Test;Test;N;N
 113gang;Gang vor Raum 113;Hauptgebäude;1. Obergeschoss;Vamos a España - Spanischunterricht;Catherine Kausche & Greta Martirosyan;Y;Y
 115gang;Gang vor dem Lehrerzimmer;Hauptgebäude;1. Obergeschoss;Latein – mehr als nur eine Sprache;Dr. Monika Schreiber;Y;Y
@@ -54,20 +54,20 @@ Hege Studies-AG
 Dr. Jean-Marie Schwarzkopf
 
 Projekt Herausforderung Skandinavien
-Lars Schwartz, Hendrik von Vöhren";N;Y
-114;114;Hauptgebäude;1. Obergeschoss;Medienraum;;Y;N
-115;115;Hauptgebäude;1. Obergeschoss;Lehrerzimmer;;Y;N
-117;117;Hauptgebäude;1. Obergeschoss;;WC Damen;Y;N
-118;118;Hauptgebäude;1. Obergeschoss;;IT-Admin: Michael König, David Hähningen;Y;N
-119;119;Hauptgebäude;1. Obergeschoss;Physik 2;;Y;N
-121;121;Hauptgebäude;1. Obergeschoss;Mathe/Physik;(Es)/(Jo);Y;N
+Lars Schwartz, Hendrik von Vöhren";Y;N
+114;114;Hauptgebäude;1. Obergeschoss;Medienraum;;N;Y
+115;115;Hauptgebäude;1. Obergeschoss;Lehrerzimmer;;N;Y
+117;117;Hauptgebäude;1. Obergeschoss;;WC Damen;N;Y
+118;118;Hauptgebäude;1. Obergeschoss;;IT-Admin: Michael König, David Hähningen;N;Y
+119;119;Hauptgebäude;1. Obergeschoss;Physik 2;;N;Y
+121;121;Hauptgebäude;1. Obergeschoss;Mathe/Physik;(Es)/(Jo);N;Y
 122;122;Hauptgebäude;1. Obergeschoss;Physik entdecken – physikalischen Phänomenen auf der Spur;"Der Fachbereich Physik: Experimente zum Mitmachen
 Silas Fobel, Dennis Drews";Y;Y
-123;123;Hauptgebäude;1. Obergeschoss;Physik-Sammlung;;Y;N
-124;124;Hauptgebäude;1. Obergeschoss;Lehrerarbeitsraum;;Y;N
+123;123;Hauptgebäude;1. Obergeschoss;Physik-Sammlung;;N;Y
+124;124;Hauptgebäude;1. Obergeschoss;Lehrerarbeitsraum;;N;Y
 124gang;Gang vor Raum 124;Hauptgebäude;1. Obergeschoss;Café Challenge;SchülerInnen des Jahrgangs 10;Y;Y
-Sonstiges_12;;Hauptgebäude;1. Obergeschoss;Freiarbeitsbereich;;Y;N
-Sonstiges_13;;Hauptgebäude;1. Obergeschoss;Lehrerzimmer;;Y;N
+Sonstiges_12;;Hauptgebäude;1. Obergeschoss;Freiarbeitsbereich;;N;Y
+Sonstiges_13;;Hauptgebäude;1. Obergeschoss;Lehrerzimmer;;N;Y
 220;220;Hauptgebäude;2. Obergeschoss;Aula: Schulchor, Begrüßung, Vorstellung der Klassenleitungen und Aufführung ;"11:00–11:15 Uhr
 Schulchor
 Sarah-Jiny Kisker, Fabian Kenk
@@ -81,34 +81,34 @@ Schüler:innen-Aufführung der 5b
 „Zauberblumen“ 
 Almuth Schäfer";Y;Y
 201;201 (Chemie Hörsaal);Hauptgebäude;2. Obergeschoss;Naturwissenschaftliche Experimente;Mattes Jokmin;Y;Y
-202;202;Hauptgebäude;2. Obergeschoss;Chemie-Sammlung;;Y;N
+202;202;Hauptgebäude;2. Obergeschoss;Chemie-Sammlung;;N;Y
 203;203 (Chemie 1);Hauptgebäude;2. Obergeschoss;Chemie zum Anfassen;"Dr. Frank Jürgensen, Mattes Jokmin
 Fällt wetterbedingt aus!";Y;Y
-204;204;Hauptgebäude;2. Obergeschoss;Chemie-Verwaltung;Dr. Frank Jürgensen;Y;N
+204;204;Hauptgebäude;2. Obergeschoss;Chemie-Verwaltung;Dr. Frank Jürgensen;N;Y
 205;205;Hauptgebäude;2. Obergeschoss;Digitales Arbeiten;Catharine Kausche, Jörn Ole Augustin;Y;Y
-206;206;Hauptgebäude;2. Obergeschoss;Musik 2;;Y;N
-207;207;Hauptgebäude;2. Obergeschoss;Biologie 1;;Y;N
+206;206;Hauptgebäude;2. Obergeschoss;Musik 2;;N;Y
+207;207;Hauptgebäude;2. Obergeschoss;Biologie 1;;N;Y
 208;208;Hauptgebäude;2. Obergeschoss;;;N;N
 211;211;Hauptgebäude;2. Obergeschoss;Biologie entdecken und Discovering Biology;Sarah Heerdmann, Agnes Kruppa, Gunnar Scheehl;Y;Y
-212;212;Hauptgebäude;2. Obergeschoss;Biologie-Sammlung;;Y;N
-213;213;Hauptgebäude;2. Obergeschoss;Geographie-Sammlung;Dr. Jean-Marie Schwarzkopf;Y;N
-214;214;Hauptgebäude;2. Obergeschoss;Geographie;;Y;N
+212;212;Hauptgebäude;2. Obergeschoss;Biologie-Sammlung;;N;Y
+213;213;Hauptgebäude;2. Obergeschoss;Geographie-Sammlung;Dr. Jean-Marie Schwarzkopf;N;Y
+214;214;Hauptgebäude;2. Obergeschoss;Geographie;;N;Y
 215;215;Hauptgebäude;2. Obergeschoss;Informatik – Vorstellung „Scratch“ und „Python“;David Hähnigen, Michael Fiehn, Ralf Kohler;Y;Y
 216;216;Hauptgebäude;2. Obergeschoss;11:30 - 13:00 Uhr: Instrumentenzirkel;Fabian Kenk;Y;Y
 216p;216p;Hauptgebäude;2. Obergeschoss;;;N;N
-218;218;Hauptgebäude;2. Obergeschoss;;WC Herren;Y;N
-222;222;Hauptgebäude;2. Obergeschoss;Musik-Sammlung;;Y;N
-223;223;Hauptgebäude;2. Obergeschoss;Chemie-Sammlung;;Y;N
-Sonstiges_14;;Hauptgebäude;2. Obergeschoss;Biologie-Arbeitsraum;;Y;N
+218;218;Hauptgebäude;2. Obergeschoss;;WC Herren;N;Y
+222;222;Hauptgebäude;2. Obergeschoss;Musik-Sammlung;;N;Y
+223;223;Hauptgebäude;2. Obergeschoss;Chemie-Sammlung;;N;Y
+Sonstiges_14;;Hauptgebäude;2. Obergeschoss;Biologie-Arbeitsraum;;N;Y
 Sonstiges_15;;Hauptgebäude;2. Obergeschoss;;Aufgang zur Schülerbibliothek;N;N
-Sonstiges_16;;Hauptgebäude;2. Obergeschoss;;WC Lehrkräfte;Y;N
+Sonstiges_16;;Hauptgebäude;2. Obergeschoss;;WC Lehrkräfte;N;Y
 301;301;Hauptgebäude;3. Obergeschoss;Terrasse;;N;N
 302;302;Hauptgebäude;3. Obergeschoss;;;N;N
 302a;302a;Hauptgebäude;3. Obergeschoss;;;N;N
-304;304;Hauptgebäude;3. Obergeschoss;Kunst-Sammlung und -Vorbereitung;;Y;N
+304;304;Hauptgebäude;3. Obergeschoss;Kunst-Sammlung und -Vorbereitung;;N;Y
 304a;304a;Hauptgebäude;3. Obergeschoss;;;N;N
 304b;304b;Hauptgebäude;3. Obergeschoss;;;N;N
-306;306;Hauptgebäude;3. Obergeschoss;Kunst-Brennraum;;Y;N
+306;306;Hauptgebäude;3. Obergeschoss;Kunst-Brennraum;;N;Y
 308;308;Hauptgebäude;3. Obergeschoss;"Kunst entdecken (I)
 
 Das Kunstprofil bietet Monotypie zum Mitmachen an.
@@ -116,7 +116,7 @@ Das Kunstprofil bietet Monotypie zum Mitmachen an.
 309;309;Hauptgebäude;3. Obergeschoss;"Kunst entdecken (II)
 Das Kunstprofil bietet Monotypie zum Mitmachen an.";Präsentation von Schüler:innenarbeiten • Ergebnisse der Kunst-Ag und Street-Art-Ag • Janina Arlt, Sebastian Gehnen, Katja Lehmann, Matthias Taube, Freda Wehowski;Y;Y
 Sonstiges_17;;Hauptgebäude;3. Obergeschoss;Kunst-Vorbereitung;;N;N
-Sonstiges_18;;Hauptgebäude;3. Obergeschoss;Schülerbibliothek;;Y;N
+Sonstiges_18;;Hauptgebäude;3. Obergeschoss;Schülerbibliothek;;N;Y
 Sonstiges_19;;Hauptgebäude;3. Obergeschoss;;Lager;N;N
 Mehrzweckhalle;Multifunktionshalle;Hauptgebäude;Untergeschoss;;"Theater Ausstellung
 Almuth Schäfer
@@ -126,14 +126,14 @@ Hans Peters
 
 Schulhockey
 Johanna Gewand";Y;Y
-UG1;UG1;Hauptgebäude;Untergeschoss;Ruheraum L;;Y;N
-UG14;UG14;Hauptgebäude;Untergeschoss;Sozialpädagogin;Helle Westermann;Y;N
+UG1;UG1;Hauptgebäude;Untergeschoss;Ruheraum L;;N;Y
+UG14;UG14;Hauptgebäude;Untergeschoss;Sozialpädagogin;Helle Westermann;N;Y
 UG2;UG2;Hauptgebäude;Untergeschoss;Beratung & Lerncoaching;Maria Matschiner, Jana Welling, Johanna Gewand;Y;Y
-UG3;UG3;Hauptgebäude;Untergeschoss;Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung;Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand;Y;N
+UG3;UG3;Hauptgebäude;Untergeschoss;Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung;Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand;N;Y
 UG7;UG7;Hauptgebäude;Untergeschoss;Unser Ganztag • Kooperation mit der ETV-KiJU;Oliver Nielsen, Julia Rindsfus;Y;Y
-UG7a;UG7a;Hauptgebäude;Untergeschoss;Ganztag (Ruhe);Büro: Oliver Nielsen;Y;N
+UG7a;UG7a;Hauptgebäude;Untergeschoss;Ganztag (Ruhe);Büro: Oliver Nielsen;N;Y
 UG8;UG8;Hauptgebäude;Untergeschoss;;Personalraum Reinigung;N;N
-UG_kleine_Halle;;Hauptgebäude;Untergeschoss;Kleine Halle;;Y;N
+UG_kleine_Halle;;Hauptgebäude;Untergeschoss;Kleine Halle;;N;Y
 Mensa;;Hauptgebäude;Untergeschoss;Mensa;KITZ-Catering, Fingerfood;Y;Y
 Sonstiges_1;;Hauptgebäude;Untergeschoss;;Hausmeister, Technik, Heizung;N;N
 Sonstiges_2;;Hauptgebäude;Untergeschoss;;Hausmeister, Technik, Heizung;N;N
@@ -146,8 +146,8 @@ Sonstiges_8;;Hauptgebäude;Untergeschoss;;Umkleiden & Duschen;N;N
 Sonstiges_9;;Hauptgebäude;Untergeschoss;;Umkleiden & Duschen;N;N
 Sonstiges_10;;Hauptgebäude;Untergeschoss;;Umkleiden & Duschen;N;N
 Sonstiges_11;;Hauptgebäude;Untergeschoss;;Waschküche;N;N
-WC_4;;Hauptgebäude;Untergeschoss;;WC Damen;Y;N
-gesamtergang;Oberstufengebäude;Neubau;Erdgeschoss;Infos zur Oberstufe;Dr. Björn Reetz (Abteilungsleiter Oberstufe);N;Y
+WC_4;;Hauptgebäude;Untergeschoss;;WC Damen;N;Y
+gesamtergang;Oberstufengebäude;Neubau;Erdgeschoss;Infos zur Oberstufe;Dr. Björn Reetz (Abteilungsleiter Oberstufe);Y;N
 L1;L1;Neubau;Erdgeschoss;;;N;N
 L2;L2;Neubau;Erdgeschoss;;;N;N
 N1;N1;Neubau;Erdgeschoss;Klasse 10a (Jo);;N;N
@@ -160,8 +160,8 @@ Oberstufenraum;;Neubau;Erdgeschoss;Oberstufenraum;;N;N
 Sonstiges_20;;Neubau;Erdgeschoss;;Technik;N;N
 Sonstiges_21;;Neubau;Erdgeschoss;;Technik;N;N
 Sonstiges_22;;Neubau;Erdgeschoss;;Technik;N;N
-WC_5;;Neubau;Erdgeschoss;;WC Damen, barrierefrei;Y;N
-WC_6;;Neubau;Erdgeschoss;;WC Damen;Y;N
+WC_5;;Neubau;Erdgeschoss;;WC Damen, barrierefrei;N;Y
+WC_6;;Neubau;Erdgeschoss;;WC Damen;N;Y
 N1.1;N1.1;Neubau;1. Obergeschoss;Klasse 10c (Ln);;N;N
 N1.2;N1.2;Neubau;1. Obergeschoss;Klasse 10d (Dw);;N;N
 N1.3;N1.3;Neubau;1. Obergeschoss;Arbeitsraum;;N;N
@@ -171,7 +171,7 @@ N1.5;N1.5;Neubau;1. Obergeschoss;;;N;N
 N1.6;N1.6;Neubau;1. Obergeschoss;;;N;N
 Sonstiges_23;;Neubau;1. Obergeschoss;;Technik;N;N
 Sonstiges_24;;Neubau;1. Obergeschoss;;Technik;N;N
-WC_1;;Neubau;1. Obergeschoss;;WC Damen;Y;N
-WC_7;;Neubau;1. Obergeschoss;;WC Herren;Y;N
-WC_2;;Neubau;1. Obergeschoss;;WC Herren;Y;N
-WC_3;;Neubau;1. Obergeschoss;;WC Herren, barrierefrei;Y;N
+WC_1;;Neubau;1. Obergeschoss;;WC Damen;N;Y
+WC_7;;Neubau;1. Obergeschoss;;WC Herren;N;Y
+WC_2;;Neubau;1. Obergeschoss;;WC Herren;N;Y
+WC_3;;Neubau;1. Obergeschoss;;WC Herren, barrierefrei;N;Y
