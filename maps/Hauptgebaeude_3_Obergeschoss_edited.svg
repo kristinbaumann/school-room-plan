@@ -203,6 +203,30 @@
           <path id="Vector_132" fill="#000" d="M82.67 223.31c0 .4-.07.77-.21 1.09-.14.32-.33.59-.59.82-.26.23-.56.4-.92.52s-.75.18-1.19.18c-.44 0-.85-.06-1.21-.19s-.67-.3-.92-.52c-.26-.22-.45-.49-.59-.8a2.51 2.51 0 0 1-.21-1.04c0-.38.07-.71.21-1.02.14-.31.33-.57.57-.78.24-.22.53-.38.86-.5.33-.11.69-.17 1.09-.17h.41v4.13h.26c.25 0 .47-.04.68-.12.21-.08.39-.19.54-.34.15-.15.27-.33.35-.54.08-.21.12-.45.12-.71 0-.37-.09-.7-.26-.97s-.41-.48-.71-.63l.43-.64c.37.17.68.44.92.83.24.39.36.85.36 1.41l.01-.01Zm-5.12.06a1.588 1.588 0 0 0 .49 1.18c.15.15.33.26.53.35.21.08.43.12.67.12h.08v-3.2h-.12c-.25 0-.47.04-.67.11-.2.08-.38.18-.52.31-.15.13-.26.3-.34.49-.08.19-.12.4-.12.63v.01Z" class="Vector"/>
         </g>
       </g>
+      <g id="room_308gang" class="room_308gang">
+        <rect id="area_13" width="16" height="106" x="81" y="49" fill="#fff" class="area"/>
+      </g>
+      <g id="room_306gang" class="room_306gang">
+        <rect id="area_14" width="16" height="24" x="81" y="23" fill="#fff" class="area"/>
+      </g>
+      <g id="room_302agang" class="room_302agang">
+        <rect id="area_15" width="16" height="23" x="62" y="23" fill="#fff" class="area"/>
+      </g>
+      <g id="room_304agang" class="room_304agang">
+        <rect id="area_16" width="16" height="23" x="62" y="49" fill="#fff" class="area"/>
+      </g>
+      <g id="room_304gang" class="room_304gang">
+        <rect id="area_17" width="16" height="41" x="62" y="75" fill="#fff" class="area"/>
+      </g>
+      <g id="room_302gang" class="room_302gang">
+        <rect id="area_18" width="16" height="27" x="62" y="119" fill="#fff" class="area"/>
+      </g>
+      <g id="room_304bgang" class="room_304bgang">
+        <rect id="area_19" width="16" height="18" x="62" y="149" fill="#fff" class="area"/>
+      </g>
+      <g id="room_309gang" class="room_309gang">
+        <rect id="area_20" width="16" height="31" x="81" y="170" fill="#fff" class="area"/>
+      </g>
     </g>
     <g id="walls" class="walls">
       <path id="Vector_133" stroke="#000" stroke-miterlimit="10" d="M1 314.98v383.79l25.28 33.55 240.5 68.96 43.25-150.81-126.86-36.38" class="Vector"/>

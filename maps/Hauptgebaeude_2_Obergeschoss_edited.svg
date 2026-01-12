@@ -435,6 +435,57 @@
           <path id="Vector_284" fill="#000" d="M232.35 699.55c-.09.33-.24.53-.45.62-.21.09-.44.12-.7.08l-.02.05c.28.21.47.47.57.78.1.31.09.68-.03 1.12-.16.56-.43.97-.82 1.21-.39.25-.83.3-1.34.16-.5-.14-.83-.43-1-.88-.17-.44-.13-1.07.1-1.88l.33-1.14-.53-.15c-.39-.11-.72-.09-.98.08-.26.17-.45.45-.57.86-.1.36-.12.67-.04.94.08.27.22.51.42.72l-.58.44c-.12-.11-.23-.24-.33-.4-.1-.16-.18-.33-.23-.54-.05-.21-.08-.42-.07-.66 0-.24.04-.49.12-.76.18-.63.48-1.08.91-1.36.43-.28.92-.34 1.49-.17l2.96.85.21-.75.72.21-.16.57h.02Zm-1.28 2.31c.06-.21.09-.42.09-.61s-.03-.36-.08-.52c-.05-.16-.12-.29-.22-.4a.751.751 0 0 0-.36-.22l-.88-.25-.33 1.14c-.14.5-.18.88-.1 1.15.07.27.24.44.5.52l.22.06c.28.08.51.04.71-.12.2-.16.35-.41.45-.75Z" class="Vector"/>
         </g>
       </g>
+      <g id="room_206gang" class="room_206gang">
+        <rect id="area_21" width="16" height="65" x="62" y="317" fill="#fff" class="area"/>
+      </g>
+      <g id="room_216gang" class="room_216gang">
+        <rect id="area_22" width="16" height="105" x="81" y="317" fill="#fff" class="area"/>
+      </g>
+      <g id="room_215gang" class="room_215gang">
+        <rect id="area_23" width="16" height="72" x="81" y="241" fill="#fff" class="area"/>
+      </g>
+      <g id="room_214gang" class="room_214gang">
+        <rect id="area_24" width="16" height="68" x="81" y="170" fill="#fff" class="area"/>
+      </g>
+      <g id="room_213gang" class="room_213gang">
+        <rect id="area_25" width="16" height="31" x="81" y="136" fill="#fff" class="area"/>
+      </g>
+      <g id="room_212gang" class="room_212gang">
+        <rect id="area_26" width="16" height="32" x="81" y="101" fill="#fff" class="area"/>
+      </g>
+      <g id="room_211gang" class="room_211gang">
+        <rect id="area_27" width="16" height="42" x="81" y="56" fill="#fff" class="area"/>
+      </g>
+      <g id="room_208gang" class="room_208gang">
+        <rect id="area_28" width="16" height="35" x="62" y="72" fill="#fff" class="area" transform="rotate(-90 62 72)"/>
+      </g>
+      <g id="room_207gang" class="room_207gang">
+        <rect id="area_29" width="16" height="111" x="62" y="56" fill="#fff" class="area"/>
+      </g>
+      <g id="room_205gang" class="room_205gang">
+        <rect id="area_30" width="16" height="64" x="62" y="385" fill="#fff" class="area"/>
+      </g>
+      <g id="room_205gang_2" class="room_205gang">
+        <rect id="area_31" width="16" height="23" x="62" y="452" fill="#fff" class="area"/>
+      </g>
+      <g id="room_203gang" class="room_203gang">
+        <rect id="area_32" width="16" height="84" x="62" y="478" fill="#fff" class="area"/>
+      </g>
+      <g id="room_202gang" class="room_202gang">
+        <rect id="area_33" width="16" height="16" x="62" y="563" fill="#fff" class="area"/>
+      </g>
+      <g id="room_201gang" class="room_201gang">
+        <rect id="area_34" width="16" height="70" x="62" y="583" fill="#fff" class="area"/>
+      </g>
+      <g id="room_223gang" class="room_223gang">
+        <rect id="area_35" width="40" height="16" x="75.239" y="644" fill="#fff" class="area" transform="rotate(49.902 75.24 644)"/>
+      </g>
+      <g id="room_220gang" class="room_220gang">
+        <rect id="area_36" width="38.824" height="15.497" fill="#fff" class="area" transform="matrix(-.27797 .96059 -.96389 -.2663 166.613 666.765)"/>
+      </g>
+      <g id="room_222gang" class="room_222gang">
+        <rect id="area_37" width="69.579" height="15.797" fill="#fff" class="area" transform="matrix(.96096 .2767 -.26192 .9651 92.92 670.01)"/>
+      </g>
     </g>
     <g id="walls" class="walls">
       <path id="Vector_285" stroke="#000" stroke-miterlimit="10" d="M1.01 315.12v383.92l25.28 33.56 240.58 68.98 43.26-150.86-126.89-36.39" class="Vector"/>

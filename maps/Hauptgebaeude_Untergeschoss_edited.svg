@@ -479,6 +479,24 @@
           <path id="Vector_357" fill="#000" d="M280.49 700.46c-.09.32-.23.6-.41.82-.18.23-.4.4-.66.52s-.54.19-.86.21c-.32.02-.65-.03-1-.13-.36-.1-.67-.24-.93-.43-.26-.18-.47-.39-.62-.63-.15-.24-.25-.5-.29-.78-.04-.28-.01-.58.08-.88.09-.3.22-.56.4-.77.18-.21.39-.38.63-.5s.51-.18.8-.2c.29-.02.6.02.91.11l.33.09-.95 3.3.21.06c.2.06.39.08.57.06.19-.01.36-.06.51-.15.15-.08.29-.2.41-.35.12-.15.2-.33.26-.54.09-.3.09-.58.02-.84-.07-.26-.22-.48-.43-.67l.49-.41c.26.22.45.51.55.87.1.36.09.77-.03 1.21l.01.03Zm-4.11-1.13c-.05.19-.07.38-.05.56.02.18.08.35.17.5.09.15.2.29.35.4.15.11.32.2.51.25l.06.02.73-2.56-.09-.03c-.2-.06-.38-.08-.56-.06-.18.01-.34.06-.49.13-.15.07-.28.18-.38.31-.11.13-.19.29-.24.48h-.01Z" class="Vector"/>
         </g>
       </g>
+      <g id="room_UG7gang" class="room_UG7gang">
+        <rect id="area_18" width="16" height="65" x="62" y="101" fill="#fff" class="area"/>
+      </g>
+      <g id="room_UG7agang" class="room_UG7agang">
+        <rect id="area_19" width="16" height="51" x="62" y="47" fill="#fff" class="area"/>
+      </g>
+      <g id="room_UG8gang" class="room_UG8gang">
+        <rect id="area_20" width="16" height="22" x="62" y="22" fill="#fff" class="area"/>
+      </g>
+    </g>
+    <g id="room_UG2gang" class="room_UG2gang">
+      <rect id="area_21" width="16" height="35" x="62" y="544" fill="#fff" class="area"/>
+    </g>
+    <g id="room_UG14gang" class="room_UG14gang">
+      <rect id="area_22" width="16" height="63" x="81" y="385" fill="#fff" class="area"/>
+    </g>
+    <g id="room_UG1gang" class="room_UG1gang">
+      <rect id="area_23" width="16" height="57" x="62" y="581" fill="#fff" class="area"/>
     </g>
     <g id="walls" class="walls">
       <path id="Vector_358" stroke="#000" stroke-miterlimit="10" d="m183.13 614.13 127.07 36.3-43.42 150.92-126.72-37.01 43.07-150.21Z" class="Vector"/>

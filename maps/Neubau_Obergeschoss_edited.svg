@@ -158,6 +158,27 @@
           <path id="Vector_94" fill="#000" d="M20.66 310.55v-.87h2.46v-.04l-.47-.4-.67-.63v-1l1.19 1.17 1.82-1.29v1.03l-1.33.88.29.29H25v.87h-4.33l-.01-.01Z" class="Vector"/>
         </g>
       </g>
+      <g id="room_gesamtergangN1.2" class="room_gesamtergangN1.2">
+        <path id="area_12" fill="#fff" d="M142 82H4v263h8.466V91H142v-9Z" class="area"/>
+      </g>
+      <g id="room_N1.1gang" class="room_N1.1gang">
+        <rect id="area_13" width="10" height="80" x="4" y="223" fill="#fff" class="area"/>
+      </g>
+      <g id="room_N1.2gang" class="room_N1.2gang">
+        <rect id="area_14" width="10" height="70" x="4" y="95" fill="#fff" class="area"/>
+      </g>
+      <g id="room_N1.3gang" class="room_N1.3gang">
+        <rect id="area_15" width="10" height="38" x="145" y="71" fill="#fff" class="area" transform="rotate(-90 145 71)"/>
+      </g>
+      <g id="room_N1.4gang" class="room_N1.4gang">
+        <rect id="area_16" width="10" height="26" x="186" y="71" fill="#fff" class="area" transform="rotate(-90 186 71)"/>
+      </g>
+      <g id="room_N1.5gang" class="room_N1.5gang">
+        <rect id="area_17" width="10" height="74" x="202" y="94" fill="#fff" class="area"/>
+      </g>
+      <g id="room_N1Arbeitsraumgang" class="room_N1Arbeitsraumgang">
+        <rect id="area_18" width="10" height="30" x="202" y="61" fill="#fff" class="area"/>
+      </g>
     </g>
     <g id="walls" class="walls">
       <path id="Vector_95" stroke="#000" stroke-miterlimit="10" d="m16.6 167.05.03 167.72H95.8" class="Vector"/>
