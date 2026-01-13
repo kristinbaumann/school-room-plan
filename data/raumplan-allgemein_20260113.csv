@@ -1,0 +1,202 @@
+Raum ID;Nummer;Gebaeude;Etage;Name_1;Name_2;gelistet & in Karte klickbar;in Karte zusätzlich beschriftet
+2;2;Hauptgebäude;Erdgeschoss;Schulbüro;Nadja Nagorsnik, Katrin Wiese;Y;Y
+22;22;Hauptgebäude;Erdgeschoss;Schulbüro & Krankenzimmer;Linn Gellermann;Y;Y
+2a;002a;Hauptgebäude;Erdgeschoss;Schulleiterin;Dr. Maike Languth;Y;Y
+3;3;Hauptgebäude;Erdgeschoss;Stellv. Schulleiter;Tino Fischer;Y;Y
+11;11;Hauptgebäude;Erdgeschoss;;;Y;Y
+12;12;Hauptgebäude;Erdgeschoss;;;Y;Y
+8;8;Hauptgebäude;Erdgeschoss;;;Y;Y
+7;7;Hauptgebäude;Erdgeschoss;;;Y;Y
+13;13;Hauptgebäude;Erdgeschoss;;;Y;Y
+14;14;Hauptgebäude;Erdgeschoss;;;Y;Y
+15;15;Hauptgebäude;Erdgeschoss;;;Y;Y
+16;16;Hauptgebäude;Erdgeschoss;;;Y;Y
+6;6;Hauptgebäude;Erdgeschoss;;;Y;Y
+5;5;Hauptgebäude;Erdgeschoss;;;Y;Y
+4;4;Hauptgebäude;Erdgeschoss;;;Y;Y
+17;17;Hauptgebäude;Erdgeschoss;;WC Herren & WC Damen (1/2 Etage tiefer);Y;Y
+21;21;Hauptgebäude;Erdgeschoss;Konferenzraum;;Y;Y
+1;1;Hauptgebäude;Erdgeschoss;Hausmeister;;Y;Y
+foyer;Foyer;Hauptgebäude;Erdgeschoss;Foyer;;N;N
+1gang;Gang vor Raum 001;Hauptgebäude;Erdgeschoss;;;N;N
+2gang;Gang vor Raum 002;Hauptgebäude;Erdgeschoss;;;N;N
+2agang;Gang vor Raum 002a;Hauptgebäude;Erdgeschoss;;;N;N
+3gang;Gang vor Raum 003;Hauptgebäude;Erdgeschoss;;;N;N
+4gang;Gang vor Raum 004;Hauptgebäude;Erdgeschoss;;;N;N
+5gang;Gang vor Raum 005;Hauptgebäude;Erdgeschoss;;;N;N
+6gang;Gang vor Raum 006;Hauptgebäude;Erdgeschoss;;;N;N
+7gang;Gang vor Raum 007;Hauptgebäude;Erdgeschoss;;;N;N
+8gang;Gang vor Raum 008;Hauptgebäude;Erdgeschoss;;;N;N
+11gang;Gang vor Raum 011;Hauptgebäude;Erdgeschoss;;;N;N
+12gang;Gang vor Raum 012;Hauptgebäude;Erdgeschoss;;;N;N
+13gang;Gang vor Raum 013;Hauptgebäude;Erdgeschoss;;;N;N
+14gang;Gang vor Raum 014;Hauptgebäude;Erdgeschoss;;;N;N
+15gang;Gang vor Raum 015;Hauptgebäude;Erdgeschoss;;;N;N
+16gang;Gang vor Raum 016;Hauptgebäude;Erdgeschoss;;;N;N
+113;113;Hauptgebäude;1. Obergeschoss;;;Y;Y
+106;106;Hauptgebäude;1. Obergeschoss;;;Y;Y
+105;105;Hauptgebäude;1. Obergeschoss;;;Y;Y
+104;104;Hauptgebäude;1. Obergeschoss;;;Y;Y
+103;103;Hauptgebäude;1. Obergeschoss;;;Y;Y
+111;111;Hauptgebäude;1. Obergeschoss;;;Y;Y
+112;112;Hauptgebäude;1. Obergeschoss;;;Y;Y
+108;108;Hauptgebäude;1. Obergeschoss;;;Y;Y
+107;107;Hauptgebäude;1. Obergeschoss;;;Y;Y
+114;114;Hauptgebäude;1. Obergeschoss;Medienraum;;Y;Y
+Sonstiges_12;;Hauptgebäude;1. Obergeschoss;Freiarbeitsbereich;;Y;Y
+117;117;Hauptgebäude;1. Obergeschoss;;WC Damen;Y;Y
+118;118;Hauptgebäude;1. Obergeschoss;;IT-Admin: Michael König, David Hähningen;Y;Y
+122;122;Hauptgebäude;1. Obergeschoss;Physik 1;;Y;Y
+119;119;Hauptgebäude;1. Obergeschoss;Physik 2;;Y;Y
+121;121;Hauptgebäude;1. Obergeschoss;Mathe/Physik;Gesa Einsporn, Mattes Jokmin;Y;Y
+123;123;Hauptgebäude;1. Obergeschoss;Physik-Sammlung;;Y;Y
+124;124;Hauptgebäude;1. Obergeschoss;Lehrerarbeitsraum;;Y;Y
+115;115;Hauptgebäude;1. Obergeschoss;Lehrerzimmer;;Y;Y
+Sonstiges_13;;Hauptgebäude;1. Obergeschoss;Lehrerzimmer;;Y;Y
+102;102;Hauptgebäude;1. Obergeschoss;Abteilungsleitung 5–7 & 8–10;Jennifer Senger-Tomiak, Christian-Ferdinand Thomasius;Y;Y
+101;101;Hauptgebäude;1. Obergeschoss;Abteilungsleitung 11–12;Dr. Björn Reetz;Y;Y
+101gang;Gang vor Raum 101;Hauptgebäude;1. Obergeschoss;;;N;N
+102gang;Gang vor Raum 102;Hauptgebäude;1. Obergeschoss;;;N;N
+103gang;Gang vor Raum 103;Hauptgebäude;1. Obergeschoss;;;N;N
+104gang;Gang vor Raum 104;Hauptgebäude;1. Obergeschoss;;;N;N
+105gang;Gang vor Raum 105;Hauptgebäude;1. Obergeschoss;;;N;N
+106gang;Gang vor Raum 106;Hauptgebäude;1. Obergeschoss;;;N;N
+107gang;Gang vor Raum 107;Hauptgebäude;1. Obergeschoss;;;N;N
+108gang;Gang vor Raum 108;Hauptgebäude;1. Obergeschoss;;;N;N
+111gang;Gang vor Raum 111;Hauptgebäude;1. Obergeschoss;;;N;N
+112gang;Gang vor Raum 112;Hauptgebäude;1. Obergeschoss;;;N;N
+113gang;Gang vor Raum 113;Hauptgebäude;1. Obergeschoss;;;N;N
+114gang;Gang vor Raum 114;Hauptgebäude;1. Obergeschoss;;;N;N
+115gang;Gang vor dem Lehrerzimmer;Hauptgebäude;1. Obergeschoss;;;N;N
+123gang;Gang vor Raum 123;Hauptgebäude;1. Obergeschoss;;;N;N
+124gang;Gang vor Raum 124;Hauptgebäude;1. Obergeschoss;;;N;N
+220;220;Hauptgebäude;2. Obergeschoss;Aula;;Y;Y
+203;203;Hauptgebäude;2. Obergeschoss;Chemie 1;;Y;Y
+201;201;Hauptgebäude;2. Obergeschoss;Chemie 2;;Y;Y
+202;202;Hauptgebäude;2. Obergeschoss;Chemie-Sammlung;;Y;Y
+223;223;Hauptgebäude;2. Obergeschoss;Chemie-Sammlung;;Y;Y
+204;204;Hauptgebäude;2. Obergeschoss;Chemie-Verwaltung;Dr. Frank Jürgensen;Y;Y
+215;215;Hauptgebäude;2. Obergeschoss;Computerraum 1;;Y;Y
+205;205;Hauptgebäude;2. Obergeschoss;Computerraum 2;;Y;Y
+216;216;Hauptgebäude;2. Obergeschoss;Musik 1;;Y;Y
+206;206;Hauptgebäude;2. Obergeschoss;Musik 2;;Y;Y
+222;222;Hauptgebäude;2. Obergeschoss;Musik-Sammlung;;Y;Y
+207;207;Hauptgebäude;2. Obergeschoss;Biologie 1;;Y;Y
+211;211;Hauptgebäude;2. Obergeschoss;Biologie 2;;Y;Y
+Sonstiges_14;;Hauptgebäude;2. Obergeschoss;Biologie-Arbeitsraum;;Y;Y
+212;212;Hauptgebäude;2. Obergeschoss;Biologie-Sammlung;;Y;Y
+214;214;Hauptgebäude;2. Obergeschoss;Geographie;;Y;Y
+213;213;Hauptgebäude;2. Obergeschoss;Geographie-Sammlung;Dr. Jean-Marie Schwarzkopf;Y;Y
+218;218;Hauptgebäude;2. Obergeschoss;;WC Herren;Y;Y
+Sonstiges_15;;Hauptgebäude;2. Obergeschoss;;Aufgang zur Schülerbibliothek;N;Y
+Sonstiges_16;;Hauptgebäude;2. Obergeschoss;;WC Lehrkräfte;Y;Y
+208;208;Hauptgebäude;2. Obergeschoss;;;N;N
+216p;216p;Hauptgebäude;2. Obergeschoss;;;N;N
+201gang;Gang vor Raum 201;Hauptgebäude;2. Obergeschoss;;;N;N
+202gang;Gang vor Raum 202;Hauptgebäude;2. Obergeschoss;;;N;N
+203gang;Gang vor Raum 203;Hauptgebäude;2. Obergeschoss;;;N;N
+204gang;Gang vor Raum 204;Hauptgebäude;2. Obergeschoss;;;N;N
+205gang;Gang vor Raum 205;Hauptgebäude;2. Obergeschoss;;;N;N
+206gang;Gang vor Raum 206;Hauptgebäude;2. Obergeschoss;;;N;N
+207gang;Gang vor Raum 207;Hauptgebäude;2. Obergeschoss;;;N;N
+208gang;Gang vor Raum 208;Hauptgebäude;2. Obergeschoss;;;N;N
+211gang;Gang vor Raum 211;Hauptgebäude;2. Obergeschoss;;;N;N
+212gang;Gang vor Raum 212;Hauptgebäude;2. Obergeschoss;;;N;N
+213gang;Gang vor Raum 213;Hauptgebäude;2. Obergeschoss;;;N;N
+214gang;Gang vor Raum 214;Hauptgebäude;2. Obergeschoss;;;N;N
+215gang;Gang vor Raum 215;Hauptgebäude;2. Obergeschoss;;;N;N
+216gang;Gang vor Raum 216;Hauptgebäude;2. Obergeschoss;;;N;N
+220gang;Gang vor Raum 220 (Aula);Hauptgebäude;2. Obergeschoss;;;N;N
+222gang;Gang vor Raum 222;Hauptgebäude;2. Obergeschoss;;;N;N
+223gang;Gang vor Raum 223;Hauptgebäude;2. Obergeschoss;;;N;N
+301;301;Hauptgebäude;3. Obergeschoss;Terrasse;;Y;Y
+302;302;Hauptgebäude;3. Obergeschoss;;;N;N
+302a;302a;Hauptgebäude;3. Obergeschoss;;;N;N
+Sonstiges_18;;Hauptgebäude;3. Obergeschoss;Schülerbibliothek;;Y;Y
+309;309;Hauptgebäude;3. Obergeschoss;Kunst 1;;Y;Y
+308;308;Hauptgebäude;3. Obergeschoss;Kunst 2;;Y;Y
+Sonstiges_17;;Hauptgebäude;3. Obergeschoss;Kunst-Vorbereitung;;Y;Y
+304;304;Hauptgebäude;3. Obergeschoss;Kunst-Sammlung und -Vorbereitung;;Y;Y
+306;306;Hauptgebäude;3. Obergeschoss;Kunst-Brennraum;;Y;Y
+Sonstiges_19;;Hauptgebäude;3. Obergeschoss;;Lager;Y;Y
+304a;304a;Hauptgebäude;3. Obergeschoss;;;N;N
+304b;304b;Hauptgebäude;3. Obergeschoss;;;N;N
+302gang;Gang vor Raum 302;Hauptgebäude;3. Obergeschoss;;;N;N
+304gang;Gang vor Raum 304;Hauptgebäude;3. Obergeschoss;;;N;N
+304agang;Gang vor Raum 304a;Hauptgebäude;3. Obergeschoss;;;N;N
+304bgang;Gang vor Raum 304b;Hauptgebäude;3. Obergeschoss;;;N;N
+302agang;Gang vor Raum 302a;Hauptgebäude;3. Obergeschoss;;;N;N
+306gang;Gang vor Raum 306;Hauptgebäude;3. Obergeschoss;;;N;N
+308gang;Gang vor Raum 308;Hauptgebäude;3. Obergeschoss;;;N;N
+309gang;Gang vor Raum 309;Hauptgebäude;3. Obergeschoss;;;N;N
+Mensa;;Hauptgebäude;Untergeschoss;Mensa HEGElicious;;Y;Y
+Mehrzweckhalle;Mehrzweckhalle;Hauptgebäude;Untergeschoss;Multifunktionshalle;;Y;Y
+UG_kleine_Halle;;Hauptgebäude;Untergeschoss;Kleine Halle;;Y;Y
+UG7;UG7;Hauptgebäude;Untergeschoss;Ganztag (PerLe);;Y;Y
+UG7a;UG7a;Hauptgebäude;Untergeschoss;Ganztag (Ruhe);Büro: Oliver Nielsen;Y;Y
+UG1;UG1;Hauptgebäude;Untergeschoss;Ruheraum L;;Y;Y
+UG14;UG14;Hauptgebäude;Untergeschoss;Sozialpädagogin;Helle Westermann;Y;Y
+UG2;UG2;Hauptgebäude;Untergeschoss;Beratung & Lerncoaching;;Y;Y
+UG3;UG3;Hauptgebäude;Untergeschoss;Hege Helping Hands, Förderkoordination, Sprachförderung, Beratung;Matthias Wilksen, Yvonne Böcker, Stefanie Hahn, Sara-Marie Kummerfeldt, Johanna Gewand;Y;Y
+UG8;UG8;Hauptgebäude;Untergeschoss;;Personalraum Reinigung;N;Y
+Sonstiges_1;;Hauptgebäude;Untergeschoss;;Hausmeister, Technik, Heizung;N;Y
+Sonstiges_2;;Hauptgebäude;Untergeschoss;;Hausmeister, Technik, Heizung;N;Y
+Sonstiges_3;;Hauptgebäude;Untergeschoss;;Hausmeister, Technik, Heizung;N;Y
+Sonstiges_4;;Hauptgebäude;Untergeschoss;;Hausmeister, Technik, Heizung;N;Y
+Sonstiges_5;;Hauptgebäude;Untergeschoss;;Küche;N;Y
+Sonstiges_6;;Hauptgebäude;Untergeschoss;;Reinigung;N;Y
+Sonstiges_7;;Hauptgebäude;Untergeschoss;;Reinigung;N;Y
+Sonstiges_8;;Hauptgebäude;Untergeschoss;;Umkleiden & Duschen;Y;Y
+Sonstiges_9;;Hauptgebäude;Untergeschoss;;Umkleiden & Duschen;Y;Y
+Sonstiges_10;;Hauptgebäude;Untergeschoss;;Umkleiden & Duschen;Y;Y
+Sonstiges_11;;Hauptgebäude;Untergeschoss;;Waschküche;N;Y
+WC_4;;Hauptgebäude;Untergeschoss;;WC Damen;Y;Y
+UG1gang;Gang vor Raum UG1;Hauptgebäude;Untergeschoss;;;N;N
+UG2gang;Gang vor Raum UG2;Hauptgebäude;Untergeschoss;;;N;N
+UG7gang;Gang vor Raum UG7;Hauptgebäude;Untergeschoss;;;N;N
+UG7agang;Gang vor Raum UG7a;Hauptgebäude;Untergeschoss;;;N;N
+UG8gang;Gang vor Raum UG8;Hauptgebäude;Untergeschoss;;;N;N
+UG14gang;Gang vor Raum UG14;Hauptgebäude;Untergeschoss;;;N;N
+L1;L1;Neubau;Erdgeschoss;;;Y;N
+L2;L2;Neubau;Erdgeschoss;;;Y;N
+N1;N1;Neubau;Erdgeschoss;;;Y;Y
+N2;N2;Neubau;Erdgeschoss;;;Y;Y
+N3;N3;Neubau;Erdgeschoss;;;Y;N
+N4;N4;Neubau;Erdgeschoss;;;Y;N
+N5;N5;Neubau;Erdgeschoss;;;Y;N
+N6;N6;Neubau;Erdgeschoss;Oberstufenraum;;Y;Y
+Oberstufenraum;;Neubau;Erdgeschoss;Oberstufenraum;;Y;Y
+Sonstiges_20;;Neubau;Erdgeschoss;;Technik;N;Y
+Sonstiges_21;;Neubau;Erdgeschoss;;Technik;N;Y
+Sonstiges_22;;Neubau;Erdgeschoss;;Technik;N;Y
+WC_5;;Neubau;Erdgeschoss;;WC Damen, barrierefrei;N;N
+WC_6;;Neubau;Erdgeschoss;;WC Damen;Y;Y
+N1gang;Gang vor Raum N1;Neubau;Erdgeschoss;;;N;N
+L1gang;Gang vor Raum L1;Neubau;Erdgeschoss;;;N;N
+L2gang;Gang vor Raum L2;Neubau;Erdgeschoss;;;N;N
+N2gang;Gang vor Raum N2;Neubau;Erdgeschoss;;;N;N
+N3gang;Gang vor Raum N3;Neubau;Erdgeschoss;;;N;N
+N4gang;Gang vor Raum N4;Neubau;Erdgeschoss;;;N;N
+N5gang;Gang vor Raum N5;Neubau;Erdgeschoss;;;N;N
+gesamtergangN2;Gang im Oberstufengebäude;Neubau;Erdgeschoss;;;N;N
+oberstufenraumgang;Gang vor Oberstufenraum;Neubau;Erdgeschoss;;;N;N
+N1.1;N1.1;Neubau;1. Obergeschoss;;;Y;Y
+N1.2;N1.2;Neubau;1. Obergeschoss;;;Y;Y
+N1.3;N1.3;Neubau;1. Obergeschoss;Arbeitsraum;;Y;Y
+N1Arbeitsraum;;Neubau;1. Obergeschoss;Arbeitsraum;;Y;Y
+N1.4;N1.4;Neubau;1. Obergeschoss;;;Y;N
+N1.5;N1.5;Neubau;1. Obergeschoss;;;Y;N
+N1.6;N1.6;Neubau;1. Obergeschoss;;;Y;N
+Sonstiges_23;;Neubau;1. Obergeschoss;;Technik;N;Y
+Sonstiges_24;;Neubau;1. Obergeschoss;;Technik;N;Y
+WC_1;;Neubau;1. Obergeschoss;;WC Damen;Y;Y
+WC_2;;Neubau;1. Obergeschoss;;WC Herren;Y;Y
+WC_7;;Neubau;1. Obergeschoss;;WC Herren;Y;Y
+WC_3;;Neubau;1. Obergeschoss;;WC Herren, barrierefrei;N;N
+N1.1gang;Gang vor Raum N1.1;Neubau;1. Obergeschoss;;;N;N
+N1.2gang;Gang vor Raum N1.2;Neubau;1. Obergeschoss;;;N;N
+N1.3gang;Gang vor Raum N1.3;Neubau;1. Obergeschoss;;;N;N
+N1.4gang;Gang vor Raum N1.4;Neubau;1. Obergeschoss;;;N;N
+N1.5gang;Gang vor Raum N1.5;Neubau;1. Obergeschoss;;;N;N
+gesamtergangN1.2;Gang im Oberstufengebäude im 1.Obergeschoss;Neubau;1. Obergeschoss;;;N;N
+N1Arbeitsraumgang;Gang vor Arbeitsraum;Neubau;1. Obergeschoss;;;N;N
